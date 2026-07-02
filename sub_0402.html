@@ -39,11 +39,8 @@ var g5_cookie_domain = "";
 <body>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init();
-</script>
+<link rel="stylesheet" href="./css/redesign.css">
+<script src="./js/redesign_motion.js"></script>
 
 <script>
 	var top = $(window).scrollTop();
@@ -189,13 +186,13 @@ AOS.init();
         </script>
     
         <ul id="tnb">
-            <li><a href="#" class="sitemap_box_open" id="ham">
-                <img src="./img/ham_bar_w.png" alt="">
+            <li><a href="#" class="sitemap_box_open" id="ham" aria-label="전체메뉴 열기">
+                <i class="fas fa-bars fa-2x" style="color: #fff;"></i></a>
             </li>
 
             <div class="sitemap_box">
                 <div class="sitemap_box_close_wrap">
-                    <a href="./index.html" class="sitemap_box_close"><img src="./img/close_btn.png" alt=""></a>
+                    <a href="#" class="sitemap_box_close" aria-label="전체메뉴 닫기"><i class="fas fa-times fa-2x" style="color: #333;"></i></a>
                 </div>
                     <nav id="tnb_gnb_sm">
                                                 <!-- 1번째 리스트 묶음 -->
@@ -456,10 +453,7 @@ $(function () {
 
 <!-- { mobile상단 시작 -->
     <div id="hd_mo" class="pc_hide clear_fix">
-    <ul class="hd_top_left_mo clear_fix">
-        <li><a href="https://www.westerndigital.com/ko-kr" target="_blank"><img src="./theme/tobo/img/icon_hd_top01.png" alt=""></a></li>
-        <li><a href="https://www.g-technology.com/ko-kr" target="_blank"><img src="./theme/tobo/img/icon_hd_top02.png" alt=""></a></li>
-    </ul>
+    
     <div id="logo_mo">
         <a href="./index.html"><img src="./img/logo.png" alt="(주)신영에스씨엠"></a>
     </div>
@@ -673,6 +667,12 @@ $(function () {
 <div class="list_top_txt">
         </div>
 
+<div class="cta-wrap motion-fade-up">
+    <a href="tel:02-484-4700" class="btn-cta outline"><i class="fas fa-phone-alt"></i> 02-484-4700</a>
+    <a href="mailto:scm4700@naver.com" class="btn-cta outline"><i class="fas fa-envelope"></i> scm4700@naver.com</a>
+    <a href="http://sinyoungscm.com/bbs/write.php?bo_table=0402" class="btn-cta"><i class="fas fa-edit"></i> 무료 견적 문의하기</a>
+</div>
+
 <!-- 게시판 목록 시작 { -->
 <div id="bo_list" style="width:100%">
 
@@ -719,7 +719,7 @@ $(function () {
         </tr>
         </thead>
         <tbody>
-                <tr class=" even">
+                <tr class=" even motion-fade-up">
                         <td class="td_num2 mo_hide">
             12            </td>
 
@@ -734,7 +734,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">07-01</td>
 
         </tr>
-                <tr class=" ">
+                <tr class="  motion-fade-up">
                         <td class="td_num2 mo_hide">
             11            </td>
 
@@ -749,7 +749,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">06-30</td>
 
         </tr>
-                <tr class=" even">
+                <tr class=" even motion-fade-up">
                         <td class="td_num2 mo_hide">
             10            </td>
 
@@ -764,7 +764,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">06-28</td>
 
         </tr>
-                <tr class=" ">
+                <tr class="  motion-fade-up">
                         <td class="td_num2 mo_hide">
             9            </td>
 
@@ -779,7 +779,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">06-27</td>
 
         </tr>
-                <tr class=" even">
+                <tr class=" even motion-fade-up">
                         <td class="td_num2 mo_hide">
             8            </td>
 
@@ -794,7 +794,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">06-25</td>
 
         </tr>
-                <tr class=" ">
+                <tr class="  motion-fade-up">
                         <td class="td_num2 mo_hide">
             7            </td>
 
@@ -809,7 +809,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">06-22</td>
 
         </tr>
-                <tr class=" even">
+                <tr class=" even motion-fade-up">
                         <td class="td_num2 mo_hide">
             6            </td>
 
@@ -824,7 +824,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">06-16</td>
 
         </tr>
-                <tr class=" ">
+                <tr class="  motion-fade-up">
                         <td class="td_num2 mo_hide">
             5            </td>
 
@@ -839,7 +839,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">05-26</td>
 
         </tr>
-                <tr class=" even">
+                <tr class=" even motion-fade-up">
                         <td class="td_num2 mo_hide">
             4            </td>
 
@@ -854,7 +854,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">05-14</td>
 
         </tr>
-                <tr class=" ">
+                <tr class="  motion-fade-up">
                         <td class="td_num2 mo_hide">
             3            </td>
 
@@ -869,7 +869,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">05-12</td>
 
         </tr>
-                <tr class=" even">
+                <tr class=" even motion-fade-up">
                         <td class="td_num2 mo_hide">
             2            </td>
 
@@ -884,7 +884,7 @@ $(function () {
                                     <td class="td_datetime mo_hide">05-11</td>
 
         </tr>
-                <tr class=" ">
+                <tr class="  motion-fade-up">
                         <td class="td_num2 mo_hide">
             1            </td>
 
@@ -970,7 +970,7 @@ $(function () {
 				대표 : 이관배 | 사업자등록번호 : 212-81-91777 |<br class="pc_hide"> E-mail : scm4700@naver.com<br>
                 서울사무실 : 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호 | TEL : 02-484-4700 |<br class="pc_hide"> FAX : 02-484-4750<br>
                 광명사무실 : 경기도 광명시 소하로 190, 광명G타워 B동 1314호
-				<a href="http://sinyoungscm.com/adm"><img src="./theme/basic/img/admin.gif" width="38px" height="12px" alt="admin"></a>
+				
 			</p>
 	    </div>
 	</div>
@@ -997,10 +997,7 @@ $(function () {
 <!-- MR Script END Ver 2.0 -->
 <!-- } 하단 끝 -->
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+
 
 
 <script>

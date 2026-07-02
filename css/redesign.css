@@ -1,0 +1,241 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+    --color-primary: #0033cc;
+    --color-primary-dark: #002288;
+    --color-text-main: #1a1a1a;
+    --color-text-muted: #555555;
+    --color-bg-light: #f8f9fa;
+    --color-border: #e0e0e0;
+    --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    
+    --transition-fast: 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-normal: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Base & Accessibility */
+body, input, button, textarea, select {
+    font-family: var(--font-main);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--color-text-main);
+}
+
+@media (min-width: 768px) {
+    body, input, button, textarea, select {
+        font-size: 18px;
+    }
+}
+
+a, button {
+    cursor: pointer;
+    transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+/* Touch Target Minimum (44x44) for accessibility on links that look like buttons */
+.btn-cta, .btn-link, .bo_tit a, .sch_btn, .btn_menu_open, .gnb_menu_btn, .gnb_close_btn, .btn_menu_close, .btn_menu_op {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Focus Ring for Keyboard Navigation */
+*:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* CTA Buttons */
+.cta-wrap {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+}
+
+.btn-cta {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: var(--shadow-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cta:hover, .btn-cta:focus {
+    background-color: var(--color-primary-dark);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.btn-cta.outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-cta.outline:hover, .btn-cta.outline:focus {
+    background-color: rgba(0, 51, 204, 0.05);
+}
+
+/* Board List Redesign */
+.tbl_head01.tbl_wrap {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    margin-top: 24px;
+}
+
+.tbl_head01 table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl_head01 th {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    padding: 16px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.tbl_head01 td {
+    padding: 16px;
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color var(--transition-fast);
+}
+
+.tbl_head01 tbody tr:hover td {
+    background-color: #fbfcff;
+}
+
+/* Badges */
+.new_icon {
+    display: inline-block;
+    background-color: #ff3b30;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.cnt_cmt {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* Mobile Card View */
+@media (max-width: 767px) {
+    .tbl_head01.tbl_wrap {
+        background: transparent;
+        box-shadow: none;
+    }
+    .tbl_head01 table, .tbl_head01 thead, .tbl_head01 tbody, .tbl_head01 tr, .tbl_head01 td {
+        display: block;
+        width: 100%;
+    }
+    .tbl_head01 thead {
+        display: none;
+    }
+    .tbl_head01 tbody tr {
+        background: #fff;
+        margin-bottom: 16px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-soft);
+        padding: 16px;
+        border: 1px solid var(--color-border);
+        transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .tbl_head01 tbody tr:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+    }
+    .tbl_head01 td {
+        border-bottom: none;
+        padding: 4px 0;
+    }
+    .tbl_head01 .td_subject {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    .tbl_head01 .td_name, .tbl_head01 .td_datetime, .tbl_head01 .td_num {
+        display: inline-block;
+        font-size: 14px;
+        color: var(--color-text-muted);
+        margin-right: 12px;
+    }
+    /* Show hidden elements in mobile card context if necessary */
+    .mo_hide_in_table {
+        display: none;
+    }
+}
+
+/* Links hover effect (Underline) */
+.bo_tit a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--color-text-main);
+    transition: color var(--transition-fast);
+}
+.bo_tit a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Motions (Scroll & Staggered) --- */
+.motion-fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.motion-fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for initial load items */
+.stagger-1 { transition-delay: 0.08s; }
+.stagger-2 { transition-delay: 0.16s; }
+.stagger-3 { transition-delay: 0.24s; }
+.stagger-4 { transition-delay: 0.32s; }
+
+/* Reduced Motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .motion-fade-up {
+        opacity: 1;
+        transform: none;
+    }
+}
