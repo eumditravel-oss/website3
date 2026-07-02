@@ -1,12 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 0. Safe Fallback initialization for scroll animations
-    // Add .js-hidden only to fade-up elements that are below the initial fold
-    const fadeElements = document.querySelectorAll('.fade-up');
-    fadeElements.forEach(el => {
-        el.classList.add('js-hidden');
-    });
 
-    // 1. Scroll Fade-up Observer
 
     const observerOptions = {
         root: null,
@@ -18,14 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                entry.target.classList.remove('js-hidden');
             } else {
-                // To keep reversing effect, add js-hidden back when scrolling up out of view
                 entry.target.classList.remove('visible');
-                // Only if it actually went below the viewport
-                if (entry.boundingClientRect.top > 0) {
-                    entry.target.classList.add('js-hidden');
-                }
             }
         });
     }, observerOptions);
