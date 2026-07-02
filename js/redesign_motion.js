@@ -1,44 +1,91 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (prefersReducedMotion) {
-        return; // Exit if user prefers reduced motion
-    }
-
-    // Intersection Observer for scroll animations
+    // 1. Scroll Fade-up Observer
     const observerOptions = {
         root: null,
-        rootMargin: '0px 0px -50px 0px',
-        threshold: 0.1
+        rootMargin: '0px',
+        threshold: 0.15
     };
 
-    const motionObserver = new IntersectionObserver((entries, observer) => {
+    const fadeObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Unobserve after animating once
+                entry.target.classList.add('visible');
+                // Optional: Unobserve after fading in to keep it visible
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Apply observer to all elements with motion-fade-up class
-    const motionElements = document.querySelectorAll('.motion-fade-up');
-    motionElements.forEach(el => {
-        motionObserver.observe(el);
-    });
+    const fadeElements = document.querySelectorAll('.fade-up');
+    fadeElements.forEach(el => fadeObserver.observe(el));
+
+    // 2. Number Count-up Observer
+    const countElements = document.querySelectorAll('.count-up');
     
-    // Smooth scroll for top button
-    const topBtn = document.getElementById('top_btn');
-    if(topBtn) {
-        // Replace existing click handler to ensure smooth scroll
-        $(topBtn).off('click').on('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+    const countObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const targetNumber = parseInt(target.getAttribute('data-target'), 10);
+                const duration = 2000; // 2 seconds
+                let startTimestamp = null;
+                
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    // easeOutQuart
+                    const easeProgress = 1 - Math.pow(1 - progress, 4);
+                    
+                    target.innerText = Math.floor(easeProgress * targetNumber).toLocaleString();
+                    
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        target.innerText = targetNumber.toLocaleString();
+                    }
+                };
+                
+                window.requestAnimationFrame(step);
+                observer.unobserve(target); // Only animate once
+            }
         });
+    }, observerOptions);
+
+    countElements.forEach(el => countObserver.observe(el));
+
+    // 3. Header Scroll Effect
+    const header = document.getElementById('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
+    }
+
+    // 4. Mobile Menu Toggle
+    const btnMenuOpen = document.getElementById('btn-menu-open');
+    const btnMenuClose = document.getElementById('btn-menu-close');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mOverlay = document.getElementById('m-overlay');
+
+    if (btnMenuOpen && btnMenuClose && mobileNav && mOverlay) {
+        const openMenu = () => {
+            mobileNav.classList.add('open');
+            mOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeMenu = () => {
+            mobileNav.classList.remove('open');
+            mOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        };
+
+        btnMenuOpen.addEventListener('click', openMenu);
+        btnMenuClose.addEventListener('click', closeMenu);
+        mOverlay.addEventListener('click', closeMenu);
     }
 });

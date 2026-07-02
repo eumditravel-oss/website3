@@ -1,4 +1,6 @@
-<!doctype html>
+import os
+
+html_content = """<!doctype html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -276,4 +278,7 @@
 <!-- Scripts -->
 <script src="./js/redesign_motion.js"></script>
 </body>
-</html>
+</html>"""
+
+with open('f:/website3/index.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
