@@ -267,7 +267,7 @@ for filepath in sub_files:
     sidebar_items_html = ""
     for k, v in sub_items.items():
         active_class = "active" if k == page_id else ""
-        sidebar_items_html += f'<li class="{active_class}"><a href="./sub_{k}.html">{v}</a></li>\\n                '
+        sidebar_items_html += f'<li class="{active_class}"><a href="./sub_{k}.html">{v}</a></li>\n                '
 
     # Build new layout WITHOUT .fade-up on top elements
     new_body = mega_header + f"""
