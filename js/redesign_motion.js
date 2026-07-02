@@ -3,11 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add .js-hidden only to fade-up elements that are below the initial fold
     const fadeElements = document.querySelectorAll('.fade-up');
     fadeElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        // If element is below the fold, hide it for scroll animation
-        if (rect.top > window.innerHeight - 100) {
-            el.classList.add('js-hidden');
-        }
+        el.classList.add('js-hidden');
     });
 
     // 1. Scroll Fade-up Observer
