@@ -88,6 +88,36 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 500;
 }
 
+/* Gnuboard Table Resets */
+.tbl_wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.tbl_wrap caption {
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.tbl_head01 th, .tbl_head01 td {
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+}
+.tbl_head01 th {
+    background-color: var(--color-bg-light);
+    font-weight: 600;
+    color: var(--color-text-main);
+    border-top: 2px solid var(--color-primary);
+}
+.tbl_head01 .td_subject {
+    text-align: left;
+}
+.tbl_head01 tbody tr:hover td {
+    background-color: #f8fafc;
+}
+
 .container {
     width: 100%;
     max-width: 1300px;
