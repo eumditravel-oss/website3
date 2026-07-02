@@ -79,7 +79,7 @@ new_head_template = """<meta charset="utf-8">
 with open('f:/website3/index.html', 'r', encoding='utf-8') as f:
     idx_content = f.read()
 mega_header = idx_content[idx_content.find('<!-- Mobile Overlay -->'):idx_content.find('</header>')+9]
-mega_header += '\\n<div class="mega-overlay"></div>'
+mega_header += '\n<div class="mega-overlay"></div>'
 
 new_footer = """
     <!-- Bottom CTA -->
@@ -305,12 +305,12 @@ for filepath in sub_files:
     # Replace head
     head_start = content.find('<head>')
     head_end = content.find('</head>')
-    new_head = content[:head_start+6] + '\\n' + new_head_template.format(title=page_title_tag) + '\\n' + content[head_end:]
+    new_head = content[:head_start+6] + '\n' + new_head_template.format(title=page_title_tag) + '\n' + content[head_end:]
     
     body_start = new_head.find('<body')
     body_start = new_head.find('>', body_start) + 1
     
-    final_content = new_head[:body_start] + '\\n' + new_body + '\\n</body>\\n</html>'
+    final_content = new_head[:body_start] + '\n' + new_body + '\n</body>\n</html>'
 
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(final_content)
