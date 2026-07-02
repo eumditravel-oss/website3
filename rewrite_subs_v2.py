@@ -1,19 +1,77 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
+import glob
+import re
+import os
+
+menus = {
+    '01': {
+        'title': '회사소개',
+        'items': {
+            '0101': '인사말',
+            '0102': '연혁',
+            '0103': '주요실적',
+            '0104': '오시는길'
+        }
+    },
+    '02': {
+        'title': '업무분야',
+        'items': {
+            '0201': '안전진단',
+            '0202': '안전점검',
+            '0203': '건축물관리점검',
+            '0204': '건설공사 정기안전점검',
+            '0205': '내진성능평가',
+            '0206': '법원감정',
+            '0207': '인접건축물 사전조사',
+            '0208': '구조설계/감리',
+            '0209': '시설물보수/보강공사'
+        }
+    },
+    '03': {
+        'title': '인증 및 장비현황',
+        'items': {
+            '0301': '인증현황',
+            '0302': '장비보유현황'
+        }
+    },
+    '0401': {
+        'title': '고객센터',
+        'items': {
+            '0401': '공지사항'
+        }
+    },
+    '0402': {
+        'title': '무료견적문의',
+        'items': {
+            '0402': '견적문의'
+        }
+    }
+}
+
+def get_menu_info(page_id):
+    if page_id in ['0401', '0402']:
+        cat = menus[page_id]
+        return cat['title'], cat['items'][page_id], cat['items'], page_id
+    else:
+        top_id = page_id[:2]
+        if top_id in menus:
+            cat = menus[top_id]
+            title = cat['title']
+            sub_title = cat['items'].get(page_id, title)
+            return title, sub_title, cat['items'], top_id
+    return "메뉴", "페이지", {}, "00"
+
+new_head_template = """<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>공지사항 1 페이지 | (주)신영에스씨엠</title>
+<title>{title}</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="./css/redesign_main.css">
 <link rel="stylesheet" href="./sub/sub.css">
 <!-- Subpage specific css/js for forms if needed -->
 <script src="./js/jquery-1.12.4.min.js"></script>
+"""
 
-</head>
-<body>
-<!-- Mobile Overlay -->
+mega_header = """<!-- Mobile Overlay -->
 <div class="m-overlay" id="m-overlay"></div>
 
 <!-- Mobile Navigation -->
@@ -134,260 +192,9 @@
     </div>
 </header>
 <div class="mega-overlay"></div>
+"""
 
-<div id="wrapper">
-    <div class="sub-hero fade-up">
-        <div class="sub-hero-bg"></div>
-        <div class="container sub-hero-content">
-            <h1 class="sub-hero-title">고객센터</h1>
-            <p class="sub-hero-desc">신뢰를 최우선으로 하는 안전진단 전문기관</p>
-        </div>
-    </div>
-
-    <div class="breadcrumb">
-        <div class="container">
-            <span><i class="fas fa-home"></i> 홈</span>
-            <span><i class="fas fa-chevron-right"></i> 고객센터</span>
-            <span class="current"><i class="fas fa-chevron-right"></i> 공지사항</span>
-        </div>
-    </div>
-
-    <div class="container sub-layout">
-        <aside class="sub-sidebar fade-up">
-            <h2 class="sidebar-title">고객센터</h2>
-            <ul class="sidebar-menu">
-                <li class="active"><a href="./sub_0401.html">공지사항</a></li>
-
-            </ul>
-        </aside>
-
-        <main class="sub-content content-body fade-up">
-            <!-- 상단 글 -->
-
-
-
-<!-- 게시판 목록 시작 { -->
-
-<div id="bo_list" style="width:100%">
-
-
-
-    <!-- 게시판 카테고리 시작 { -->
-
-        <!-- } 게시판 카테고리 끝 -->
-
-    
-
-    <form name="fboardlist" id="fboardlist" action="http://sinyoungscm.com/bbs/board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
-
-    
-
-    <input type="hidden" name="bo_table" value="0401">
-
-    <input type="hidden" name="sfl" value="">
-
-    <input type="hidden" name="stx" value="">
-
-    <input type="hidden" name="spt" value="">
-
-    <input type="hidden" name="sca" value="">
-
-    <input type="hidden" name="sst" value="wr_num, wr_reply">
-
-    <input type="hidden" name="sod" value="">
-
-    <input type="hidden" name="page" value="1">
-
-    <input type="hidden" name="sw" value="">
-
-
-
-    <!-- 게시판 페이지 정보 및 버튼 시작 { -->
-
-    <div id="bo_btn_top">
-
-        <div id="bo_list_total">
-
-            <span>Total 1건</span>
-
-            1 페이지
-
-        </div>
-
-
-
-        <ul class="btn_bo_user">
-
-        	                        <li>
-
-            	<button type="button" class="btn_bo_sch btn_b01 btn" title="게시판 검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">게시판 검색</span></button>
-
-            </li>
-
-                    	        </ul>
-
-    </div>
-
-    <!-- } 게시판 페이지 정보 및 버튼 끝 -->
-
-        	
-
-    <div class="tbl_head01 tbl_wrap">
-
-        <table>
-
-        <caption>공지사항 목록</caption>
-
-        <thead>
-
-        <tr>
-
-                        <th scope="col" class="mo_hide">번호</th>
-
-            <th scope="col">제목</th>
-
-            <th scope="col" class="mo_hide">글쓴이</th>
-
-            <th scope="col" class="mo_hide"><a href="./sub_0401.html">조회 </a></th>
-
-                                    <th scope="col" class="mo_hide"><a href="./sub_0401.html">날짜  </a></th>
-
-        </tr>
-
-        </thead>
-
-        <tbody>
-
-                <tr class=" even">
-
-                        <td class="td_num2 mo_hide">
-
-            1            </td>
-
-
-
-            <td class="td_subject" style="padding-left:0px">
-
-                                <div class="bo_tit">
-
-                    <a href="./sub_0401.html">
-
-                                                                        안녕하세요. (주)신영에스씨엠입니다.                    </a>
-
-                                                        </div>
-
-            </td>
-
-            <td class="td_name sv_use mo_hide"><span class="sv_member">최고관리자</span></td>
-
-            <td class="td_num mo_hide">68</td>
-
-                                    <td class="td_datetime mo_hide">06-05</td>
-
-
-
-        </tr>
-
-                        </tbody>
-
-        </table>
-
-    </div>
-
-	<!-- 페이지 -->
-
-		<!-- 페이지 -->
-
-	
-
-       
-
-    </form>
-
-
-
-    <!-- 게시판 검색 시작 { -->
-
-    <div class="bo_sch_wrap">
-
-        <fieldset class="bo_sch">
-
-            <h3>검색</h3>
-
-            <form name="fsearch" method="get">
-
-            <input type="hidden" name="bo_table" value="0401">
-
-            <input type="hidden" name="sca" value="">
-
-            <input type="hidden" name="sop" value="and">
-
-            <label for="sfl" class="sound_only">검색대상</label>
-
-            <select name="sfl" id="sfl">
-
-                <option value="wr_subject" >제목</option><option value="wr_content" >내용</option><option value="wr_subject||wr_content" >제목+내용</option><option value="wr_name,1" >글쓴이</option><option value="wr_name,0" >글쓴이(코)</option>            </select>
-
-            <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
-
-            <div class="sch_bar">
-
-                <input type="text" name="stx" value="" required id="stx" class="sch_input" size="25" maxlength="20" placeholder=" 검색어를 입력해주세요">
-
-                <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
-
-            </div>
-
-            <button type="button" class="bo_sch_cls" title="닫기"><i class="fa fa-times" aria-hidden="true"></i><span class="sound_only">닫기</span></button>
-
-            </form>
-
-        </fieldset>
-
-        <div class="bo_sch_bg"></div>
-
-    </div>
-
-    <script>
-
-    jQuery(function($){
-
-        // 게시판 검색
-
-        $(".btn_bo_sch").on("click", function() {
-
-            $(".bo_sch_wrap").toggle();
-
-        })
-
-        $('.bo_sch_bg, .bo_sch_cls').click(function(){
-
-            $('.bo_sch_wrap').hide();
-
-        });
-
-    });
-
-    </script>
-
-    <!-- } 게시판 검색 끝 --> 
-
-</div>
-
-
-
-
-
-<!-- } 게시판 목록 끝 -->
-
-
-
-    </div>
-
-</div>
-        </main>
-    </div>
-
+new_footer = """
     <!-- Bottom CTA -->
     <div class="sub-contact-cta">
         <div class="container">
@@ -429,6 +236,96 @@
     </div>
 </footer>
 <script src="./js/redesign_motion.js"></script>
+"""
 
-</body>
-</html>
+sub_files = glob.glob('f:/website3/sub_*.html')
+
+for filepath in sub_files:
+    filename = os.path.basename(filepath)
+    page_id = filename.replace('sub_', '').replace('.html', '')
+    
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Get title
+    title_match = re.search(r'<title>(.*?)</title>', content)
+    page_title_tag = title_match.group(1) if title_match else "(주)신영에스씨엠"
+    
+    cat_title, sub_title, sub_items, cat_id = get_menu_info(page_id)
+    
+    # Extract actual content inside <div id="container"> 
+    # We want to skip <h2 id="container_title">
+    container_start = content.find('<div id="container">')
+    if container_start == -1:
+        continue # skip if malformed
+        
+    wrapper_end = content.rfind('<!-- } 콘텐츠 끝 -->')
+    if wrapper_end == -1:
+        wrapper_end = content.find('<hr>', container_start)
+    if wrapper_end == -1:
+        wrapper_end = content.find('<!-- 하단 시작 { -->', container_start)
+        
+    main_content_raw = content[container_start:wrapper_end]
+    
+    # Remove container_title
+    main_content_raw = re.sub(r'<h2 id="container_title">.*?</h2>', '', main_content_raw, flags=re.DOTALL)
+    # Remove the <div id="container"> opening tag and the closing </div>
+    main_content_raw = re.sub(r'^<div id="container">\s*', '', main_content_raw)
+    main_content_raw = main_content_raw.strip()
+    if main_content_raw.endswith('</div>'):
+        main_content_raw = main_content_raw[:-6].strip()
+
+    # Build sidebar
+    sidebar_items_html = ""
+    for k, v in sub_items.items():
+        active_class = "active" if k == page_id else ""
+        sidebar_items_html += f'<li class="{active_class}"><a href="./sub_{k}.html">{v}</a></li>\n'
+
+    # Build new layout
+    new_body = mega_header + f"""
+<div id="wrapper">
+    <div class="sub-hero fade-up">
+        <div class="sub-hero-bg"></div>
+        <div class="container sub-hero-content">
+            <h1 class="sub-hero-title">{cat_title}</h1>
+            <p class="sub-hero-desc">신뢰를 최우선으로 하는 안전진단 전문기관</p>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <span><i class="fas fa-home"></i> 홈</span>
+            <span><i class="fas fa-chevron-right"></i> {cat_title}</span>
+            <span class="current"><i class="fas fa-chevron-right"></i> {sub_title}</span>
+        </div>
+    </div>
+
+    <div class="container sub-layout">
+        <aside class="sub-sidebar fade-up">
+            <h2 class="sidebar-title">{cat_title}</h2>
+            <ul class="sidebar-menu">
+                {sidebar_items_html}
+            </ul>
+        </aside>
+
+        <main class="sub-content content-body fade-up">
+            {main_content_raw}
+        </main>
+    </div>
+""" + new_footer
+
+    # Replace head
+    head_start = content.find('<head>')
+    head_end = content.find('</head>')
+    new_head = content[:head_start+6] + '\n' + new_head_template.format(title=page_title_tag) + '\n' + content[head_end:]
+    
+    body_start = new_head.find('<body')
+    body_start = new_head.find('>', body_start) + 1
+    
+    final_content = new_head[:body_start] + '\n' + new_body + '\n</body>\n</html>'
+
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(final_content)
+
+print(f"Updated {len(sub_files)} sub files.")
+

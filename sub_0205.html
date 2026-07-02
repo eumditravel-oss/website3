@@ -22,9 +22,36 @@
         <i class="fas fa-times"></i>
     </button>
     <ul class="m-gnb">
-        <li><a href="./sub_0101.html">회사소개</a></li>
-        <li><a href="./sub_0201.html">업무분야</a></li>
-        <li><a href="./sub_0301.html">인증 및 장비현황</a></li>
+        <li>
+            <a href="./sub_0101.html" class="subOpen">회사소개 <i class="fa fa-chevron-down"></i></a>
+            <ul class="gnb_2dul_mo">
+                <li><a href="./sub_0101.html">인사말</a></li>
+                <li><a href="./sub_0102.html">연혁</a></li>
+                <li><a href="./sub_0103.html">주요실적</a></li>
+                <li><a href="./sub_0104.html">오시는길</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="./sub_0201.html" class="subOpen">업무분야 <i class="fa fa-chevron-down"></i></a>
+            <ul class="gnb_2dul_mo">
+                <li><a href="./sub_0201.html">안전진단</a></li>
+                <li><a href="./sub_0202.html">안전점검</a></li>
+                <li><a href="./sub_0203.html">건축물관리점검</a></li>
+                <li><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
+                <li><a href="./sub_0205.html">내진성능평가</a></li>
+                <li><a href="./sub_0206.html">법원감정</a></li>
+                <li><a href="./sub_0207.html">인접건축물 사전조사</a></li>
+                <li><a href="./sub_0208.html">구조설계/감리</a></li>
+                <li><a href="./sub_0209.html">시설물보수/보강공사</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="./sub_0301.html" class="subOpen">인증 및 장비현황 <i class="fa fa-chevron-down"></i></a>
+            <ul class="gnb_2dul_mo">
+                <li><a href="./sub_0301.html">인증현황</a></li>
+                <li><a href="./sub_0302.html">장비보유현황</a></li>
+            </ul>
+        </li>
         <li><a href="./sub_0401.html">고객센터</a></li>
         <li><a href="./sub_0402.html">무료견적문의</a></li>
     </ul>
@@ -36,254 +63,114 @@
         <a href="./index.html" class="logo">
             <img src="./img/logo.png" alt="(주)신영에스씨엠">
         </a>
-        <ul class="gnb">
-            <li><a href="./sub_0101.html">회사소개</a></li>
-            <li><a href="./sub_0201.html">업무분야</a></li>
-            <li><a href="./sub_0301.html">인증 및 장비현황</a></li>
-            <li><a href="./sub_0401.html">고객센터</a></li>
-            <li><a href="./sub_0402.html">무료견적문의</a></li>
-        </ul>
+        <nav class="gnb-wrap">
+            <ul class="gnb">
+                <li data-target="menu-01"><a href="./sub_0101.html">회사소개</a></li>
+                <li data-target="menu-02"><a href="./sub_0201.html">업무분야</a></li>
+                <li data-target="menu-03"><a href="./sub_0301.html">인증 및 장비현황</a></li>
+                <li data-target="menu-04"><a href="./sub_0401.html">고객센터</a></li>
+                <li data-target="menu-05"><a href="./sub_0402.html">무료견적문의</a></li>
+            </ul>
+        </nav>
         <button class="btn-mobile-menu" id="btn-menu-open" aria-label="메뉴 열기">
             <i class="fas fa-bars"></i>
         </button>
     </div>
-</header>
 
-<div id="wrapper" style="margin-top: 80px;">
-
-	        <div class="subtop">
-            <div class="txt">
-                <h2>업무분야</h2>
-                <h3>내진성능평가</h3>
+    <!-- Megamenu Panel -->
+    <div class="mega-menu-panel" aria-hidden="true">
+        <div class="container mega-container">
+            <div class="mega-cols">
+                <div class="mega-col" id="menu-01">
+                    <h3 class="mega-title"><a href="./sub_0101.html">회사소개</a></h3>
+                    <ul class="mega-list">
+                        <li><a href="./sub_0101.html">인사말</a></li>
+                        <li><a href="./sub_0102.html">연혁</a></li>
+                        <li><a href="./sub_0103.html">주요실적</a></li>
+                        <li><a href="./sub_0104.html">오시는길</a></li>
+                    </ul>
+                </div>
+                <div class="mega-col" id="menu-02">
+                    <h3 class="mega-title"><a href="./sub_0201.html">업무분야</a></h3>
+                    <ul class="mega-list">
+                        <li><a href="./sub_0201.html">안전진단</a></li>
+                        <li><a href="./sub_0202.html">안전점검</a></li>
+                        <li><a href="./sub_0203.html">건축물관리점검</a></li>
+                        <li><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
+                        <li><a href="./sub_0205.html">내진성능평가</a></li>
+                        <li><a href="./sub_0206.html">법원감정</a></li>
+                        <li><a href="./sub_0207.html">인접건축물 사전조사</a></li>
+                        <li><a href="./sub_0208.html">구조설계/감리</a></li>
+                        <li><a href="./sub_0209.html">시설물보수/보강공사</a></li>
+                    </ul>
+                </div>
+                <div class="mega-col" id="menu-03">
+                    <h3 class="mega-title"><a href="./sub_0301.html">인증 및 장비현황</a></h3>
+                    <ul class="mega-list">
+                        <li><a href="./sub_0301.html">인증현황</a></li>
+                        <li><a href="./sub_0302.html">장비보유현황</a></li>
+                    </ul>
+                </div>
+                <div class="mega-col" id="menu-04">
+                    <h3 class="mega-title"><a href="./sub_0401.html">고객센터</a></h3>
+                    <ul class="mega-list">
+                        <li><a href="./sub_0401.html">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="mega-col" id="menu-05">
+                    <h3 class="mega-title"><a href="./sub_0402.html">무료견적문의</a></h3>
+                    <ul class="mega-list">
+                        <li><a href="./sub_0402.html">견적문의</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mega-cta">
+                <p>전문가의 빠르고 정확한 진단</p>
+                <a href="./sub_0402.html" class="btn btn-point"><i class="fas fa-file-invoice"></i> 무료 견적 문의</a>
+                <div class="mega-phone" style="margin-top:15px;"><i class="fas fa-phone"></i> 02-484-4700</div>
             </div>
         </div>
-    
-    <div class="container_wrap">
-                    <div id="aside" class="mo_hide">
-                
-<!-- 메뉴 시작 { -->
-<link rel="stylesheet" href="./skin/groupmenu/adffix/css/style.css">
+    </div>
+</header>
+<div class="mega-overlay"></div>
 
+<div id="wrapper">
+    <div class="sub-hero fade-up">
+        <div class="sub-hero-bg"></div>
+        <div class="container sub-hero-content">
+            <h1 class="sub-hero-title">업무분야</h1>
+            <p class="sub-hero-desc">신뢰를 최우선으로 하는 안전진단 전문기관</p>
+        </div>
+    </div>
 
-<section id="groupmenu" style="width:195px;">
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
-        <tr height="70">
-            <td class="nanum-gb" valign="top" colspan='3' style="color:#525252; font-size:25px; line-height:80px; border-bottom:1px solid #d6d6d6;border-top:10px solid #0033cc;text-align:center;">
-                <!--  그룹 네임 시작 -->
-                <b>
-                    업무분야                </b>
-                <!-- 그룹 네임 끝 -->
-            </td>
-        </tr>
+    <div class="breadcrumb">
+        <div class="container">
+            <span><i class="fas fa-home"></i> 홈</span>
+            <span><i class="fas fa-chevron-right"></i> 업무분야</span>
+            <span class="current"><i class="fas fa-chevron-right"></i> 내진성능평가</span>
+        </div>
+    </div>
 
+    <div class="container sub-layout">
+        <aside class="sub-sidebar fade-up">
+            <h2 class="sidebar-title">업무분야</h2>
+            <ul class="sidebar-menu">
+                <li class=""><a href="./sub_0201.html">안전진단</a></li>
+<li class=""><a href="./sub_0202.html">안전점검</a></li>
+<li class=""><a href="./sub_0203.html">건축물관리점검</a></li>
+<li class=""><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
+<li class="active"><a href="./sub_0205.html">내진성능평가</a></li>
+<li class=""><a href="./sub_0206.html">법원감정</a></li>
+<li class=""><a href="./sub_0207.html">인접건축물 사전조사</a></li>
+<li class=""><a href="./sub_0208.html">구조설계/감리</a></li>
+<li class=""><a href="./sub_0209.html">시설물보수/보강공사</a></li>
 
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li>
-                            <!-- <a href="./sub_0201.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >안전진단</a> -->
-                                                        <a href="./sub_0201.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >안전진단</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
+            </ul>
+        </aside>
 
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li>
-                            <!-- <a href="./sub_0202.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >안전점검</a> -->
-                                                        <a href="./sub_0202.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >안전점검</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li>
-                            <!-- <a href="./sub_0203.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >건축물관리점검</a> -->
-                                                        <a href="./sub_0203.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >건축물관리점검</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li>
-                            <!-- <a href="./sub_0204.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >건설공사 정기안전점검</a> -->
-                                                        <a href="./sub_0204.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >건설공사 정기안전점검</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li class="on">
-                            <!-- <a href="./sub_0205.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >내진성능평가</a> -->
-                                                        <a href="./sub_0205.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >내진성능평가</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li>
-                            <!-- <a href="./sub_0206.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >법원감정</a> -->
-                                                        <a href="./sub_0206.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >법원감정</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li>
-                            <!-- <a href="./sub_0207.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >인접건축물 사전조사</a> -->
-                                                        <a href="./sub_0207.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >인접건축물 사전조사</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li>
-                            <!-- <a href="./sub_0208.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >구조설계/감리</a> -->
-                                                        <a href="./sub_0208.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >구조설계/감리</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-
-                <tr>
-            <td>
-                <div id="nav1">
-                    <ul>
-                        <li>
-                            <!-- <a href="./sub_0209.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >시설물보수/보강공사</a> -->
-                                                        <a href="./sub_0209.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >시설물보수/보강공사</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-
-        
-    </table>
-</section>
-<!-- } 메뉴 끝 -->
-
-<style>
-    #nav1 {
-        text-indent: 10px;
-    }
-
-</style>
-            </div>
-
-            <div id="aside" class="pc_hide">
-                
-<!-- 메뉴 시작 { -->
-<link rel="stylesheet" href="./skin/groupmenu/custom/css/style.css">
-<section id="groupmenu" style="width:100%;">
-	<ul>
-            	
-                <li>
-                        <!-- <a href="./sub_0201.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >안전진단</a> -->
-                                                <a href="./sub_0201.html" class="nanum-g">안전진단</a>
-                    </li>
-	
-                <li>
-                        <!-- <a href="./sub_0202.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >안전점검</a> -->
-                                                <a href="./sub_0202.html" class="nanum-g">안전점검</a>
-                    </li>
-	
-                <li>
-                        <!-- <a href="./sub_0203.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >건축물관리점검</a> -->
-                                                <a href="./sub_0203.html" class="nanum-g">건축물관리점검</a>
-                    </li>
-	
-                <li>
-                        <!-- <a href="./sub_0204.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >건설공사 정기안전점검</a> -->
-                                                <a href="./sub_0204.html" class="nanum-g">건설공사 정기안전점검</a>
-                    </li>
-	
-                <li class="on">
-                        <!-- <a href="./sub_0205.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >내진성능평가</a> -->
-                                                <a href="./sub_0205.html" class="nanum-g">내진성능평가</a>
-                    </li>
-	
-                <li>
-                        <!-- <a href="./sub_0206.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >법원감정</a> -->
-                                                <a href="./sub_0206.html" class="nanum-g">법원감정</a>
-                    </li>
-	
-                <li>
-                        <!-- <a href="./sub_0207.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >인접건축물 사전조사</a> -->
-                                                <a href="./sub_0207.html" class="nanum-g">인접건축물 사전조사</a>
-                    </li>
-	
-                <li>
-                        <!-- <a href="./sub_0208.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >구조설계/감리</a> -->
-                                                <a href="./sub_0208.html" class="nanum-g">구조설계/감리</a>
-                    </li>
-	
-                <li>
-                        <!-- <a href="./sub_0209.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >시설물보수/보강공사</a> -->
-                                                <a href="./sub_0209.html" class="nanum-g">시설물보수/보강공사</a>
-                    </li>
-	</ul>
-</section>
-<!-- } 메뉴 끝 -->
-
-<style>
-
-
-@media screen and (max-width:1200px){
-    #groupmenu{box-sizing: border-box;border-bottom: 1px solid #bbb;}
-    #groupmenu ul{display: flex;flex-direction: row;justify-content: flex-start;flex-wrap: wrap;max-width: 1200px;margin: 0 auto;}
-    #groupmenu ul li{width: calc(100% / 9);}
-    #groupmenu ul li a{height: 60px;line-height: 60px;text-align: center;font-size: 16px;display: block;}
-    #groupmenu ul li.on a{background:#0033cc;color: #fff;}
-
-	#groupmenu ul{}
-	#groupmenu ul li{width: auto;}
-	#groupmenu ul li a{font-size: 14px;line-height: 40px;height: 40px;letter-spacing: -0.2px;padding: 0 15px;word-break: keep-all;width: max-content;}
-}
-</style>            </div>
-        
-   
-        <div id="container">
-            <h2 id="container_title">내진성능평가</h2>
-
-
-<div class="sub_wrap">
+        <main class="sub-content content-body fade-up">
+            <div class="sub_wrap">
 
     <div class="sub_0201">
 
@@ -402,13 +289,27 @@
     </div>
 
 </div>
+        </main>
+    </div>
 
-</div>
-<!-- } 콘텐츠 끝 -->
+    <!-- Bottom CTA -->
+    <div class="sub-contact-cta">
+        <div class="container">
+            <div class="cta-inner fade-up">
+                <h2>고객 만족을 위한 빠른 문의</h2>
+                <div class="cta-actions">
+                    <a href="tel:02-484-4700" class="btn btn-outline-white"><i class="fas fa-phone"></i> 02-484-4700</a>
+                    <a href="mailto:scm4700@naver.com" class="btn btn-outline-white"><i class="fas fa-envelope"></i> scm4700@naver.com</a>
+                    <a href="./sub_0402.html" class="btn btn-point"><i class="fas fa-file-invoice"></i> 온라인 견적 양식 작성</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+</div> <!-- End wrapper -->
 
 <!-- Footer -->
-<footer id="footer" style="margin-top: 80px;">
+<footer id="footer">
     <div class="container">
         <div class="footer-inner">
             <div class="f-info">
@@ -435,5 +336,3 @@
 
 </body>
 </html>
-
-<!-- 사용스킨 : theme/html -->

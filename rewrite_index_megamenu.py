@@ -1,5 +1,6 @@
+import os
 
-<!-- Mobile Overlay -->
+mega_header = """<!-- Mobile Overlay -->
 <div class="m-overlay" id="m-overlay"></div>
 
 <!-- Mobile Navigation -->
@@ -119,103 +120,17 @@
         </div>
     </div>
 </header>
-<div class="mega-overlay"></div>
+<div class="mega-overlay"></div>"""
 
-<div id="wrapper">
-    <div class="sub-hero fade-up">
-        <div class="sub-hero-bg"></div>
-        <div class="container sub-hero-content">
-            <h1 class="sub-hero-title">메뉴</h1>
-            <p class="sub-hero-desc">신뢰를 최우선으로 하는 안전진단 전문기관</p>
-        </div>
-    </div>
+with open('f:/website3/index.html', 'r', encoding='utf-8') as f:
+    content = f.read()
 
-    <div class="breadcrumb">
-        <div class="container">
-            <span><i class="fas fa-home"></i> 홈</span>
-            <span><i class="fas fa-chevron-right"></i> 메뉴</span>
-            <span class="current"><i class="fas fa-chevron-right"></i> 페이지</span>
-        </div>
-    </div>
+# Replace from <!-- Mobile Overlay --> to </header>
+start_idx = content.find('<!-- Mobile Overlay -->')
+end_idx = content.find('</header>') + 9
 
-    <div class="container sub-layout">
-        <aside class="sub-sidebar fade-up">
-            <h2 class="sidebar-title">메뉴</h2>
-            <ul class="sidebar-menu">
-                
-            </ul>
-        </aside>
-
-        <main class="sub-content content-body fade-up">
-            <div class="sub_wrap">
-    <div class="sub_0101">
-        <div class="img">
-            <img src="./img/0101_1.jpg" alt="">
-        </div>
-        <div class="txt">
-            <h1>신뢰를 최우선으로 하는 안전진단 전문기관</h1>
-            <h2>(주)신영에스씨엠</h2>
-            <p>
-            저희는 최신 기술과 엄격한 안전진단 기준을 바탕으로,<br class="mo_hide"> 다양한 분야의 안전진단 서비스를 제공합니다.
-            <br><br>
-            고도화된 진단 장비와 정밀한 데이터 분석을 통해 구조적 결함이나<br class="mo_hide"> 위험 요소를 신속하게 파악하고 
-            높은 정확도를 자랑하며, 예방적인 안전관리로 리스크를 최소화하고 사고를 사전에 방지합니다.
-            <br><br>
-            고객님께 최적의 솔루션을 제시하여 우리나라의 안전,<br class="mo_hide"> 여러분의 안전을 보장할 수 있도록
-            앞장서겠습니다.
-            </p>
-        </div>
-    </div>
-</div>
-
-
-    </div>
-
-</div>
-        </main>
-    </div>
-
-    <!-- Bottom CTA -->
-    <div class="sub-contact-cta">
-        <div class="container">
-            <div class="cta-inner fade-up">
-                <h2>고객 만족을 위한 빠른 문의</h2>
-                <div class="cta-actions">
-                    <a href="tel:02-484-4700" class="btn btn-outline-white"><i class="fas fa-phone"></i> 02-484-4700</a>
-                    <a href="mailto:scm4700@naver.com" class="btn btn-outline-white"><i class="fas fa-envelope"></i> scm4700@naver.com</a>
-                    <a href="./sub_0402.html" class="btn btn-point"><i class="fas fa-file-invoice"></i> 온라인 견적 양식 작성</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div> <!-- End wrapper -->
-
-<!-- Footer -->
-<footer id="footer">
-    <div class="container">
-        <div class="footer-inner">
-            <div class="f-info">
-                <div class="f-logo">
-                    <img src="./img/logo.png" alt="(주)신영에스씨엠">
-                </div>
-                <p><strong>대표 :</strong> 이관배 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
-                <p><strong>서울사무실 :</strong> 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호</p>
-                <p><strong>광명사무실 :</strong> 경기도 광명시 소하로 190, 광명G타워 B동 1314호</p>
-                <p><strong>TEL :</strong> 02-484-4700 &nbsp;|&nbsp; <strong>FAX :</strong> 02-484-4750 &nbsp;|&nbsp; <strong>E-mail :</strong> scm4700@naver.com</p>
-            </div>
-            <div style="text-align: right; align-self: flex-end;">
-                <a href="#header" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color:#fff!important;">
-                    <i class="fas fa-arrow-up"></i> 맨 위로
-                </a>
-            </div>
-        </div>
-        <div class="f-copy">
-            Copyright &copy; (주)신영에스씨엠. All rights reserved.
-        </div>
-    </div>
-</footer>
-<script src="./js/redesign_motion.js"></script>
-
-</body>
-</html>
+if start_idx != -1 and end_idx != -1:
+    content = content[:start_idx] + mega_header + content[end_idx:]
+    with open('f:/website3/index.html', 'w', encoding='utf-8') as f:
+        f.write(content)
+    print("Updated index.html")
