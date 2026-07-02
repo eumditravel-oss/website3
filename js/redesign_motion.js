@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: Unobserve after fading in to keep it visible
-                observer.unobserve(entry.target);
+            } else {
+                entry.target.classList.remove('visible');
             }
         });
     }, observerOptions);
@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
                 
                 window.requestAnimationFrame(step);
-                observer.unobserve(target); // Only animate once
+            } else {
+                // Reset when scrolling out of view
+                entry.target.innerText = "0";
             }
         });
     }, observerOptions);
