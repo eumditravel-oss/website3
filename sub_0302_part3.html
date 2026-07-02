@@ -1,55 +1,29 @@
-<!-- 하단 시작 { -->
-<div id="ft">
 
-    <div id="ft_wr">
-        <div id="ft_company" class="ft_cnt">
-	        <p class="ft_info">
-	        	<b>(주)신영에스씨엠</b><br>
-				대표 : 이관배 | 사업자등록번호 : 212-81-91777 |<br class="pc_hide"> E-mail : scm4700@naver.com<br>
-                서울사무실 : 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호 | TEL : 02-484-4700 |<br class="pc_hide"> FAX : 02-484-4750<br>
-                광명사무실 : 경기도 광명시 소하로 190, 광명G타워 B동 1314호
-				<a href="http://sinyoungscm.com/adm"><img src="./theme/basic/img/admin.gif" width="38px" height="12px" alt="admin"></a>
-			</p>
-	    </div>
-	</div>
-        <div id="ft_copy">Copyright &copy; <b>(주)신영에스씨엠.</b> All rights reserved.</div>
-    
-    
-    <button type="button" id="top_btn">
-    	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
-    </button>
-    <script>
-    $(function() {
-        $("#top_btn").on("click", function() {
-            $("html, body").animate({scrollTop:0}, '500');
-            return false;
-        });
-    });
-    </script>
-</div>
-
-<!-- MR Script Ver 2.0 -->
-
-<script async="true" src="//log1.toup.net/mirae_log_chat_common.js?adkey=plvbh" charset="UTF-8"></script>
-
-<!-- MR Script END Ver 2.0 -->
-<!-- } 하단 끝 -->
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-
-
-<script>
-$(function() {
-    // 폰트 리사이즈 쿠키있으면 실행
-    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
-});
-</script>
-
-
-
+<!-- Footer -->
+<footer id="footer" style="margin-top: 80px;">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="f-info">
+                <div class="f-logo">
+                    <img src="./img/logo.png" alt="(주)신영에스씨엠">
+                </div>
+                <p><strong>대표 :</strong> 이관배 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
+                <p><strong>서울사무실 :</strong> 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호</p>
+                <p><strong>광명사무실 :</strong> 경기도 광명시 소하로 190, 광명G타워 B동 1314호</p>
+                <p><strong>TEL :</strong> 02-484-4700 &nbsp;|&nbsp; <strong>FAX :</strong> 02-484-4750 &nbsp;|&nbsp; <strong>E-mail :</strong> scm4700@naver.com</p>
+            </div>
+            <div style="text-align: right; align-self: flex-end;">
+                <a href="#header" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color:#fff!important;">
+                    <i class="fas fa-arrow-up"></i> 맨 위로
+                </a>
+            </div>
+        </div>
+        <div class="f-copy">
+            Copyright &copy; (주)신영에스씨엠. All rights reserved.
+        </div>
+    </div>
+</footer>
+<script src="./js/redesign_motion.js"></script>
 
 </body>
 </html>
