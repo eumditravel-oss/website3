@@ -3,216 +3,273 @@
 :root {
     --color-primary: #0033cc;
     --color-primary-dark: #002288;
-    --color-text-main: #1a1a1a;
+    --color-text-main: #111111;
     --color-text-muted: #555555;
-    --color-bg-light: #f8f9fa;
+    --color-bg-light: #f4f7f9;
     --color-border: #e0e0e0;
     --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     
-    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 10px 30px rgba(0, 51, 204, 0.15);
     
-    --transition-fast: 0.15s cubic-bezier(0.22, 1, 0.36, 1);
-    --transition-normal: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-    --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-fast: 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-normal: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Base & Accessibility */
+/* Base Aggressive Override */
 body, input, button, textarea, select {
-    font-family: var(--font-main);
-    font-size: 17px;
-    line-height: 1.6;
-    color: var(--color-text-main);
+    font-family: var(--font-main) !important;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    color: var(--color-text-main) !important;
+    letter-spacing: -0.02em;
 }
 
-@media (min-width: 768px) {
-    body, input, button, textarea, select {
-        font-size: 18px;
-    }
+#container {
+    background-color: #fafbfc;
+    padding: 40px !important;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
 }
 
 a, button {
     cursor: pointer;
-    transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+    transition: all var(--transition-fast) !important;
 }
 
-/* Touch Target Minimum (44x44) for accessibility on links that look like buttons */
+/* Touch Target Minimum (44x44) */
 .btn-cta, .btn-link, .bo_tit a, .sch_btn, .btn_menu_open, .gnb_menu_btn, .gnb_close_btn, .btn_menu_close, .btn_menu_op {
     min-width: 44px;
     min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Focus Ring for Keyboard Navigation */
+/* Focus Ring */
 *:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
+    outline: 3px solid var(--color-primary) !important;
+    outline-offset: 3px !important;
 }
 
 /* CTA Buttons */
 .cta-wrap {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     flex-wrap: wrap;
-    margin: 24px 0;
+    margin: 30px 0 40px 0;
+    justify-content: flex-end;
 }
 
 .btn-cta {
-    background-color: var(--color-primary);
-    color: #ffffff;
-    font-weight: 600;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: var(--shadow-soft);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    background-color: var(--color-primary) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    padding: 16px 32px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 16px rgba(0,51,204,0.2) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
 }
 
 .btn-cta:hover, .btn-cta:focus {
-    background-color: var(--color-primary-dark);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
-    color: #ffffff;
+    background-color: var(--color-primary-dark) !important;
+    box-shadow: 0 12px 24px rgba(0,51,204,0.3) !important;
+    transform: translateY(-4px) !important;
+    color: #ffffff !important;
 }
 
 .btn-cta.outline {
-    background-color: transparent;
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    background-color: #ffffff !important;
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary) !important;
+    box-shadow: none !important;
 }
 
 .btn-cta.outline:hover, .btn-cta.outline:focus {
-    background-color: rgba(0, 51, 204, 0.05);
+    background-color: #f0f4ff !important;
 }
 
-/* Board List Redesign */
-.tbl_head01.tbl_wrap {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    margin-top: 24px;
+/* Board List Completely Revamped (Desktop) */
+#bo_list .tbl_head01.tbl_wrap {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
-.tbl_head01 table {
+#bo_list .tbl_head01 table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 12px !important;
+}
+
+#bo_list .tbl_head01 th {
+    background-color: transparent !important;
+    color: var(--color-text-muted) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 16px !important;
+    border: none !important;
+    border-bottom: 2px solid #ddd !important;
+}
+
+#bo_list .tbl_head01 td {
+    padding: 24px 16px !important;
+    border: none !important;
+    background-color: #ffffff !important;
+    color: var(--color-text-main) !important;
+    font-size: 18px !important;
+    transition: all var(--transition-fast) !important;
+    vertical-align: middle !important;
+}
+
+#bo_list .tbl_head01 tr {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+    border-radius: 12px !important;
+    transition: all var(--transition-fast) !important;
+}
+
+/* Border radius for first and last td to make tr rounded */
+#bo_list .tbl_head01 tr td:first-child {
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+}
+#bo_list .tbl_head01 tr td:last-child {
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+}
+
+#bo_list .tbl_head01 tbody tr:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: var(--shadow-hover) !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Board Titles */
+#bo_list .tbl_head01 .td_subject {
+    font-weight: 700 !important;
+    font-size: 20px !important;
+}
+
+.bo_tit a {
+    color: var(--color-text-main) !important;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.bo_tit a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width var(--transition-fast);
+}
+
+.bo_tit a:hover:after {
     width: 100%;
-    border-collapse: collapse;
 }
 
-.tbl_head01 th {
-    background-color: var(--color-bg-light);
-    color: var(--color-text-muted);
-    font-weight: 600;
-    padding: 16px;
-    border-bottom: 2px solid var(--color-border);
-}
-
-.tbl_head01 td {
-    padding: 16px;
-    border-bottom: 1px solid var(--color-border);
-    transition: background-color var(--transition-fast);
-}
-
-.tbl_head01 tbody tr:hover td {
-    background-color: #fbfcff;
+.bo_tit a:hover {
+    color: var(--color-primary) !important;
 }
 
 /* Badges */
 .new_icon {
-    display: inline-block;
-    background-color: #ff3b30;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    border-radius: 50%;
-    margin-left: 6px;
-    vertical-align: middle;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #ff3b30 !important;
+    color: #fff !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    margin-left: 8px !important;
+    vertical-align: middle !important;
+    box-shadow: 0 2px 4px rgba(255,59,48,0.3) !important;
 }
 
 .cnt_cmt {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 2px 6px;
-    border-radius: 12px;
-    margin-left: 6px;
-    vertical-align: middle;
+    display: inline-flex !important;
+    background-color: #f0f4ff !important;
+    color: var(--color-primary) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    margin-left: 8px !important;
+    vertical-align: middle !important;
+    border: 1px solid rgba(0,51,204,0.1) !important;
 }
 
-/* Mobile Card View */
+/* Mobile Card View (Extremely clear) */
 @media (max-width: 767px) {
-    .tbl_head01.tbl_wrap {
-        background: transparent;
-        box-shadow: none;
+    #container {
+        padding: 20px !important;
     }
-    .tbl_head01 table, .tbl_head01 thead, .tbl_head01 tbody, .tbl_head01 tr, .tbl_head01 td {
-        display: block;
-        width: 100%;
+    
+    .cta-wrap {
+        flex-direction: column;
+        align-items: stretch;
     }
-    .tbl_head01 thead {
-        display: none;
+    
+    .btn-cta {
+        justify-content: center !important;
     }
-    .tbl_head01 tbody tr {
-        background: #fff;
-        margin-bottom: 16px;
-        border-radius: 12px;
-        box-shadow: var(--shadow-soft);
-        padding: 16px;
-        border: 1px solid var(--color-border);
-        transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+    #bo_list .tbl_head01 table, 
+    #bo_list .tbl_head01 thead, 
+    #bo_list .tbl_head01 tbody, 
+    #bo_list .tbl_head01 tr, 
+    #bo_list .tbl_head01 td {
+        display: block !important;
+        width: 100% !important;
     }
-    .tbl_head01 tbody tr:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-hover);
+    
+    #bo_list .tbl_head01 thead {
+        display: none !important;
     }
-    .tbl_head01 td {
-        border-bottom: none;
-        padding: 4px 0;
+    
+    #bo_list .tbl_head01 tr {
+        margin-bottom: 20px !important;
+        padding: 24px !important;
+        background: #fff !important;
+        border: 1px solid var(--color-border) !important;
     }
-    .tbl_head01 .td_subject {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 8px;
+    
+    #bo_list .tbl_head01 td {
+        padding: 4px 0 !important;
+        border-radius: 0 !important;
     }
-    .tbl_head01 .td_name, .tbl_head01 .td_datetime, .tbl_head01 .td_num {
-        display: inline-block;
-        font-size: 14px;
-        color: var(--color-text-muted);
-        margin-right: 12px;
+    
+    #bo_list .tbl_head01 .td_subject {
+        font-size: 22px !important;
+        margin-bottom: 12px !important;
+        display: block !important;
     }
-    /* Show hidden elements in mobile card context if necessary */
-    .mo_hide_in_table {
-        display: none;
+    
+    #bo_list .tbl_head01 .td_name, 
+    #bo_list .tbl_head01 .td_datetime, 
+    #bo_list .tbl_head01 .td_num {
+        display: inline-block !important;
+        font-size: 15px !important;
+        color: var(--color-text-muted) !important;
+        margin-right: 12px !important;
     }
 }
 
-/* Links hover effect (Underline) */
-.bo_tit a {
-    position: relative;
-    text-decoration: none;
-    display: inline-block;
-    color: var(--color-text-main);
-    transition: color var(--transition-fast);
-}
-.bo_tit a:hover {
-    color: var(--color-primary);
-}
-
-/* --- Motions (Scroll & Staggered) --- */
+/* --- Motions --- */
 .motion-fade-up {
     opacity: 0;
-    transform: translateY(16px);
-    transition: opacity var(--transition-normal), transform var(--transition-normal);
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .motion-fade-up.is-visible {
@@ -220,15 +277,8 @@ a, button {
     transform: translateY(0);
 }
 
-/* Stagger delays for initial load items */
-.stagger-1 { transition-delay: 0.08s; }
-.stagger-2 { transition-delay: 0.16s; }
-.stagger-3 { transition-delay: 0.24s; }
-.stagger-4 { transition-delay: 0.32s; }
-
-/* Reduced Motion preference */
 @media (prefers-reduced-motion: reduce) {
-    *, ::before, ::after {
+    * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
