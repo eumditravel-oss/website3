@@ -59,6 +59,35 @@ a {
 img { max-width: 100%; height: auto; display: block; }
 
 /* Utilities */
+.sound_only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Board specific resets */
+#bo_btn_top .btn_bo_user .btn {
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+}
+#bo_btn_top .btn_bo_user .btn:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-main);
+}
+#bo_list_total {
+    font-weight: 500;
+}
+
 .container {
     width: 100%;
     max-width: 1300px;
