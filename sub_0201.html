@@ -1,228 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <title>안전진단 1 페이지 | (주)신영에스씨엠</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="./css/redesign_main.css">
-<link rel="stylesheet" href="./sub/sub.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="./css/redesign_main.css" rel="stylesheet"/>
+<link href="./sub/sub.css" rel="stylesheet"/>
 <!-- Subpage specific css/js for forms if needed -->
 <script src="./js/jquery-1.12.4.min.js"></script>
-
 </head>
 <body>
 <!-- Mobile Overlay -->
 <div class="m-overlay" id="m-overlay"></div>
-
 <!-- Mobile Navigation -->
 <nav class="mobile-nav" id="mobile-nav">
-    <button class="btn-close-menu" id="btn-menu-close" aria-label="메뉴 닫기">
-        <i class="fas fa-times"></i>
-    </button>
-    <ul class="m-gnb">
-        <li>
-            <a href="./sub_0101.html" class="subOpen">회사소개 <i class="fa fa-chevron-down"></i></a>
-            <ul class="gnb_2dul_mo">
-                <li><a href="./sub_0101.html">인사말</a></li>
-                <li><a href="./sub_0102.html">연혁</a></li>
-                <li><a href="./sub_0103.html">주요실적</a></li>
-                <li><a href="./sub_0104.html">오시는길</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="./sub_0201.html" class="subOpen">업무분야 <i class="fa fa-chevron-down"></i></a>
-            <ul class="gnb_2dul_mo">
-                <li><a href="./sub_0201.html">안전진단</a></li>
-                <li><a href="./sub_0202.html">안전점검</a></li>
-                <li><a href="./sub_0203.html">건축물관리점검</a></li>
-                <li><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
-                <li><a href="./sub_0205.html">내진성능평가</a></li>
-                <li><a href="./sub_0206.html">법원감정</a></li>
-                <li><a href="./sub_0207.html">인접건축물 사전조사</a></li>
-                <li><a href="./sub_0208.html">구조설계/감리</a></li>
-                <li><a href="./sub_0209.html">시설물보수/보강공사</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="./sub_0301.html" class="subOpen">인증 및 장비현황 <i class="fa fa-chevron-down"></i></a>
-            <ul class="gnb_2dul_mo">
-                <li><a href="./sub_0301.html">인증현황</a></li>
-                <li><a href="./sub_0302.html">장비보유현황</a></li>
-            </ul>
-        </li>
-        <li><a href="./sub_0401.html">고객센터</a></li>
-        <li><a href="./sub_0402.html">무료견적문의</a></li>
-    </ul>
+<button aria-label="메뉴 닫기" class="btn-close-menu" id="btn-menu-close">
+<i class="fas fa-times"></i>
+</button>
+<ul class="m-gnb">
+<li>
+<a class="subOpen" href="./sub_0101.html">회사소개 <i class="fa fa-chevron-down"></i></a>
+<ul class="gnb_2dul_mo">
+<li><a href="./sub_0101.html">인사말</a></li>
+<li><a href="./sub_0102.html">연혁</a></li>
+<li><a href="./sub_0103.html">주요실적</a></li>
+<li><a href="./sub_0104.html">오시는길</a></li>
+</ul>
+</li>
+<li>
+<a class="subOpen" href="./sub_0201.html">업무분야 <i class="fa fa-chevron-down"></i></a>
+<ul class="gnb_2dul_mo">
+<li><a href="./sub_0201.html">안전진단</a></li>
+<li><a href="./sub_0202.html">안전점검</a></li>
+<li><a href="./sub_0203.html">건축물관리점검</a></li>
+<li><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
+<li><a href="./sub_0205.html">내진성능평가</a></li>
+<li><a href="./sub_0206.html">법원감정</a></li>
+<li><a href="./sub_0207.html">인접건축물 사전조사</a></li>
+<li><a href="./sub_0208.html">구조설계/감리</a></li>
+<li><a href="./sub_0209.html">시설물보수/보강공사</a></li>
+</ul>
+</li>
+<li>
+<a class="subOpen" href="./sub_0301.html">인증 및 장비현황 <i class="fa fa-chevron-down"></i></a>
+<ul class="gnb_2dul_mo">
+<li><a href="./sub_0301.html">인증현황</a></li>
+<li><a href="./sub_0302.html">장비보유현황</a></li>
+</ul>
+</li>
+<li><a href="./sub_0401.html">고객센터</a></li>
+<li><a href="./sub_0402.html">무료견적문의</a></li>
+</ul>
 </nav>
-
 <!-- Header -->
 <header id="header">
-    <div class="container header-inner">
-        <a href="./index.html" class="logo">
-            <img src="./img/logo.png" alt="(주)신영에스씨엠">
-        </a>
-        <nav class="gnb-wrap">
-            <ul class="gnb">
-                <li data-target="menu-01"><a href="./sub_0101.html">회사소개</a></li>
-                <li data-target="menu-02"><a href="./sub_0201.html">업무분야</a></li>
-                <li data-target="menu-03"><a href="./sub_0301.html">인증 및 장비현황</a></li>
-                <li data-target="menu-04"><a href="./sub_0401.html">고객센터</a></li>
-                <li data-target="menu-05"><a href="./sub_0402.html">무료견적문의</a></li>
-            </ul>
-        </nav>
-        <button class="btn-mobile-menu" id="btn-menu-open" aria-label="메뉴 열기">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-
-    <!-- Megamenu Panel -->
-    <div class="mega-menu-panel" aria-hidden="true">
-        <div class="container mega-container">
-            <div class="mega-cols">
-                <div class="mega-col" id="menu-01">
-                    <h3 class="mega-title"><a href="./sub_0101.html">회사소개</a></h3>
-                    <ul class="mega-list">
-                        <li><a href="./sub_0101.html">인사말</a></li>
-                        <li><a href="./sub_0102.html">연혁</a></li>
-                        <li><a href="./sub_0103.html">주요실적</a></li>
-                        <li><a href="./sub_0104.html">오시는길</a></li>
-                    </ul>
-                </div>
-                <div class="mega-col" id="menu-02">
-                    <h3 class="mega-title"><a href="./sub_0201.html">업무분야</a></h3>
-                    <ul class="mega-list">
-                        <li><a href="./sub_0201.html">안전진단</a></li>
-                        <li><a href="./sub_0202.html">안전점검</a></li>
-                        <li><a href="./sub_0203.html">건축물관리점검</a></li>
-                        <li><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
-                        <li><a href="./sub_0205.html">내진성능평가</a></li>
-                        <li><a href="./sub_0206.html">법원감정</a></li>
-                        <li><a href="./sub_0207.html">인접건축물 사전조사</a></li>
-                        <li><a href="./sub_0208.html">구조설계/감리</a></li>
-                        <li><a href="./sub_0209.html">시설물보수/보강공사</a></li>
-                    </ul>
-                </div>
-                <div class="mega-col" id="menu-03">
-                    <h3 class="mega-title"><a href="./sub_0301.html">인증 및 장비현황</a></h3>
-                    <ul class="mega-list">
-                        <li><a href="./sub_0301.html">인증현황</a></li>
-                        <li><a href="./sub_0302.html">장비보유현황</a></li>
-                    </ul>
-                </div>
-                <div class="mega-col" id="menu-04">
-                    <h3 class="mega-title"><a href="./sub_0401.html">고객센터</a></h3>
-                    <ul class="mega-list">
-                        <li><a href="./sub_0401.html">공지사항</a></li>
-                    </ul>
-                </div>
-                <div class="mega-col" id="menu-05">
-                    <h3 class="mega-title"><a href="./sub_0402.html">무료견적문의</a></h3>
-                    <ul class="mega-list">
-                        <li><a href="./sub_0402.html">견적문의</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="mega-cta">
-                <p>전문가의 빠르고 정확한 진단</p>
-                <a href="./sub_0402.html" class="btn btn-point"><i class="fas fa-file-invoice"></i> 무료 견적 문의</a>
-                <div class="mega-phone" style="margin-top:15px;"><i class="fas fa-phone"></i> 02-484-4700</div>
-            </div>
-        </div>
-    </div>
+<div class="container header-inner">
+<a class="logo" href="./index.html">
+<img alt="(주)신영에스씨엠" src="./img/logo.png"/>
+</a>
+<nav class="gnb-wrap">
+<ul class="gnb">
+<li data-target="menu-01"><a href="./sub_0101.html">회사소개</a></li>
+<li data-target="menu-02"><a href="./sub_0201.html">업무분야</a></li>
+<li data-target="menu-03"><a href="./sub_0301.html">인증 및 장비현황</a></li>
+<li data-target="menu-04"><a href="./sub_0401.html">고객센터</a></li>
+<li data-target="menu-05"><a href="./sub_0402.html">무료견적문의</a></li>
+</ul>
+</nav>
+<button aria-label="메뉴 열기" class="btn-mobile-menu" id="btn-menu-open">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+<!-- Megamenu Panel -->
+<div aria-hidden="true" class="mega-menu-panel">
+<div class="container mega-container">
+<div class="mega-cols">
+<div class="mega-col" id="menu-01">
+<h3 class="mega-title"><a href="./sub_0101.html">회사소개</a></h3>
+<ul class="mega-list">
+<li><a href="./sub_0101.html">인사말</a></li>
+<li><a href="./sub_0102.html">연혁</a></li>
+<li><a href="./sub_0103.html">주요실적</a></li>
+<li><a href="./sub_0104.html">오시는길</a></li>
+</ul>
+</div>
+<div class="mega-col" id="menu-02">
+<h3 class="mega-title"><a href="./sub_0201.html">업무분야</a></h3>
+<ul class="mega-list">
+<li><a href="./sub_0201.html">안전진단</a></li>
+<li><a href="./sub_0202.html">안전점검</a></li>
+<li><a href="./sub_0203.html">건축물관리점검</a></li>
+<li><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
+<li><a href="./sub_0205.html">내진성능평가</a></li>
+<li><a href="./sub_0206.html">법원감정</a></li>
+<li><a href="./sub_0207.html">인접건축물 사전조사</a></li>
+<li><a href="./sub_0208.html">구조설계/감리</a></li>
+<li><a href="./sub_0209.html">시설물보수/보강공사</a></li>
+</ul>
+</div>
+<div class="mega-col" id="menu-03">
+<h3 class="mega-title"><a href="./sub_0301.html">인증 및 장비현황</a></h3>
+<ul class="mega-list">
+<li><a href="./sub_0301.html">인증현황</a></li>
+<li><a href="./sub_0302.html">장비보유현황</a></li>
+</ul>
+</div>
+<div class="mega-col" id="menu-04">
+<h3 class="mega-title"><a href="./sub_0401.html">고객센터</a></h3>
+<ul class="mega-list">
+<li><a href="./sub_0401.html">공지사항</a></li>
+</ul>
+</div>
+<div class="mega-col" id="menu-05">
+<h3 class="mega-title"><a href="./sub_0402.html">무료견적문의</a></h3>
+<ul class="mega-list">
+<li><a href="./sub_0402.html">견적문의</a></li>
+</ul>
+</div>
+</div>
+<div class="mega-cta">
+<p>전문가의 빠르고 정확한 진단</p>
+<a class="btn btn-point" href="./sub_0402.html"><i class="fas fa-file-invoice"></i> 무료 견적 문의</a>
+<div class="mega-phone" style="margin-top:15px;"><i class="fas fa-phone"></i> 02-484-4700</div>
+</div>
+</div>
+</div>
 </header>
 <div class="mega-overlay"></div>
 <div id="wrapper">
-    <div class="sub-hero">
-        <div class="sub-hero-bg"></div>
-        <div class="container sub-hero-content">
-            <h1 class="sub-hero-title">업무분야</h1>
-            <p class="sub-hero-desc">신뢰를 최우선으로 하는 안전진단 전문기관</p>
-        </div>
-    </div>
-
-    <div class="breadcrumb">
-        <div class="container">
-            <span><i class="fas fa-home"></i> 홈</span>
-            <span><i class="fas fa-chevron-right"></i> 업무분야</span>
-            <span class="current"><i class="fas fa-chevron-right"></i> 안전진단</span>
-        </div>
-    </div>
-
-    <div class="container sub-layout">
-        <aside class="sub-sidebar">
-            <h2 class="sidebar-title">업무분야</h2>
-            <ul class="sidebar-menu">
-                <li class="active"><a href="./sub_0201.html">안전진단</a></li>
-                <li class=""><a href="./sub_0202.html">안전점검</a></li>
-                <li class=""><a href="./sub_0203.html">건축물관리점검</a></li>
-                <li class=""><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
-                <li class=""><a href="./sub_0205.html">내진성능평가</a></li>
-                <li class=""><a href="./sub_0206.html">법원감정</a></li>
-                <li class=""><a href="./sub_0207.html">인접건축물 사전조사</a></li>
-                <li class=""><a href="./sub_0208.html">구조설계/감리</a></li>
-                <li class=""><a href="./sub_0209.html">시설물보수/보강공사</a></li>
-                
-            </ul>
-        </aside>
-
-        <main class="sub-content content-body">
-    <h2 class="page-title">안전진단</h2>
-
-    <div class="sub_wrap">
-
-    <section class="service-section">
-        <div class="service-header fade-up">
-            <h3>시특법에 의한 정밀안전진단(시설물의 안전 및 유지관리에 관한 특별법)</h3>
-        </div>
-        <div class="service-grid">
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-gavel"></i></div>
-                    <h4>관련법</h4>
-                </div>
-                <div class="service-card-body">
-                    
+<div class="sub-hero">
+<div class="sub-hero-bg"></div>
+<div class="container sub-hero-content">
+<h1 class="sub-hero-title">업무분야</h1>
+<p class="sub-hero-desc">신뢰를 최우선으로 하는 안전진단 전문기관</p>
+</div>
+</div>
+<div class="breadcrumb">
+<div class="container">
+<span><i class="fas fa-home"></i> 홈</span>
+<span><i class="fas fa-chevron-right"></i> 업무분야</span>
+<span class="current"><i class="fas fa-chevron-right"></i> 안전진단</span>
+</div>
+</div>
+<div class="container sub-layout">
+<aside class="sub-sidebar">
+<h2 class="sidebar-title">업무분야</h2>
+<ul class="sidebar-menu">
+<li class="active"><a href="./sub_0201.html">안전진단</a></li>
+<li class=""><a href="./sub_0202.html">안전점검</a></li>
+<li class=""><a href="./sub_0203.html">건축물관리점검</a></li>
+<li class=""><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
+<li class=""><a href="./sub_0205.html">내진성능평가</a></li>
+<li class=""><a href="./sub_0206.html">법원감정</a></li>
+<li class=""><a href="./sub_0207.html">인접건축물 사전조사</a></li>
+<li class=""><a href="./sub_0208.html">구조설계/감리</a></li>
+<li class=""><a href="./sub_0209.html">시설물보수/보강공사</a></li>
+</ul>
+</aside>
+<main class="sub-content content-body">
+<h2 class="page-title">안전진단</h2>
+<div class="sub_wrap">
+<section class="service-section">
+<div class="service-header fade-up">
+<h3>시특법에 의한 정밀안전진단(시설물의 안전 및 유지관리에 관한 특별법)</h3>
+</div>
+<div class="service-grid">
+<div class="service-card fade-up">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-gavel"></i></div>
+<h4>관련법</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li>시설물의 안전 및 유지관리에 관한 특별법 제12조(정밀안전진단의 실시)</li>
 <li>시설물의 안전 및 유지관리에 관한 특별법 시행령 제10조(정밀안전진단의 실시)</li>
 <li>시설물의 안전 및 유지관리에 관한 특별법 시행령 제17조(안전점검 등에 관한 지침)</li>
 </ul>
-
-                </div>
-            </div>
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-bullseye"></i></div>
-                    <h4>실시대상</h4>
-                </div>
-                <div class="service-card-body">
-                    
+</div>
+</div>
+<div class="service-card fade-up two-cols">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-bullseye"></i></div>
+<h4>실시대상</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li>제1종시설물 및 대통령령으로 정하는 제2종시설물</li>
 <li>시설물의 안전 및 유지관리에 관한 특별법 제11조에 따른 안전점검 또는 13조에 따른 긴급안전점검을 실시한 결과<br class="mo_hide"/> 재해 및 재난을 예방하기 위하여 필요하다고 인정되는 경우에는 정밀안전진단을 실시하여야 한다.</li>
 <li>준공 후 30년이 경과된 이후 정밀안전진단을 받지 아니한 제2종시설물이나 제3종시설물</li>
 <li>안전점검을 실시한 결과 제16조에 따라 지정된 안전등급 중 대통령령으로 정하는 안전등급으로 지정된 경우</li>
 </ul>
-
-                </div>
-            </div>
-
-            <div class="service-card full-width fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h4>실시시기</h4>
-                </div>
-                <div class="service-card-body">
-                    
-<table >
+</div>
+</div>
+<div class="service-card full-width fade-up">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-calendar-alt"></i></div>
+<h4>실시시기</h4>
+</div>
+<div class="service-card-body">
+<table>
 <tr>
-<th >안전등급</th>
-<th >정밀안전진단</th>
+<th>안전등급</th>
+<th>정밀안전진단</th>
 </tr>
 <tr>
 <td>A등급</td>
@@ -237,17 +219,14 @@
 <td>4년에 1회 이상</td>
 </tr>
 </table>
-
-                </div>
-            </div>
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-tasks"></i></div>
-                    <h4>과업내용</h4>
-                </div>
-                <div class="service-card-body">
-                    
+</div>
+</div>
+<div class="service-card fade-up two-cols">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-tasks"></i></div>
+<h4>과업내용</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li>
 <b>자료수집 및 분석</b>
@@ -295,41 +274,33 @@
 <li>보수·보강 방법 제시</li>
 <li>보고서 작성</li>
 </ul>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="service-section">
-        <div class="service-header fade-up">
-            <h3>재건축사업을 위한 재건축안전진단</h3>
-        </div>
-        <div class="service-grid">
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-gavel"></i></div>
-                    <h4>관련법</h4>
-                </div>
-                <div class="service-card-body">
-                    
+</div>
+</div>
+</div>
+</section>
+<section class="service-section">
+<div class="service-header fade-up">
+<h3>재건축사업을 위한 재건축안전진단</h3>
+</div>
+<div class="service-grid">
+<div class="service-card fade-up">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-gavel"></i></div>
+<h4>관련법</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li>도시 및 주거환경정비법 제12조(재건축사업을 위한 재건축진단)</li>
 <li>도시 및 주거환경정비법 시행규칙 제3조(안전진단의 요청 등)</li>
 </ul>
-
-                </div>
-            </div>
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-tasks"></i></div>
-                    <h4>과업내용</h4>
-                </div>
-                <div class="service-card-body">
-                    
+</div>
+</div>
+<div class="service-card fade-up two-cols">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-tasks"></i></div>
+<h4>과업내용</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li>
 <b>구조안전성에 관한 사항</b>
@@ -344,42 +315,34 @@
 <li><b>종합평가 의견</b></li>
 <li><b>보고서 작성</b></li>
 </ul>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="service-section">
-        <div class="service-header fade-up">
-            <h3>리모델링을 위한 안전진단</h3>
-        </div>
-        <div class="service-grid">
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-gavel"></i></div>
-                    <h4>관련법</h4>
-                </div>
-                <div class="service-card-body">
-                    
+</div>
+</div>
+</div>
+</section>
+<section class="service-section">
+<div class="service-header fade-up">
+<h3>리모델링을 위한 안전진단</h3>
+</div>
+<div class="service-grid">
+<div class="service-card fade-up">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-gavel"></i></div>
+<h4>관련법</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li>주택법 제68조(증축형 리모델링의 안전진단)</li>
 <li>증축형 리모델링 안전진단 기준</li>
 </ul>
-
-                </div>
-            </div>
-
-            <div class="service-card full-width fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-bullseye"></i></div>
-                    <h4>실시대상</h4>
-                </div>
-                <div class="service-card-body">
-                    
-<table >
+</div>
+</div>
+<div class="service-card full-width fade-up">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-bullseye"></i></div>
+<h4>실시대상</h4>
+</div>
+<div class="service-card-body">
+<table>
 <colgroup>
 <col width="15%"/>
 <col width="15%"/>
@@ -399,7 +362,7 @@
 <li>계단, ELEV 등의 설치를 위한 슬래브의 부분 절단, 제거</li>
 </ul>
 </td>
-<td rowspan="12" >부재변경에 의해 지지조건, 하중조건의 변경이 따르므로 구조안전상의 문제가 발생될 수 있음. 구조검토, 안전진단에 의해 가능성 검토 후 적정조치필요.</td>
+<td rowspan="12">부재변경에 의해 지지조건, 하중조건의 변경이 따르므로 구조안전상의 문제가 발생될 수 있음. 구조검토, 안전진단에 의해 가능성 검토 후 적정조치필요.</td>
 </tr>
 <tr>
 <td>보</td>
@@ -528,17 +491,14 @@
 </td>
 </tr>
 </table>
-
-                </div>
-            </div>
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-tasks"></i></div>
-                    <h4>과업내용</h4>
-                </div>
-                <div class="service-card-body">
-                    
+</div>
+</div>
+<div class="service-card fade-up two-cols">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-tasks"></i></div>
+<h4>과업내용</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li><b>지반상태</b>
 <dl>
@@ -562,40 +522,32 @@
 <li><b>구조체 노후화상태(철근노출 및 부식상태, 박리·박락상태, 백화상태, 누수상태)</b></li>
 <li><b>구조부재의 변경상태(구조부재의 철거, 변경 및 신설)</b></li>
 </ul>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="service-section">
-        <div class="service-header fade-up">
-            <h3>구조물 해체공사에 따른 안전진단</h3>
-        </div>
-        <div class="service-grid">
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-gavel"></i></div>
-                    <h4>관련법</h4>
-                </div>
-                <div class="service-card-body">
-                    
+</div>
+</div>
+</div>
+</section>
+<section class="service-section">
+<div class="service-header fade-up">
+<h3>구조물 해체공사에 따른 안전진단</h3>
+</div>
+<div class="service-grid">
+<div class="service-card fade-up">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-gavel"></i></div>
+<h4>관련법</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li>건축물관리법 제30조(건축물 해체의 허가)</li>
 </ul>
-
-                </div>
-            </div>
-
-            <div class="service-card  fade-up">
-                <div class="service-card-header">
-                    <div class="service-card-icon"><i class="fas fa-tasks"></i></div>
-                    <h4>과업내용</h4>
-                </div>
-                <div class="service-card-body">
-                    
+</div>
+</div>
+<div class="service-card fade-up two-cols">
+<div class="service-card-header">
+<div class="service-card-icon"><i class="fas fa-tasks"></i></div>
+<h4>과업내용</h4>
+</div>
+<div class="service-card-body">
 <ul>
 <li><b>관련자료의 수집 및 분석·검토</b>
 <dl>
@@ -618,57 +570,51 @@
 <li><b>보수·보강안 제시</b></li>
 <li><b>종합분석 및 평가</b></li>
 </ul>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
+</div>
+</div>
+</div>
+</section>
 </div>
 </main>
-    </div>
-
-    <!-- Bottom CTA -->
-    <div class="sub-contact-cta">
-        <div class="container">
-            <div class="cta-inner fade-up">
-                <h2>고객 만족을 위한 빠른 문의</h2>
-                <div class="cta-actions">
-                    <a href="tel:02-484-4700" class="btn btn-outline-white"><i class="fas fa-phone"></i> 02-484-4700</a>
-                    <a href="mailto:scm4700@naver.com" class="btn btn-outline-white"><i class="fas fa-envelope"></i> scm4700@naver.com</a>
-                    <a href="./sub_0402.html" class="btn btn-point"><i class="fas fa-file-invoice"></i> 온라인 견적 양식 작성</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+</div>
+<!-- Bottom CTA -->
+<div class="sub-contact-cta">
+<div class="container">
+<div class="cta-inner fade-up">
+<h2>고객 만족을 위한 빠른 문의</h2>
+<div class="cta-actions">
+<a class="btn btn-outline-white" href="tel:02-484-4700"><i class="fas fa-phone"></i> 02-484-4700</a>
+<a class="btn btn-outline-white" href="mailto:scm4700@naver.com"><i class="fas fa-envelope"></i> scm4700@naver.com</a>
+<a class="btn btn-point" href="./sub_0402.html"><i class="fas fa-file-invoice"></i> 온라인 견적 양식 작성</a>
+</div>
+</div>
+</div>
+</div>
 </div> <!-- End wrapper -->
-
 <!-- Footer -->
 <footer id="footer">
-    <div class="container">
-        <div class="footer-inner">
-            <div class="f-info">
-                <div class="f-logo">
-                    <img src="./img/logo.png" alt="(주)신영에스씨엠">
-                </div>
-                <p><strong>대표 :</strong> 이관배 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
-                <p><strong>서울사무실 :</strong> 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호</p>
-                <p><strong>광명사무실 :</strong> 경기도 광명시 소하로 190, 광명G타워 B동 1314호</p>
-                <p><strong>TEL :</strong> 02-484-4700 &nbsp;|&nbsp; <strong>FAX :</strong> 02-484-4750 &nbsp;|&nbsp; <strong>E-mail :</strong> scm4700@naver.com</p>
-            </div>
-            <div style="text-align: right; align-self: flex-end;">
-                <a href="#header" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color:#fff!important;">
-                    <i class="fas fa-arrow-up"></i> 맨 위로
+<div class="container">
+<div class="footer-inner">
+<div class="f-info">
+<div class="f-logo">
+<img alt="(주)신영에스씨엠" src="./img/logo.png"/>
+</div>
+<p><strong>대표 :</strong> 이관배  |  <strong>사업자등록번호 :</strong> 212-81-91777</p>
+<p><strong>서울사무실 :</strong> 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호</p>
+<p><strong>광명사무실 :</strong> 경기도 광명시 소하로 190, 광명G타워 B동 1314호</p>
+<p><strong>TEL :</strong> 02-484-4700  |  <strong>FAX :</strong> 02-484-4750  |  <strong>E-mail :</strong> scm4700@naver.com</p>
+</div>
+<div style="text-align: right; align-self: flex-end;">
+<a class="btn btn-outline" href="#header" style="border-color: rgba(255,255,255,0.2); color:#fff!important;">
+<i class="fas fa-arrow-up"></i> 맨 위로
                 </a>
-            </div>
+</div>
+</div>
+<div class="f-copy">
+            Copyright © (주)신영에스씨엠. All rights reserved.
         </div>
-        <div class="f-copy">
-            Copyright &copy; (주)신영에스씨엠. All rights reserved.
-        </div>
-    </div>
+</div>
 </footer>
 <script src="./js/redesign_motion.js"></script>
-
 </body>
 </html>

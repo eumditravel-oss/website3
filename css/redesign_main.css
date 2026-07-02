@@ -1492,3 +1492,22 @@ img { max-width: 100%; height: auto; display: block; }
         background: #fff;
     }
 }
+
+/* Long list cards */
+.service-card.two-cols {
+    grid-column: 1 / -1;
+}
+.service-card.two-cols .service-card-body > ul {
+    column-count: 2;
+    column-gap: 40px;
+}
+.service-card.two-cols .service-card-body > ul > li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .service-card.two-cols .service-card-body > ul {
+        column-count: 1;
+    }
+}
