@@ -1422,12 +1422,12 @@ img { max-width: 100%; height: auto; display: block; }
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    height: 450px;
+    /* height: 450px; removed to prevent map cutoff */
     background: #e5e7eb;
 }
 .map_wrap .root_daum_roughmap {
     width: 100% !important;
-    height: 100% !important;
+    /* height: 100% !important; removed to prevent map cutoff */
 }
 .map_info_t {
     position: absolute;
@@ -1479,7 +1479,7 @@ img { max-width: 100%; height: auto; display: block; }
         flex-direction: column;
     }
     .map_wrap .root_daum_roughmap {
-        height: 300px !important;
+        /* height: 300px !important; removed to prevent mobile map cutoff */
         position: relative !important;
     }
     .map_info_t {
