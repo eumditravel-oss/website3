@@ -1607,8 +1607,12 @@ img { max-width: 100%; height: auto; display: block; }
         column-count: 1;
     }
     .service-card {
-        flex: 1 1 100%;
+        flex: 1 1 calc(50% - 6px);
+        min-width: 140px;
         padding: 12px 15px;
+    }
+    .service-card.full-width {
+        flex: 1 1 100%;
     }
     .service-card-header {
         margin-bottom: 10px;
