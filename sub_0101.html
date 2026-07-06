@@ -134,62 +134,144 @@
     </div>
 </header>
 <div class="mega-overlay"></div>
+<style>
+    /* Greeting Page Custom Layout */
+    .greeting-page {
+        padding-top: 130px; /* Space for header */
+        padding-bottom: 80px;
+    }
+    .greeting-title-wrap {
+        max-width: 1400px;
+        margin: 0 auto 40px;
+        padding: 0 24px;
+    }
+    .greeting-title-wrap h2 {
+        font-size: 36px;
+        font-weight: 800;
+        color: #111;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .greeting-title-wrap h2::before {
+        content: '';
+        display: inline-block;
+        width: 35px;
+        height: 4px;
+        background-color: var(--color-primary);
+        margin-right: 15px;
+    }
+    .greeting-title-wrap .en-title {
+        display: block;
+        font-size: 15px;
+        color: #999;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-top: 8px;
+        margin-left: 50px;
+        text-transform: uppercase;
+    }
+
+    .greeting-content {
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 80px;
+    }
+    .greeting-img-col {
+        width: 50%;
+        border-radius: 0 40px 40px 0;
+        overflow: hidden;
+    }
+    .greeting-img-col img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 600px;
+    }
+    .greeting-text-col {
+        width: 50%;
+        padding: 20px 40px 20px 60px;
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    @media (max-width: 1024px) {
+        .greeting-content { flex-direction: column; padding: 0 24px; }
+        .greeting-img-col { width: 100%; border-radius: 20px; min-height: 300px; }
+        .greeting-text-col { width: 100%; padding: 40px 0; }
+    }
+
+    .greeting-text-col h3 {
+        font-size: 30px;
+        color: var(--color-primary);
+        font-weight: 700;
+        line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 40px;
+        position: relative;
+        padding-bottom: 25px;
+    }
+    .greeting-text-col h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--color-primary);
+    }
+    .greeting-text-col p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        word-break: keep-all;
+    }
+    .greeting-sign {
+        margin-top: 40px;
+        text-align: right;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+    }
+    .greeting-sign .sign-name {
+        font-family: 'Great Vibes', cursive, serif;
+        font-size: 40px;
+        color: var(--color-primary);
+        margin-left: 15px;
+        font-weight: normal;
+    }
+</style>
+
 <div id="wrapper">
-    <div class="sub-hero">
-        <div class="sub-hero-bg"></div>
-        <div class="container sub-hero-content">
-            <h1 class="sub-hero-title">회사소개</h1>
-            <p class="sub-hero-desc">신뢰를 최우선으로 하는 안전진단 전문기관</p>
-        </div>
-    </div>
-
-    <div class="breadcrumb">
-        <div class="container">
-            <span><i class="fas fa-home"></i> 홈</span>
-            <span><i class="fas fa-chevron-right"></i> 회사소개</span>
-            <span class="current"><i class="fas fa-chevron-right"></i> 인사말</span>
-        </div>
-    </div>
-
-    <div class="container sub-layout">
-        <aside class="sub-sidebar">
-            <h2 class="sidebar-title">회사소개</h2>
-            <ul class="sidebar-menu">
-                <li class="active"><a href="./sub_0101.html">인사말</a></li>
-                <li class=""><a href="./sub_0102.html">연혁</a></li>
-                <li class=""><a href="./sub_0103.html">주요실적</a></li>
-                <li class=""><a href="./sub_0104.html">오시는길</a></li>
-                
-            </ul>
-        </aside>
-
-        <main class="sub-content content-body">
-    <h2 class="page-title">인사말</h2>
-
-    <div class="sub_wrap">
+    <div class="greeting-page">
         
-        <!-- Section 1: CEO Message -->
-        <section class="ceo-message fade-up">
-            <div class="ceo-img">
-                <img src="./img/0101_1.jpg" alt="(주)한강엔지니어링 대표이사">
+        <div class="greeting-title-wrap fade-up">
+            <h2>인사말</h2>
+            <span class="en-title">GREETING</span>
+        </div>
+        
+        <div class="greeting-content fade-up" style="transition-delay: 0.1s;">
+            <div class="greeting-img-col">
+                <img src="./img/0101_1.jpg" alt="(주)한강엔지니어링 인사말">
             </div>
-            <div class="ceo-text">
+            <div class="greeting-text-col">
                 <h3>건축물의 안전과 가치를 지키는<br>든든한 파트너가 되겠습니다.</h3>
-                <p>
-                안녕하십니까, (주)한강엔지니어링을 찾아주신 고객 여러분 진심으로 환영합니다.
-                <br><br>
-                현대 사회에서 건축물과 시설물의 안전은 그 무엇과도 타협할 수 없는 최우선 가치입니다. 저희 (주)한강엔지니어링은 수년간 축적된 현장 경험과 고도의 전문 지식을 바탕으로, 우리 사회의 근간을 이루는 다양한 시설물의 정밀 안전진단 및 유지관리 서비스를 제공하고 있습니다.
-                <br><br>
-                고도화된 첨단 진단 장비와 정밀한 데이터 분석 시스템을 통해 육안으로 확인하기 어려운 미세한 구조적 결함까지 정확하게 짚어내며, 이를 바탕으로 가장 효율적이고 안전한 보수·보강 솔루션을 제시합니다.
-                <br><br>
-                단순한 점검을 넘어, 고객의 소중한 자산과 생명을 보호한다는 막중한 사명감을 가지고 매 프로젝트에 임하겠습니다. 변함없는 신뢰로 보답하는 최고의 안전진단 전문기관이 될 것을 약속드립니다. 감사합니다.
-                </p>
-                <div class="ceo-sign">
+                <p>안녕하십니까, (주)한강엔지니어링을 찾아주신 고객 여러분 진심으로 환영합니다.</p>
+                <p>현대 사회에서 건축물과 시설물의 안전은 그 무엇과도 타협할 수 없는 최우선 가치입니다. 저희 (주)한강엔지니어링은 수년간 축적된 현장 경험과 고도의 전문 지식을 바탕으로, 우리 사회의 근간을 이루는 다양한 시설물의 정밀 안전진단 및 유지관리 서비스를 제공하고 있습니다.</p>
+                <p>고도화된 첨단 진단 장비와 정밀한 데이터 분석 시스템을 통해 육안으로 확인하기 어려운 미세한 구조적 결함까지 정확하게 짚어내며, 이를 바탕으로 가장 효율적이고 안전한 보수·보강 솔루션을 제시합니다.</p>
+                <p>단순한 점검을 넘어, 고객의 소중한 자산과 생명을 보호한다는 막중한 사명감을 가지고 매 프로젝트에 임하겠습니다. 변함없는 신뢰로 보답하는 최고의 안전진단 전문기관이 될 것을 약속드립니다.</p>
+                <p>감사합니다.</p>
+                
+                <div class="greeting-sign">
                     대표이사 <span class="sign-name">우상진</span>
                 </div>
             </div>
-        </section>
+        </div>
 
+        <div class="container sub_wrap" style="max-width: 1400px; margin: 0 auto;">
         <!-- Section 2: Core Strengths -->
         <section class="core-strengths">
             <h3 class="section-heading fade-up">우리의 핵심 역량</h3>
@@ -268,11 +350,9 @@
         </section>
 
     </div>
+    </div>
 
 
-    </div>
-</main>
-    </div>
 
     <!-- Bottom CTA -->
     <div class="sub-contact-cta">
