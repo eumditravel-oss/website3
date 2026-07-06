@@ -531,16 +531,24 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 768px) {
-    .section-padding { padding: 60px 0; }
-    .hero-title { font-size: 32px !important; }
-    .hero-desc { font-size: 18px !important; }
-    .hero-actions { flex-direction: column; }
-    .btn { width: 100%; }
-    .business-grid { grid-template-columns: 1fr; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .news-grid { grid-template-columns: 1fr; }
-    .trust-metrics { grid-template-columns: 1fr; }
-    .metric-card { padding: 24px; }
+    .section-padding { padding: 40px 0; }
+    .section-title { font-size: 26px !important; }
+    .hero { min-height: 500px; height: 100svh; }
+    .hero-title { font-size: 28px !important; margin-bottom: 20px; }
+    .hero-desc { font-size: 16px !important; margin-bottom: 30px; }
+    .hero-actions { flex-direction: column; gap: 10px; }
+    .btn { width: 100%; padding: 12px 20px; font-size: 15px; }
+    .business-grid { grid-template-columns: 1fr; gap: 16px; }
+    .projects-grid { grid-template-columns: 1fr; gap: 16px; }
+    .news-grid { grid-template-columns: 1fr; gap: 16px; }
+    .trust-metrics { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 20px; }
+    .metric-card { padding: 20px 10px; }
+    .metric-icon { font-size: 32px; margin-bottom: 10px; }
+    .metric-number { font-size: 24px; }
+    .metric-label { font-size: 13px; }
+    .footer-inner { flex-direction: column; text-align: center; gap: 20px; }
+    .footer-inner > div { align-self: center !important; }
+    .f-logo img { margin: 0 auto 15px auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
