@@ -1,15 +1,20 @@
 <!doctype html>
 <html lang="ko">
-<head>\n<meta charset="utf-8">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>주요실적 1 페이지 | (주)한강엔지니어링</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="./css/redesign_main.css">
 <link rel="stylesheet" href="./sub/sub.css">
+<!-- Subpage specific css/js for forms if needed -->
 <script src="./js/jquery-1.12.4.min.js"></script>
-\n</head>
-<body>\n<!-- Mobile Overlay -->
+
+<link rel="stylesheet" href="./theme/basic/skin/board/gallery/style.css">
+</head>
+<body>
+<!-- Mobile Overlay -->
 <div class="m-overlay" id="m-overlay"></div>
 
 <!-- Mobile Navigation -->
@@ -131,48 +136,1136 @@
 </header>
 <div class="mega-overlay"></div>
 <div id="wrapper">
-    <div class="subpage-new-layout">
-        <aside class="sidebar-new">
-            <div class="sidebar-header">
-                <h2>회사소개</h2>
-                <span class="en">COMPANY</span>
-            </div>
-            <ul class="sidebar-menu-new">
-                <li class=""><a href="./sub_0101.html"><i class="fas fa-user-tie"></i> <span>인사말</span></a></li>
-                <li class=""><a href="./sub_0102.html"><i class="fas fa-calendar-alt"></i> <span>연혁</span></a></li>
-                <li class="active"><a href="./sub_0103.html"><i class="fas fa-list-alt"></i> <span>주요실적</span></a></li>
-                <li class=""><a href="./sub_0104.html"><i class="fas fa-map-marked-alt"></i> <span>오시는길</span></a></li>
+    <div class="sub-hero">
+        <div class="sub-hero-bg"></div>
+        <div class="container sub-hero-content">
+            <h1 class="sub-hero-title">회사소개</h1>
+            <p class="sub-hero-desc">신뢰를 최우선으로 하는 안전진단 전문기관</p>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <span><i class="fas fa-home"></i> 홈</span>
+            <span><i class="fas fa-chevron-right"></i> 회사소개</span>
+            <span class="current"><i class="fas fa-chevron-right"></i> 주요실적</span>
+        </div>
+    </div>
+
+    <div class="container sub-layout">
+        <aside class="sub-sidebar">
+            <h2 class="sidebar-title">회사소개</h2>
+            <ul class="sidebar-menu">
+                <li class=""><a href="./sub_0101.html">인사말</a></li>
+                <li class=""><a href="./sub_0102.html">연혁</a></li>
+                <li class="active"><a href="./sub_0103.html">주요실적</a></li>
+                <li class=""><a href="./sub_0104.html">오시는길</a></li>
                 
             </ul>
-            <div class="sidebar-contact">
-                <div class="contact-icon"><i class="fas fa-headset"></i></div>
-                <h3>문의안내</h3>
-                <p>궁금하신 사항을<br>친절히 안내해 드립니다.</p>
-                <div class="phone">02-6959-0729</div>
-                <div class="hours">평일 09:00 - 18:00</div>
-            </div>
         </aside>
 
-        <div class="content-wrapper">
-            <div class="breadcrumb-new">
-                <i class="fas fa-home"></i> &gt; <span>회사소개</span> &gt; <span class="current">주요실적</span>
-            </div>
-            
-            <main class="content-main">
-                <h2 class="page-title">주요실적</h2>\n<p class="lead-text">수많은 공공기관 및 민간 기업과 함께하며 축적된 노하우</p>
-    <div class="info-card fade-up">
-        <i class="fas fa-check-circle" style="color: var(--color-point); margin-bottom: 12px; font-size: 24px;"></i>
-        <p>※ <strong>매년 수십 건 이상</strong>의 정밀 안전진단 및 점검을 성공적으로 수행하고 있습니다.</p>
-    </div>
-    <h3 class="section-title fade-up">최근 실적/현황 갤러리</h3>
-    <div class="gallery-grid fade-up">
-        <div class="gallery-card"><div class="img-wrap"><img src="./img/main01.jpg" alt="이미지"></div><div class="txt-wrap"><h4>[진단] 서울 OO 업무시설</h4><p>정밀안전진단 및 내진평가</p></div></div>
-        <div class="gallery-card"><div class="img-wrap"><img src="./img/main02.jpg" alt="이미지"></div><div class="txt-wrap"><h4>[점검] 경기 OO 교육시설</h4><p>건축물 정기안전점검</p></div></div>
-        <div class="gallery-card"><div class="img-wrap"><img src="./img/main03.jpg" alt="이미지"></div><div class="txt-wrap"><h4>[평가] 인천 OO 주거시설</h4><p>내진성능평가 수행</p></div></div>
-        <div class="gallery-card"><div class="img-wrap"><img src="./img/main04.jpg" alt="이미지"></div><div class="txt-wrap"><h4>[조사] 강원 OO 공공시설</h4><p>인접건축물 사전조사</p></div></div>
+        <main class="sub-content content-body">
+    <h2 class="page-title">주요실적</h2>
+
+    <!-- 게시판 목록 시작 { -->
+
+<div id="bo_gall" style="width:100%">
+
+
+
+    
+
+    <form name="fboardlist"  id="fboardlist" action="http://sinyoungscm.com/bbs/board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
+
+    <input type="hidden" name="bo_table" value="0103">
+
+    <input type="hidden" name="sfl" value="">
+
+    <input type="hidden" name="stx" value="">
+
+    <input type="hidden" name="spt" value="">
+
+    <input type="hidden" name="sst" value="wr_num, wr_reply">
+
+    <input type="hidden" name="sod" value="">
+
+    <input type="hidden" name="page" value="1">
+
+    <input type="hidden" name="sw" value="">
+
+
+
+    <!-- 게시판 페이지 정보 및 버튼 시작 { -->
+
+    <div id="bo_btn_top">
+
+        <div id="bo_list_total">
+
+            <span>Total 17건</span>
+
+            1 페이지
+
+        </div>
+
+
+
+        <ul class="btn_bo_user">
+
+                                    <li>
+
+                <button type="button" class="btn_bo_sch btn_b01 btn" title="게시판 검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">게시판 검색</span></button> 
+
+            </li>
+
+                                </ul>
+
     </div>
 
-            </main>
+    <!-- } 게시판 페이지 정보 및 버튼 끝 -->
+
+
+
+    
+
+    <ul id="gall_ul" class="gall_row">
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        17                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2605/thumb-b89c2edcc7e30b61b41f589983060736_1778492665_1356_350x230.jpg" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            경강선 신축공사에 따른 연도변조사                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 05-11</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 8</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        16                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2605/thumb-b89c2edcc7e30b61b41f589983060736_1778492455_171_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            송도 연세대기숙사(송도동 162-1)…                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 05-11</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 5</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        15                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773815081_4929_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            청심평화월드센터 정밀안전진단 및 내진…                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 8</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3 box_clear">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        14                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773814718_4109_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            D타워 정밀안전진단 및 내진성능평가                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt"></span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 11</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        13                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773814788_8769_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            금강펜테리움IT타워 정밀안전진단 및 …                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 12</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        12                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773814832_6744_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            두산위브파빌리온 정밀안전진단                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 10</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3 box_clear">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        11                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773814867_9278_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            롯데부여리조트 백상원콘도미니엄 정밀안…                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 17</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        10                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773815019_4765_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            미진프라자 정밀안전진단                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 11</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        9                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2506/thumb-febd975f1e35b54c5c2d654601fff791_1749110770_029_350x230.jpg" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            안양원스퀘어 00복합시설 공사재개에 …                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;
+[이 게시물은 최고관리자님에 의해 2025-06-05 17:06:34 주요실적에서 복사 됨]</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 13</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3 box_clear">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        8                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773816152_6109_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            (주)한국초저온평택 물류단지 정밀안전…                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt"></span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 11</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        7                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773816229_5145_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            바이오니아 가동 정밀안전점검                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 9</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        6                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773816650_6897_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            삼송테크노밸리 정밀안전점검                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 10</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3 box_clear">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        5                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773816690_0608_350x230.jpg" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            서울대학교치과병원 정밀안전점검                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 10</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        4                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773816724_6876_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            서울숲코오롱디지털타워 정밀안전점검                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 12</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                <li class="gall_li col-gn-3">
+
+            <div class="gall_box">
+
+                <div class="gall_chk chk_box">
+
+                                        <span class="sound_only">
+
+                        3                    </span>
+
+                </div>
+
+                <div class="gall_con">
+
+                    <div class="gall_img" style="">
+
+                        <a href="./sub_0103.html">
+
+                        <img src="./data/editor/2603/thumb-6b5eba9fd637f461678ff05058031eb6_1773816791_3155_350x230.png" alt="" >                        </a>
+
+                    </div>
+
+                    <div class="gall_text_href">
+
+                                                <a href="./sub_0103.html" class="bo_tit">
+
+                            
+
+                                                        <!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+
+
+
+                            2020 가합 42701 하자보수에 …                      
+
+                                                                                 </a>
+
+                         <span class="bo_cnt">&nbsp;</span>
+
+                    </div>
+
+
+
+                    <!-- <div class="gall_info">
+
+                        <span class="sound_only">작성자 </span><span class="sv_member">최고관리자</span>                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> 06-05</span>
+
+                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 14</span>
+
+                    </div> -->
+
+                    <div class="gall_option">
+
+                                                         
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+                    </ul>
+
+
+
+    <!-- 페이지 -->
+
+    <nav class="pg_wrap"><span class="pg"><span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
+<a href="./sub_0103.html" class="pg_page">2<span class="sound_only">페이지</span></a>
+<a href="./sub_0103.html" class="pg_page pg_end">맨끝</a>
+</span></nav>    <!-- 페이지 -->
+
+
+
+     
+
+    </form>
+
+
+
+    <!-- 게시판 검색 시작 { -->
+
+    <div class="bo_sch_wrap">   
+
+        <fieldset class="bo_sch">
+
+            <h3>검색</h3>
+
+            <form name="fsearch" method="get">
+
+            <input type="hidden" name="bo_table" value="0103">
+
+            <input type="hidden" name="sca" value="">
+
+            <input type="hidden" name="sop" value="and">
+
+            <label for="sfl" class="sound_only">검색대상</label>
+
+            <select name="sfl" id="sfl">
+
+                <option value="wr_subject" >제목</option><option value="wr_content" >내용</option><option value="wr_subject||wr_content" >제목+내용</option><option value="wr_name,1" >글쓴이</option><option value="wr_name,0" >글쓴이(코)</option>            </select>
+
+            <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+
+            <div class="sch_bar">
+
+                <input type="text" name="stx" value="" required id="stx" class="sch_input" size="25" maxlength="20" placeholder="검색어를 입력해주세요">
+
+                <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
+
+            </div>
+
+            <button type="button" class="bo_sch_cls"><i class="fa fa-times" aria-hidden="true"></i><span class="sound_only">닫기</span></button>
+
+            </form>
+
+        </fieldset>
+
+        <div class="bo_sch_bg"></div>
+
+    </div>
+
+    <script>
+
+        // 게시판 검색
+
+        $(".btn_bo_sch").on("click", function() {
+
+            $(".bo_sch_wrap").toggle();
+
+        })
+
+        $('.bo_sch_bg, .bo_sch_cls').click(function(){
+
+            $('.bo_sch_wrap').hide();
+
+        });
+
+    </script>
+
+    <!-- } 게시판 검색 끝 -->
+
+</div>
+
+
+
+
+
+<!-- } 게시판 목록 끝 -->
+
+
+
+    </div>
+</main>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="sub-contact-cta">
+        <div class="container">
+            <div class="cta-inner fade-up">
+                <h2>고객 만족을 위한 빠른 문의</h2>
+                <div class="cta-actions">
+                    <a href="tel:02-6959-0729" class="btn btn-outline-white"><i class="fas fa-phone"></i> 02-6959-0729</a>
+                    <a href="mailto:hangang0730@daum.net" class="btn btn-outline-white"><i class="fas fa-envelope"></i> hangang0730@daum.net</a>
+                    <a href="./sub_0402.html" class="btn btn-point"><i class="fas fa-file-invoice"></i> 온라인 견적 양식 작성</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -188,6 +1281,7 @@
                 </div>
                 <p><strong>대표 :</strong> 우상진 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
                 <p><strong>본사 :</strong> 서울시 성동구 연무장5가길 7 현대테라스타워 W동 1006호</p>
+                
                 <p><strong>TEL :</strong> 02-6959-0729 &nbsp;|&nbsp; <strong>FAX :</strong> 02-6959-0730 &nbsp;|&nbsp; <strong>Mobile :</strong> 010-9700-2926 &nbsp;|&nbsp; <strong>E-mail :</strong> hangang0730@daum.net</p>
             </div>
             <div style="text-align: right; align-self: flex-end;">
@@ -202,4 +1296,6 @@
     </div>
 </footer>
 <script src="./js/redesign_motion.js"></script>
-\n</body>\n</html>
+
+</body>
+</html>

@@ -1,15 +1,19 @@
 <!doctype html>
 <html lang="ko">
-<head>\n<meta charset="utf-8">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>인사말 1 페이지 | (주)한강엔지니어링</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="./css/redesign_main.css">
 <link rel="stylesheet" href="./sub/sub.css">
+<!-- Subpage specific css/js for forms if needed -->
 <script src="./js/jquery-1.12.4.min.js"></script>
-\n</head>
-<body>\n<!-- Mobile Overlay -->
+
+</head>
+<body>
+<!-- Mobile Overlay -->
 <div class="m-overlay" id="m-overlay"></div>
 
 <!-- Mobile Navigation -->
@@ -130,86 +134,237 @@
     </div>
 </header>
 <div class="mega-overlay"></div>
+<style>
+    /* Greeting Page Custom Layout */
+    .greeting-page {
+        padding-top: 130px; /* Space for header */
+        padding-bottom: 80px;
+    }
+    .greeting-title-wrap {
+        max-width: 1400px;
+        margin: 0 auto 40px;
+        padding: 0 24px;
+    }
+    .greeting-title-wrap h2 {
+        font-size: 36px;
+        font-weight: 800;
+        color: #111;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .greeting-title-wrap h2::before {
+        content: '';
+        display: inline-block;
+        width: 35px;
+        height: 4px;
+        background-color: var(--color-primary);
+        margin-right: 15px;
+    }
+    .greeting-title-wrap .en-title {
+        display: block;
+        font-size: 15px;
+        color: #999;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-top: 8px;
+        margin-left: 50px;
+        text-transform: uppercase;
+    }
+
+    .greeting-content {
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 80px;
+    }
+    .greeting-img-col {
+        width: 50%;
+        border-radius: 0 40px 40px 0;
+        overflow: hidden;
+    }
+    .greeting-img-col img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 600px;
+    }
+    .greeting-text-col {
+        width: 50%;
+        padding: 20px 40px 20px 60px;
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    @media (max-width: 1024px) {
+        .greeting-content { flex-direction: column; padding: 0 24px; }
+        .greeting-img-col { width: 100%; border-radius: 20px; min-height: 300px; }
+        .greeting-text-col { width: 100%; padding: 40px 0; }
+    }
+
+    .greeting-text-col h3 {
+        font-size: 30px;
+        color: var(--color-primary);
+        font-weight: 700;
+        line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 40px;
+        position: relative;
+        padding-bottom: 25px;
+    }
+    .greeting-text-col h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--color-primary);
+    }
+    .greeting-text-col p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        word-break: keep-all;
+    }
+    .greeting-sign {
+        margin-top: 40px;
+        text-align: right;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+    }
+    .greeting-sign .sign-name {
+        font-family: 'Great Vibes', cursive, serif;
+        font-size: 40px;
+        color: var(--color-primary);
+        margin-left: 15px;
+        font-weight: normal;
+    }
+</style>
+
 <div id="wrapper">
-    <div class="subpage-new-layout">
-        <aside class="sidebar-new">
-            <div class="sidebar-header">
-                <h2>회사소개</h2>
-                <span class="en">COMPANY</span>
+    <div class="greeting-page">
+        
+        <div class="greeting-title-wrap fade-up">
+            <h2>인사말</h2>
+            <span class="en-title">GREETING</span>
+        </div>
+        
+        <div class="greeting-content fade-up" style="transition-delay: 0.1s;">
+            <div class="greeting-img-col">
+                <img src="./img/0101_1.jpg" alt="(주)한강엔지니어링 인사말">
             </div>
-            <ul class="sidebar-menu-new">
-                <li class="active"><a href="./sub_0101.html"><i class="fas fa-user-tie"></i> <span>인사말</span></a></li>
-                <li class=""><a href="./sub_0102.html"><i class="fas fa-calendar-alt"></i> <span>연혁</span></a></li>
-                <li class=""><a href="./sub_0103.html"><i class="fas fa-list-alt"></i> <span>주요실적</span></a></li>
-                <li class=""><a href="./sub_0104.html"><i class="fas fa-map-marked-alt"></i> <span>오시는길</span></a></li>
+            <div class="greeting-text-col">
+                <h3>건축물의 안전과 가치를 지키는<br>든든한 파트너가 되겠습니다.</h3>
+                <p>안녕하십니까, (주)한강엔지니어링을 찾아주신 고객 여러분 진심으로 환영합니다.</p>
+                <p>현대 사회에서 건축물과 시설물의 안전은 그 무엇과도 타협할 수 없는 최우선 가치입니다. 저희 (주)한강엔지니어링은 수년간 축적된 현장 경험과 고도의 전문 지식을 바탕으로, 우리 사회의 근간을 이루는 다양한 시설물의 정밀 안전진단 및 유지관리 서비스를 제공하고 있습니다.</p>
+                <p>고도화된 첨단 진단 장비와 정밀한 데이터 분석 시스템을 통해 육안으로 확인하기 어려운 미세한 구조적 결함까지 정확하게 짚어내며, 이를 바탕으로 가장 효율적이고 안전한 보수·보강 솔루션을 제시합니다.</p>
+                <p>단순한 점검을 넘어, 고객의 소중한 자산과 생명을 보호한다는 막중한 사명감을 가지고 매 프로젝트에 임하겠습니다. 변함없는 신뢰로 보답하는 최고의 안전진단 전문기관이 될 것을 약속드립니다.</p>
+                <p>감사합니다.</p>
                 
-            </ul>
-            <div class="sidebar-contact">
-                <div class="contact-icon"><i class="fas fa-headset"></i></div>
-                <h3>문의안내</h3>
-                <p>궁금하신 사항을<br>친절히 안내해 드립니다.</p>
-                <div class="phone">02-6959-0729</div>
-                <div class="hours">평일 09:00 - 18:00</div>
-            </div>
-        </aside>
-
-        <div class="content-wrapper">
-            <div class="breadcrumb-new">
-                <i class="fas fa-home"></i> &gt; <span>회사소개</span> &gt; <span class="current">인사말</span>
-            </div>
-            
-            <main class="content-main">
-                
-        <div class="greeting-new-layout">
-            <div class="greeting-header-new fade-up">
-                <span class="en-title">GREETING</span>
-                <h2>건축물의 안전과 가치를 지키는<br><strong>든든한 파트너</strong>가 되겠습니다.</h2>
-            </div>
-            
-            <div class="greeting-body fade-up" style="transition-delay: 0.1s;">
-                <div class="greeting-text">
-                    <p>안녕하십니까, (주)한강엔지니어링을 찾아주신 고객 여러분 진심으로 환영합니다.</p>
-                    <p>현대 사회에서 건축물과 시설물의 안전은 그 무엇과도 타협할 수 없는 최우선 가치입니다. 저희 (주)한강엔지니어링은 수년간 축적된 현장 경험과 고도의 전문 지식을 바탕으로, 우리 사회의 근간을 이루는 다양한 시설물의 정밀 안전진단 및 유지관리 서비스를 제공하고 있습니다.</p>
-                    <p>고도화된 첨단 진단 장비와 정밀한 데이터 분석 시스템을 통해 육안으로 확인하기 어려운 미세한 구조적 결함까지 정확하게 짚어내며, 이를 바탕으로 가장 효율적이고 안전한 보수·보강 솔루션을 제시합니다.</p>
-                    <p>단순한 점검을 넘어, 고객의 소중한 자산과 생명을 보호한다는 막중한 사명감을 가지고 매 프로젝트에 임하겠습니다. 변함없는 신뢰로 보답하는 최고의 안전진단 전문기관이 될 것을 약속드립니다.</p>
-                    <p>감사합니다.</p>
-                </div>
-                <div class="greeting-img">
-                    <img src="./img/0101_1.jpg" alt="(주)한강엔지니어링 인사말">
-                </div>
-            </div>
-
-            <div class="greeting-strengths fade-up">
-                <div class="strength-item">
-                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>최우선 가치, 안전</h4>
-                    <p>건축물과 시설물의 안전은 그 무엇과도 타협할 수 없는 최우선 가치입니다.</p>
-                </div>
-                <div class="strength-item">
-                    <div class="icon"><i class="fas fa-users-cog"></i></div>
-                    <h4>축적된 경험과 전문성</h4>
-                    <p>수년간 축적된 현장 경험과 고도의 전문 지식을 바탕으로, 다양한 시설물의 정밀 안전진단 및 유지관리 서비스를 제공합니다.</p>
-                </div>
-                <div class="strength-item">
-                    <div class="icon"><i class="fas fa-chart-line"></i></div>
-                    <h4>정확한 진단과 최적의 솔루션</h4>
-                    <p>첨단 진단 장비와 정밀한 데이터 분석 시스템을 통해 육안으로 확인하기 어려운 미세한 구조적 결함까지 정확하게 짚어냅니다.</p>
-                </div>
-                <div class="strength-item">
-                    <div class="icon"><i class="fas fa-handshake"></i></div>
-                    <h4>신뢰와 책임의 약속</h4>
-                    <p>고객의 소중한 자산과 생명을 보호한다는 사명감을 가지고 매 프로젝트에 임하겠습니다. 변함없는 신뢰로 보답하겠습니다.</p>
-                </div>
-            </div>
-
-            <div class="greeting-footer fade-up">
                 <div class="greeting-sign">
                     대표이사 <span class="sign-name">우상진</span>
                 </div>
             </div>
         </div>
-        
-            </main>
+
+        <div class="container sub_wrap" style="max-width: 1400px; margin: 0 auto;">
+        <!-- Section 2: Core Strengths -->
+        <section class="core-strengths">
+            <h3 class="section-heading fade-up">우리의 핵심 역량</h3>
+            <div class="strengths-grid">
+                <div class="strength-card fade-up">
+                    <div class="strength-icon"><i class="fas fa-microscope"></i></div>
+                    <h4>최첨단 진단장비</h4>
+                    <p>정밀하고 신뢰도 높은 데이터를 산출하기 위한 최신 검측 기기 및 스마트 진단 장비 운용</p>
+                </div>
+                <div class="strength-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="strength-icon"><i class="fas fa-hard-hat"></i></div>
+                    <h4>전문기술진</h4>
+                    <p>수많은 현장 경험과 전문 자격을 보유한 특급 기술자들의 다각적이고 깊이 있는 구조 해석</p>
+                </div>
+                <div class="strength-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="strength-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>정밀 데이터 분석</h4>
+                    <p>현장 측정 데이터를 기반으로 한 체계적이고 과학적인 상태 평가 및 보강 설계 최적화</p>
+                </div>
+                <div class="strength-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="strength-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h4>예방적 안전관리</h4>
+                    <p>사후 대처가 아닌, 잠재적 위험 요소를 사전에 차단하는 능동적인 시설물 수명 연장 솔루션</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Stats -->
+        <section class="stats-section fade-up">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-num count-up" data-target="20">0</div>
+                    <div class="stat-label">업력 (년)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num"><span class="count-up" data-target="1500" style="display:inline; margin:0; font-size:48px;">0</span><span>+</span></div>
+                    <div class="stat-label">누적 진단 실적 (건)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num count-up" data-target="45">0</div>
+                    <div class="stat-label">보유 전문 장비 (종)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num"><span class="count-up" data-target="100" style="display:inline; margin:0; font-size:48px;">0</span><span>%</span></div>
+                    <div class="stat-label">고객 만족도</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Trust Info Box -->
+        <section class="trust-info-box fade-up">
+            <div class="trust-info-content">
+                <h3>믿을 수 있는 안전진단 전문기관</h3>
+                <ul class="trust-info-list">
+                    <li><strong>상호명</strong> <span>(주)한강엔지니어링</span></li>
+                    <li><strong>대표자</strong> <span>우상진</span></li>
+                    <li><strong>사업자등록번호</strong> <span>212-81-91777</span></li>
+                    <li><strong>안전진단 전문기관 등록</strong> <span>제 202X - OO호 (내용 확정 필요)</span></li>
+                    <li><strong>주요 업무</strong> <span>안전진단, 안전점검, 건축물관리점검, 내진성능평가 등</span></li>
+                </ul>
+            </div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-award"></i>
+                    <span>공식 인증기관</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-hard-hat"></i>
+                    <span>안전보건경영</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-building"></i>
+                    <span>시설물유지관리</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    </div>
+
+
+
+    <!-- Bottom CTA -->
+    <div class="sub-contact-cta">
+        <div class="container">
+            <div class="cta-inner fade-up">
+                <h2>고객 만족을 위한 빠른 문의</h2>
+                <div class="cta-actions">
+                    <a href="tel:02-6959-0729" class="btn btn-outline-white"><i class="fas fa-phone"></i> 02-6959-0729</a>
+                    <a href="mailto:hangang0730@daum.net" class="btn btn-outline-white"><i class="fas fa-envelope"></i> hangang0730@daum.net</a>
+                    <a href="./sub_0402.html" class="btn btn-point"><i class="fas fa-file-invoice"></i> 온라인 견적 양식 작성</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -225,6 +380,7 @@
                 </div>
                 <p><strong>대표 :</strong> 우상진 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
                 <p><strong>본사 :</strong> 서울시 성동구 연무장5가길 7 현대테라스타워 W동 1006호</p>
+                
                 <p><strong>TEL :</strong> 02-6959-0729 &nbsp;|&nbsp; <strong>FAX :</strong> 02-6959-0730 &nbsp;|&nbsp; <strong>Mobile :</strong> 010-9700-2926 &nbsp;|&nbsp; <strong>E-mail :</strong> hangang0730@daum.net</p>
             </div>
             <div style="text-align: right; align-self: flex-end;">
@@ -239,4 +395,6 @@
     </div>
 </footer>
 <script src="./js/redesign_motion.js"></script>
-\n</body>\n</html>
+
+</body>
+</html>
