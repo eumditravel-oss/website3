@@ -1,0 +1,101 @@
+/* style.css - (주)신영에스씨엠 Clone */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+:root {
+  --primary-color: #0033cc;
+  --text-dark: #222222;
+  --text-light: #ffffff;
+  --bg-light: #f8f8f8;
+  --bg-footer: #212020;
+  --header-height: 100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans KR', sans-serif; color: var(--text-dark); background-color: #fff; line-height: 1.6; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.clear_fix::after { content: ""; display: block; clear: both; }
+.mo_hide { display: block; }
+.pc_hide { display: none; }
+.sound_only { position: absolute; left: -9999px; }
+
+/* Header */
+#hd { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; height: var(--header-height); background: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(0,0,0,0.1); transition: 0.3s; }
+#hd.sticky { height: 70px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+#hd_wrapper { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 100%; position: relative; }
+#logo img { height: 40px; transition: 0.3s; }
+#hd.sticky #logo img { height: 30px; }
+
+/* GNB */
+#gnb_1dul { display: flex; height: 100%; align-items: center; }
+.gnb_1dli { position: relative; height: 100%; display: flex; align-items: center; padding: 0 25px; }
+.gnb_1da { font-size: 18px; font-weight: 600; color: #222; }
+.gnb_1dli:hover .gnb_1da { color: var(--primary-color); }
+
+/* Sub GNB Dropdown */
+.hd_bg { position: fixed; top: var(--header-height); left: 0; width: 100%; height: 250px; background: rgba(255,255,255,0.95); border-top: 1px solid #eee; display: none; z-index: 990; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
+.gnb_2dul { position: absolute; top: 100px; left: 50%; transform: translateX(-50%); width: 200px; display: none; z-index: 999; text-align: center; }
+#hd.sticky .hd_bg { top: 70px; }
+#hd.sticky .gnb_2dul { top: 70px; }
+.gnb_2dli { margin-bottom: 15px; }
+.gnb_2da { font-size: 15px; color: #555; transition: 0.2s; }
+.gnb_2da:hover { color: var(--primary-color); font-weight: bold; }
+
+/* Hero Slider */
+#visual { position: relative; height: 100vh; min-height: 600px; max-height: 900px; width: 100%; background: #000; overflow: hidden; margin-top: 0; }
+.swiper-slide { position: relative; width: 100%; height: 100%; }
+.swiper-slide > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.bg_black { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 2; }
+.main_txt { position: absolute; z-index: 100; top: 50%; left: 50%; transform: translate(-50%,-50%); max-width: 90%; width: 1300px; color: #fff; }
+.main_txt h4 { font-size: 24px; font-weight: 400; margin-bottom: 20px; line-height: 1; }
+.main_txt h1 { font-size: 55px; font-weight: 700; margin: 30px 0 50px 0; line-height: 1.2; text-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+.main_txt h3 { font-size: 20px; font-weight: 500; opacity: 0.9; line-height: 1.5; }
+
+/* Custom Swiper Pagination - Vertical Numbers */
+.swiper-pagination { position: absolute; left: 50px !important; top: 50% !important; transform: translateY(-50%) !important; display: flex; flex-direction: column; gap: 20px; z-index: 100; width: auto !important; }
+.swiper-pagination-bullet { width: auto !important; height: auto !important; background: transparent !important; opacity: 1 !important; color: rgba(255, 255, 255, 0.5); font-size: 16px; font-weight: 600; position: relative; display: flex; align-items: center; justify-content: center; padding: 20px; transition: all 0.3s; cursor: pointer; }
+.swiper-pagination-bullet-active { color: #fff; font-size: 18px; }
+.circle-svg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-90deg); width: 60px; height: 60px; }
+.circle-svg circle { fill: none; stroke: rgba(255, 255, 255, 0.2); stroke-width: 2; }
+.swiper-pagination-bullet-active .circle-svg circle { stroke: #0033cc; stroke-dasharray: 183; stroke-dashoffset: 183; animation: circleProgress 7s linear forwards; }
+@keyframes circleProgress { 0% { stroke-dashoffset: 183; } 100% { stroke-dashoffset: 0; } }
+
+/* Introduction / Quick Links */
+.main_sec { padding: 100px 0; }
+.main_sec01 { text-align: center; }
+.main_sec01 .title h1 { font-size: 40px; font-weight: 700; margin-bottom: 20px; color: #111; }
+.main_sec01 .title h2 { font-size: 18px; font-weight: 400; color: #666; margin-bottom: 60px; }
+.sec_con ul { display: flex; justify-content: center; gap: 30px; }
+.sec_con li { width: 200px; padding: 40px 20px; background: #fff; border: 1px solid #eaeaea; border-radius: 10px; transition: 0.3s; cursor: pointer; }
+.sec_con li:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-color: var(--primary-color); }
+.sec_con img { width: 60px; margin-bottom: 20px; }
+.sec_con h6 { font-size: 20px; font-weight: 600; color: #333; }
+
+/* Subpage Common Layout */
+.subtop { background: url('http://sinyoungscm.com/img/main01.jpg') no-center center/cover; padding: 150px 0 80px; position: relative; color: #fff; text-align: center; }
+.subtop::after { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index: 1; }
+.subtop .txt { position: relative; z-index: 2; }
+.subtop h2 { font-size: 40px; font-weight: 700; margin-bottom: 10px; }
+.subtop h3 { font-size: 20px; font-weight: 300; }
+
+.container_wrap { display: flex; max-width: 1200px; margin: 50px auto; padding: 0 20px; gap: 50px; align-items: flex-start; }
+#aside { width: 250px; flex-shrink: 0; }
+#groupmenu { border: 1px solid #ddd; }
+#groupmenu .nanum-gb { padding: 30px 20px; font-size: 22px; font-weight: bold; background: #f8f8f8; border-bottom: 1px solid #ddd; border-top: 5px solid var(--primary-color); text-align: center; }
+#nav1 ul li { border-bottom: 1px solid #eee; }
+#nav1 ul li a { display: block; padding: 15px 20px; font-size: 16px; color: #555; transition: 0.3s; }
+#nav1 ul li.on a, #nav1 ul li a:hover { background: var(--primary-color); color: #fff; }
+
+#container { flex-grow: 1; }
+#container_title { font-size: 32px; font-weight: bold; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 2px solid #222; }
+.sub_wrap { font-size: 16px; line-height: 1.8; color: #555; }
+.sub_wrap .img { margin-bottom: 30px; text-align: center; }
+.sub_wrap .img img { max-width: 100%; border-radius: 10px; }
+.sub_wrap .txt h1 { font-size: 28px; color: var(--primary-color); margin-bottom: 10px; }
+.sub_wrap .txt h2 { font-size: 22px; color: #333; margin-bottom: 20px; }
+
+/* Footer */
+#ft { background: var(--bg-footer); padding: 50px 0; color: #aaa; font-size: 14px; text-align: center; margin-top: 80px; }
+#ft_company b { font-size: 16px; color: #fff; margin-bottom: 10px; display: inline-block; }
+#ft_copy { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }

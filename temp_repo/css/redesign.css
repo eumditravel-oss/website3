@@ -1,0 +1,291 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+    --color-primary: #0033cc;
+    --color-primary-dark: #002288;
+    --color-text-main: #111111;
+    --color-text-muted: #555555;
+    --color-bg-light: #f4f7f9;
+    --color-border: #e0e0e0;
+    --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 10px 30px rgba(0, 51, 204, 0.15);
+    
+    --transition-fast: 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-normal: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Base Aggressive Override */
+body, input, button, textarea, select {
+    font-family: var(--font-main) !important;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    color: var(--color-text-main) !important;
+    letter-spacing: -0.02em;
+}
+
+#container {
+    background-color: #fafbfc;
+    padding: 40px !important;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+a, button {
+    cursor: pointer;
+    transition: all var(--transition-fast) !important;
+}
+
+/* Touch Target Minimum (44x44) */
+.btn-cta, .btn-link, .bo_tit a, .sch_btn, .btn_menu_open, .gnb_menu_btn, .gnb_close_btn, .btn_menu_close, .btn_menu_op {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Focus Ring */
+*:focus-visible {
+    outline: 3px solid var(--color-primary) !important;
+    outline-offset: 3px !important;
+}
+
+/* CTA Buttons */
+.cta-wrap {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 30px 0 40px 0;
+    justify-content: flex-end;
+}
+
+.btn-cta {
+    background-color: var(--color-primary) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    padding: 16px 32px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 16px rgba(0,51,204,0.2) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.btn-cta:hover, .btn-cta:focus {
+    background-color: var(--color-primary-dark) !important;
+    box-shadow: 0 12px 24px rgba(0,51,204,0.3) !important;
+    transform: translateY(-4px) !important;
+    color: #ffffff !important;
+}
+
+.btn-cta.outline {
+    background-color: #ffffff !important;
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary) !important;
+    box-shadow: none !important;
+}
+
+.btn-cta.outline:hover, .btn-cta.outline:focus {
+    background-color: #f0f4ff !important;
+}
+
+/* Board List Completely Revamped (Desktop) */
+#bo_list .tbl_head01.tbl_wrap {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+#bo_list .tbl_head01 table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 12px !important;
+}
+
+#bo_list .tbl_head01 th {
+    background-color: transparent !important;
+    color: var(--color-text-muted) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 16px !important;
+    border: none !important;
+    border-bottom: 2px solid #ddd !important;
+}
+
+#bo_list .tbl_head01 td {
+    padding: 24px 16px !important;
+    border: none !important;
+    background-color: #ffffff !important;
+    color: var(--color-text-main) !important;
+    font-size: 18px !important;
+    transition: all var(--transition-fast) !important;
+    vertical-align: middle !important;
+}
+
+#bo_list .tbl_head01 tr {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+    border-radius: 12px !important;
+    transition: all var(--transition-fast) !important;
+}
+
+/* Border radius for first and last td to make tr rounded */
+#bo_list .tbl_head01 tr td:first-child {
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+}
+#bo_list .tbl_head01 tr td:last-child {
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+}
+
+#bo_list .tbl_head01 tbody tr:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: var(--shadow-hover) !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Board Titles */
+#bo_list .tbl_head01 .td_subject {
+    font-weight: 700 !important;
+    font-size: 20px !important;
+}
+
+.bo_tit a {
+    color: var(--color-text-main) !important;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.bo_tit a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width var(--transition-fast);
+}
+
+.bo_tit a:hover:after {
+    width: 100%;
+}
+
+.bo_tit a:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Badges */
+.new_icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #ff3b30 !important;
+    color: #fff !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    margin-left: 8px !important;
+    vertical-align: middle !important;
+    box-shadow: 0 2px 4px rgba(255,59,48,0.3) !important;
+}
+
+.cnt_cmt {
+    display: inline-flex !important;
+    background-color: #f0f4ff !important;
+    color: var(--color-primary) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    margin-left: 8px !important;
+    vertical-align: middle !important;
+    border: 1px solid rgba(0,51,204,0.1) !important;
+}
+
+/* Mobile Card View (Extremely clear) */
+@media (max-width: 767px) {
+    #container {
+        padding: 20px !important;
+    }
+    
+    .cta-wrap {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-cta {
+        justify-content: center !important;
+    }
+
+    #bo_list .tbl_head01 table, 
+    #bo_list .tbl_head01 thead, 
+    #bo_list .tbl_head01 tbody, 
+    #bo_list .tbl_head01 tr, 
+    #bo_list .tbl_head01 td {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    #bo_list .tbl_head01 thead {
+        display: none !important;
+    }
+    
+    #bo_list .tbl_head01 tr {
+        margin-bottom: 20px !important;
+        padding: 24px !important;
+        background: #fff !important;
+        border: 1px solid var(--color-border) !important;
+    }
+    
+    #bo_list .tbl_head01 td {
+        padding: 4px 0 !important;
+        border-radius: 0 !important;
+    }
+    
+    #bo_list .tbl_head01 .td_subject {
+        font-size: 22px !important;
+        margin-bottom: 12px !important;
+        display: block !important;
+    }
+    
+    #bo_list .tbl_head01 .td_name, 
+    #bo_list .tbl_head01 .td_datetime, 
+    #bo_list .tbl_head01 .td_num {
+        display: inline-block !important;
+        font-size: 15px !important;
+        color: var(--color-text-muted) !important;
+        margin-right: 12px !important;
+    }
+}
+
+/* --- Motions --- */
+.motion-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.motion-fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .motion-fade-up {
+        opacity: 1;
+        transform: none;
+    }
+}

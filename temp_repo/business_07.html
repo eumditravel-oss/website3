@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>인접건축물 사전조사 1 페이지 | (주)한강엔지니어링</title>
+
+<meta name="format-detection" content="telephone=no">
+
+<link rel="stylesheet" href="theme/basic/css/default.css">
+<!--[if lte IE 8]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://sinyoungscm.com";
+var g5_bbs_url   = "http://sinyoungscm.com/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "0207";
+var g5_sca       = "";
+var g5_editor    = "smarteditor2";
+var g5_cookie_domain = "";
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="sub/sub.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="js/common.js"></script>
+<script src="js/wrest.js"></script>
+<script src="js/placeholders.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+<script>
+	var top = $(window).scrollTop();
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				var top = $(window).scrollTop(); //
+						 
+				if(top>=40){
+                    $(".top_btn_box").css({"opacity":"1"});
+							
+				}else{
+                    $(".top_btn_box").css({"opacity":"0"});
+				}
+					 
+			});
+		});
+</script>
+
+
+<!-- 상단 시작 { -->
+<div id="hd" class="mo_hide">
+    <h1 id="hd_h1">인접건축물 사전조사 1 페이지</h1>
+    <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
+
+    <div class="hd_bg"></div>
+    
+    <div id="hd_wrapper">
+
+        <div id="logo">
+            <a href="index.html">
+                <img src="./img/logo.png" alt="(주)한강엔지니어링" id="logo_img">
+            </a>
+        </div>
+
+        <nav id="gnb">
+            <h2>메인메뉴</h2>
+            <div class="gnb_wrap">
+                <ul id="gnb_1dul">
+                    <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:999">
+                        <a href="about_greeting.html" target="_self" class="gnb_1da">회사소개</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="about_greeting.html" target="_self" class="gnb_2da">인사말</a></li>
+                                                    <li class="gnb_2dli"><a href="about_history.html" target="_self" class="gnb_2da">연혁</a></li>
+                                                    <li class="gnb_2dli"><a href="about_projects.html" target="_self" class="gnb_2da">주요실적</a></li>
+                                                    <li class="gnb_2dli"><a href="about_location.html" target="_self" class="gnb_2da">오시는길</a></li>
+                        </ul></div>
+                    </li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:998">
+                        <a href="business_01.html" target="_self" class="gnb_1da">업무분야</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="business_01.html" target="_self" class="gnb_2da">안전진단</a></li>
+                                                    <li class="gnb_2dli"><a href="business_02.html" target="_self" class="gnb_2da">안전점검</a></li>
+                                                    <li class="gnb_2dli"><a href="business_03.html" target="_self" class="gnb_2da">건축물관리점검</a></li>
+                                                    <li class="gnb_2dli"><a href="business_04.html" target="_self" class="gnb_2da">건설공사 정기안전점검</a></li>
+                                                    <li class="gnb_2dli"><a href="business_05.html" target="_self" class="gnb_2da">내진성능평가</a></li>
+                                                    <li class="gnb_2dli"><a href="business_06.html" target="_self" class="gnb_2da">법원감정</a></li>
+                                                    <li class="gnb_2dli"><a href="business_07.html" target="_self" class="gnb_2da">인접건축물 사전조사</a></li>
+                                                    <li class="gnb_2dli"><a href="business_08.html" target="_self" class="gnb_2da">구조설계/감리</a></li>
+                                                    <li class="gnb_2dli"><a href="business_09.html" target="_self" class="gnb_2da">시설물보수/보강공사</a></li>
+                        </ul></div>
+                    </li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:997">
+                        <a href="cert_01.html" target="_self" class="gnb_1da">인증 및 장비현황</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="cert_01.html" target="_self" class="gnb_2da">인증현황</a></li>
+                                                    <li class="gnb_2dli"><a href="cert_02.html" target="_self" class="gnb_2da">장비보유현황</a></li>
+                        </ul></div>
+                    </li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:996">
+                        <a href="notice.html" target="_self" class="gnb_1da">고객센터</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="notice.html" target="_self" class="gnb_2da">공지사항</a></li>
+                        </ul></div>
+                    </li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:995">
+                        <a href="inquiry.html" target="_self" class="gnb_1da">무료견적문의</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="inquiry.html" target="_self" class="gnb_2da">견적문의</a></li>
+                        </ul></div>
+                    </li>
+                                    </ul>
+                <div id="gnb_all">
+                    <h2>전체메뉴</h2>
+                    <ul class="gnb_al_ul">
+                                                <li class="gnb_al_li">
+                            <a href="about_greeting.html" target="_self" class="gnb_al_a">회사소개</a>
+                            <ul>
+                                <li><a href="about_greeting.html" target="_self">인사말</a></li>
+                                                            <li><a href="about_history.html" target="_self">연혁</a></li>
+                                                            <li><a href="about_projects.html" target="_self">주요실적</a></li>
+                                                            <li><a href="about_location.html" target="_self">오시는길</a></li>
+                            </ul>
+                        </li>
+                                                <li class="gnb_al_li">
+                            <a href="business_01.html" target="_self" class="gnb_al_a">업무분야</a>
+                            <ul>
+                                <li><a href="business_01.html" target="_self">안전진단</a></li>
+                                                            <li><a href="business_02.html" target="_self">안전점검</a></li>
+                                                            <li><a href="business_03.html" target="_self">건축물관리점검</a></li>
+                                                            <li><a href="business_04.html" target="_self">건설공사 정기안전점검</a></li>
+                                                            <li><a href="business_05.html" target="_self">내진성능평가</a></li>
+                                                            <li><a href="business_06.html" target="_self">법원감정</a></li>
+                                                            <li><a href="business_07.html" target="_self">인접건축물 사전조사</a></li>
+                                                            <li><a href="business_08.html" target="_self">구조설계/감리</a></li>
+                                                            <li><a href="business_09.html" target="_self">시설물보수/보강공사</a></li>
+                            </ul>
+                        </li>
+                                                <li class="gnb_al_li">
+                            <a href="cert_01.html" target="_self" class="gnb_al_a">인증 및 장비현황</a>
+                            <ul>
+                                <li><a href="cert_01.html" target="_self">인증현황</a></li>
+                                                            <li><a href="cert_02.html" target="_self">장비보유현황</a></li>
+                            </ul>
+                        </li>
+                                                <li class="gnb_al_li">
+                            <a href="notice.html" target="_self" class="gnb_al_a">고객센터</a>
+                            <ul>
+                                <li><a href="notice.html" target="_self">공지사항</a></li>
+                            </ul>
+                        </li>
+                                                <li class="gnb_al_li">
+                            <a href="inquiry.html" target="_self" class="gnb_al_a">무료견적문의</a>
+                            <ul>
+                                <li><a href="inquiry.html" target="_self">견적문의</a></li>
+                            </ul>
+                        </li>
+                                            </ul>
+                    <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+                <div id="gnb_all_bg"></div>
+            </div>
+        </nav>
+        <script>
+        $(function(){
+            $(".gnb_menu_btn").click(function(){
+                $("#gnb_all, #gnb_all_bg").show();
+            });
+            $(".gnb_close_btn, #gnb_all_bg").click(function(){
+                $("#gnb_all, #gnb_all_bg").hide();
+            });
+        });
+        </script>
+    
+        <ul id="tnb">
+            <li><a href="#" class="sitemap_box_open" id="ham">
+                <img src="./img/ham_bar_w.png" alt="">
+            </li>
+
+            <div class="sitemap_box">
+                <div class="sitemap_box_close_wrap">
+                    <a href="/" class="sitemap_box_close"><img src="./img/close_btn.png" alt=""></a>
+                </div>
+                    <nav id="tnb_gnb_sm">
+                                                <!-- 1번째 리스트 묶음 -->
+                        <ul id="tnb_gnb_1dul">
+                            <!--li.tnb_gnb_1dli>(a.tnb_gnb_1da)+(ul.tnb_gnb_2dul>li.tnb_gnb_2dli*3>a.tnb_gnb_2da)-->
+
+
+                                                        <li class="tnb_gnb_1dli" style="z-index:999">
+                                <a href="about_greeting.html" target="_self" class="tnb_gnb_1da">회사소개</a>
+                                <ul class="tnb_gnb_2dul clear_fix">
+                                    <li class="tnb_gnb_2dli"><a href="about_greeting.html" target="_self" class="tnb_gnb_2da">인사말</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="about_history.html" target="_self" class="tnb_gnb_2da">연혁</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="about_projects.html" target="_self" class="tnb_gnb_2da">주요실적</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="about_location.html" target="_self" class="tnb_gnb_2da">오시는길</a></li>
+                                </ul>
+                            </li>
+                                                        <li class="tnb_gnb_1dli" style="z-index:998">
+                                <a href="business_01.html" target="_self" class="tnb_gnb_1da">업무분야</a>
+                                <ul class="tnb_gnb_2dul clear_fix">
+                                    <li class="tnb_gnb_2dli"><a href="business_01.html" target="_self" class="tnb_gnb_2da">안전진단</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="business_02.html" target="_self" class="tnb_gnb_2da">안전점검</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="business_03.html" target="_self" class="tnb_gnb_2da">건축물관리점검</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="business_04.html" target="_self" class="tnb_gnb_2da">건설공사 정기안전점검</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="business_05.html" target="_self" class="tnb_gnb_2da">내진성능평가</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="business_06.html" target="_self" class="tnb_gnb_2da">법원감정</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="business_07.html" target="_self" class="tnb_gnb_2da">인접건축물 사전조사</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="business_08.html" target="_self" class="tnb_gnb_2da">구조설계/감리</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="business_09.html" target="_self" class="tnb_gnb_2da">시설물보수/보강공사</a></li>
+                                </ul>
+                            </li>
+                                                        <li class="tnb_gnb_1dli" style="z-index:997">
+                                <a href="cert_01.html" target="_self" class="tnb_gnb_1da">인증 및 장비현황</a>
+                                <ul class="tnb_gnb_2dul clear_fix">
+                                    <li class="tnb_gnb_2dli"><a href="cert_01.html" target="_self" class="tnb_gnb_2da">인증현황</a></li>
+                                                                    <li class="tnb_gnb_2dli"><a href="cert_02.html" target="_self" class="tnb_gnb_2da">장비보유현황</a></li>
+                                </ul>
+                            </li>
+                                                        <li class="tnb_gnb_1dli" style="z-index:996">
+                                <a href="notice.html" target="_self" class="tnb_gnb_1da">고객센터</a>
+                                <ul class="tnb_gnb_2dul clear_fix">
+                                    <li class="tnb_gnb_2dli"><a href="notice.html" target="_self" class="tnb_gnb_2da">공지사항</a></li>
+                                </ul>
+                            </li>
+                                                        <li class="tnb_gnb_1dli" style="z-index:995">
+                                <a href="inquiry.html" target="_self" class="tnb_gnb_1da">무료견적문의</a>
+                                <ul class="tnb_gnb_2dul clear_fix">
+                                    <li class="tnb_gnb_2dli"><a href="inquiry.html" target="_self" class="tnb_gnb_2da">견적문의</a></li>
+                                </ul>
+                            </li>
+                                                    </ul>
+                    </nav>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- } 상단 끝 -->
+
+            <script>
+                $(function(){
+                    $(".search_box_open").click(function(){
+                        $(".search_box").stop().show().animate({"top":"0"},300);
+                        return false;
+                    });
+                    $(".search_box_close").click(function(){
+                        $(".search_box").stop().fadeOut().animate({"top":"0"},300);
+                        return false;
+                    });
+                });
+                $(function(){
+                    $(".sitemap_box_open").click(function(){
+                        $(".sitemap_box").stop().show().animate({"top":"0"},300);
+                        return false;
+                    });
+                    $(".sitemap_box_close").click(function(){
+                        $(".sitemap_box").stop().fadeOut().animate({"top":"0"},300);
+                        return false;
+                    });
+                });
+            </script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script>
+$(function () {
+    var gnbTimer;
+    var $logo = $('#logo img');
+    var $ham = $('#ham img'); // 햄버거 버튼 img 선택자
+
+    $('#gnb, .hd_bg').on('mouseenter', function () {
+        clearTimeout(gnbTimer);
+        $('.gnb_2dul').stop(true, true).slideDown(300, 'easeInOutCubic');
+        $('.hd_bg').stop(true, true).slideDown(300, 'easeInOutCubic');
+        // $('.gnb_1da').css('color', '#000');
+
+        // $logo.attr('src', '/img/logo.png');
+        // $ham.attr('src', '/img/ham_bar.png');
+    });
+
+    $('#gnb, .hd_bg').on('mouseleave', function () {
+        gnbTimer = setTimeout(function () {
+            $('.gnb_2dul').stop(true, true).slideUp(300, 'easeInOutCubic');
+            $('.hd_bg').stop(true, true).slideUp(300, 'easeInOutCubic');
+            // $('.gnb_1da').css('color', '');
+
+            // $logo.attr('src', '/img/logo_w.png');
+            // $ham.attr('src', '/img/ham_bar_w.png');
+        }, 300);
+    });
+});
+
+</script>
+
+<div class="mo_menu">
+    <a href="/" class="btn_menu_close"><i class="fas fa-times"></i></a>
+    <script>
+        $(function(){
+            $(".btn_menu_close").click(function(){
+                $(".mo_menu").stop().animate({"left":"-100%"},300);
+                $(".gnb_2dul_mo").slideUp();
+                return false;
+            });
+        });
+    </script>
+    
+    <div id="hd_logo_mo">
+        <a href="index.html"><img src="./img/logo.png" alt="(주)한강엔지니어링"></a>
+    </div>
+    
+    <fieldset id="hd_sch_mo">
+        <legend>사이트 내 전체검색</legend>
+        <form name="fsearchbox" method="get" action="http://sinyoungscm.com/bbs/search.php" onsubmit="return fsearchbox_submit(this);">
+        <input type="hidden" name="sfl" value="wr_subject||wr_content">
+        <input type="hidden" name="sop" value="and">
+        <label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+        <input type="text" name="stx" id="sch_stx" maxlength="20">
+        <input type="image" id="sch_submit" src="./theme/tobo/img/icon_search.png" alt="검색">
+    <!--        <input type="submit" id="sch_submit" value="검색">-->
+        </form>
+
+        <script>
+        function fsearchbox_submit(f)
+        {
+            if (f.stx.value.length < 2) {
+                alert("검색어는 두글자 이상 입력하십시오.");
+                f.stx.select();
+                f.stx.focus();
+                return false;
+            }
+
+            // 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+            var cnt = 0;
+            for (var i=0; i<f.stx.value.length; i++) {
+                if (f.stx.value.charAt(i) == ' ')
+                    cnt++;
+            }
+
+            if (cnt > 1) {
+                alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+                f.stx.select();
+                f.stx.focus();
+                return false;
+            }
+
+            return true;
+        }
+        </script>
+    </fieldset>
+    
+    <!-- GNB -->
+    <nav id="gnb_sm_mo">
+                <!-- 1번째 리스트 묶음 -->
+        <ul id="gnb_1dul_mo">
+                        <li class="gnb_1dli_mo" style="z-index:999">
+                <a href="about_greeting.html" target="_self" class="gnb_1da_mo subOpen">회사소개</a>
+                <button type="button" class="btn_menu_op"><span class="sound_only">하위분류</span><i class="fa fa-chevron-down"></i></button><ul class="gnb_2dul_mo">
+                    <li class="gnb_2dli_mo">
+                        <a href="about_greeting.html" target="_self" class="gnb_2da_mo">인사말</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="about_history.html" target="_self" class="gnb_2da_mo">연혁</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="about_projects.html" target="_self" class="gnb_2da_mo">주요실적</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="about_location.html" target="_self" class="gnb_2da_mo">오시는길</a>
+                                                </li>
+                    </ul>
+                </li>
+                        <li class="gnb_1dli_mo" style="z-index:998">
+                <a href="business_01.html" target="_self" class="gnb_1da_mo subOpen">업무분야</a>
+                <button type="button" class="btn_menu_op"><span class="sound_only">하위분류</span><i class="fa fa-chevron-down"></i></button><ul class="gnb_2dul_mo">
+                    <li class="gnb_2dli_mo">
+                        <a href="business_01.html" target="_self" class="gnb_2da_mo">안전진단</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="business_02.html" target="_self" class="gnb_2da_mo">안전점검</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="business_03.html" target="_self" class="gnb_2da_mo">건축물관리점검</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="business_04.html" target="_self" class="gnb_2da_mo">건설공사 정기안전점검</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="business_05.html" target="_self" class="gnb_2da_mo">내진성능평가</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="business_06.html" target="_self" class="gnb_2da_mo">법원감정</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="business_07.html" target="_self" class="gnb_2da_mo">인접건축물 사전조사</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="business_08.html" target="_self" class="gnb_2da_mo">구조설계/감리</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="business_09.html" target="_self" class="gnb_2da_mo">시설물보수/보강공사</a>
+                                                </li>
+                    </ul>
+                </li>
+                        <li class="gnb_1dli_mo" style="z-index:997">
+                <a href="cert_01.html" target="_self" class="gnb_1da_mo subOpen">인증 및 장비현황</a>
+                <button type="button" class="btn_menu_op"><span class="sound_only">하위분류</span><i class="fa fa-chevron-down"></i></button><ul class="gnb_2dul_mo">
+                    <li class="gnb_2dli_mo">
+                        <a href="cert_01.html" target="_self" class="gnb_2da_mo">인증현황</a>
+                                                </li>
+                                        <li class="gnb_2dli_mo">
+                        <a href="cert_02.html" target="_self" class="gnb_2da_mo">장비보유현황</a>
+                                                </li>
+                    </ul>
+                </li>
+                        <li class="gnb_1dli_mo" style="z-index:996">
+                <a href="notice.html" target="_self" class="gnb_1da_mo subOpen">고객센터</a>
+                <button type="button" class="btn_menu_op"><span class="sound_only">하위분류</span><i class="fa fa-chevron-down"></i></button><ul class="gnb_2dul_mo">
+                    <li class="gnb_2dli_mo">
+                        <a href="notice.html" target="_self" class="gnb_2da_mo">공지사항</a>
+                                                </li>
+                    </ul>
+                </li>
+                        <li class="gnb_1dli_mo" style="z-index:995">
+                <a href="inquiry.html" target="_self" class="gnb_1da_mo subOpen">무료견적문의</a>
+                <button type="button" class="btn_menu_op"><span class="sound_only">하위분류</span><i class="fa fa-chevron-down"></i></button><ul class="gnb_2dul_mo">
+                    <li class="gnb_2dli_mo">
+                        <a href="inquiry.html" target="_self" class="gnb_2da_mo">견적문의</a>
+                                                </li>
+                    </ul>
+                </li>
+                    </ul>
+    </nav>
+    
+    <script>
+        $(".btn_menu_op").click(function(){
+            $(this).next(".gnb_2dul_mo").slideToggle(300);
+        });
+    </script>
+
+</div>
+
+<!-- { mobile상단 시작 -->
+    <div id="hd_mo" class="pc_hide clear_fix">
+    <ul class="hd_top_left_mo clear_fix">
+        <li><a href="https://www.westerndigital.com/ko-kr" target="_blank"><img src="./theme/tobo/img/icon_hd_top01.png" alt=""></a></li>
+        <li><a href="https://www.g-technology.com/ko-kr" target="_blank"><img src="./theme/tobo/img/icon_hd_top02.png" alt=""></a></li>
+    </ul>
+    <div id="logo_mo">
+        <a href="index.html"><img src="./img/logo.png" alt="(주)한강엔지니어링"></a>
+    </div>
+
+    <div class="hd_bg"></div>
+
+    <nav id="gnb">
+            <h2>메인메뉴</h2>
+            <div class="gnb_wrap">
+                <ul id="gnb_1dul">
+                    <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:999">
+                        <a href="about_greeting.html" target="_self" class="gnb_1da">회사소개</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="about_greeting.html" target="_self" class="gnb_2da">인사말</a></li>
+                                                    <li class="gnb_2dli"><a href="about_history.html" target="_self" class="gnb_2da">연혁</a></li>
+                                                    <li class="gnb_2dli"><a href="about_projects.html" target="_self" class="gnb_2da">주요실적</a></li>
+                                                    <li class="gnb_2dli"><a href="about_location.html" target="_self" class="gnb_2da">오시는길</a></li>
+                        </ul></div>
+                    </li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:998">
+                        <a href="business_01.html" target="_self" class="gnb_1da">업무분야</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="business_01.html" target="_self" class="gnb_2da">안전진단</a></li>
+                                                    <li class="gnb_2dli"><a href="business_02.html" target="_self" class="gnb_2da">안전점검</a></li>
+                                                    <li class="gnb_2dli"><a href="business_03.html" target="_self" class="gnb_2da">건축물관리점검</a></li>
+                                                    <li class="gnb_2dli"><a href="business_04.html" target="_self" class="gnb_2da">건설공사 정기안전점검</a></li>
+                                                    <li class="gnb_2dli"><a href="business_05.html" target="_self" class="gnb_2da">내진성능평가</a></li>
+                                                    <li class="gnb_2dli"><a href="business_06.html" target="_self" class="gnb_2da">법원감정</a></li>
+                                                    <li class="gnb_2dli"><a href="business_07.html" target="_self" class="gnb_2da">인접건축물 사전조사</a></li>
+                                                    <li class="gnb_2dli"><a href="business_08.html" target="_self" class="gnb_2da">구조설계/감리</a></li>
+                                                    <li class="gnb_2dli"><a href="business_09.html" target="_self" class="gnb_2da">시설물보수/보강공사</a></li>
+                        </ul></div>
+                    </li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:997">
+                        <a href="cert_01.html" target="_self" class="gnb_1da">인증 및 장비현황</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="cert_01.html" target="_self" class="gnb_2da">인증현황</a></li>
+                                                    <li class="gnb_2dli"><a href="cert_02.html" target="_self" class="gnb_2da">장비보유현황</a></li>
+                        </ul></div>
+                    </li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:996">
+                        <a href="notice.html" target="_self" class="gnb_1da">고객센터</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="notice.html" target="_self" class="gnb_2da">공지사항</a></li>
+                        </ul></div>
+                    </li>
+                                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:995">
+                        <a href="inquiry.html" target="_self" class="gnb_1da">무료견적문의</a>
+                        <span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">
+                            <li class="gnb_2dli"><a href="inquiry.html" target="_self" class="gnb_2da">견적문의</a></li>
+                        </ul></div>
+                    </li>
+                                    </ul>
+                <div id="gnb_all">
+                    <h2>전체메뉴</h2>
+                    <ul class="gnb_al_ul">
+                                                <li class="gnb_al_li">
+                            <a href="about_greeting.html" target="_self" class="gnb_al_a">회사소개</a>
+                            <ul>
+                                <li><a href="about_greeting.html" target="_self">인사말</a></li>
+                                                            <li><a href="about_history.html" target="_self">연혁</a></li>
+                                                            <li><a href="about_projects.html" target="_self">주요실적</a></li>
+                                                            <li><a href="about_location.html" target="_self">오시는길</a></li>
+                            </ul>
+                        </li>
+                                                <li class="gnb_al_li">
+                            <a href="business_01.html" target="_self" class="gnb_al_a">업무분야</a>
+                            <ul>
+                                <li><a href="business_01.html" target="_self">안전진단</a></li>
+                                                            <li><a href="business_02.html" target="_self">안전점검</a></li>
+                                                            <li><a href="business_03.html" target="_self">건축물관리점검</a></li>
+                                                            <li><a href="business_04.html" target="_self">건설공사 정기안전점검</a></li>
+                                                            <li><a href="business_05.html" target="_self">내진성능평가</a></li>
+                                                            <li><a href="business_06.html" target="_self">법원감정</a></li>
+                                                            <li><a href="business_07.html" target="_self">인접건축물 사전조사</a></li>
+                                                            <li><a href="business_08.html" target="_self">구조설계/감리</a></li>
+                                                            <li><a href="business_09.html" target="_self">시설물보수/보강공사</a></li>
+                            </ul>
+                        </li>
+                                                <li class="gnb_al_li">
+                            <a href="cert_01.html" target="_self" class="gnb_al_a">인증 및 장비현황</a>
+                            <ul>
+                                <li><a href="cert_01.html" target="_self">인증현황</a></li>
+                                                            <li><a href="cert_02.html" target="_self">장비보유현황</a></li>
+                            </ul>
+                        </li>
+                                                <li class="gnb_al_li">
+                            <a href="notice.html" target="_self" class="gnb_al_a">고객센터</a>
+                            <ul>
+                                <li><a href="notice.html" target="_self">공지사항</a></li>
+                            </ul>
+                        </li>
+                                                <li class="gnb_al_li">
+                            <a href="inquiry.html" target="_self" class="gnb_al_a">무료견적문의</a>
+                            <ul>
+                                <li><a href="inquiry.html" target="_self">견적문의</a></li>
+                            </ul>
+                        </li>
+                                            </ul>
+                    <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+                <div id="gnb_all_bg"></div>
+            </div>
+        </nav>
+
+    <a href="/" class="btn_menu_open"><i class="fas fa-bars"></i></a>
+    <script>
+        $(function(){
+            $(".btn_menu_open").click(function(){
+                $(".mo_menu").stop().animate({"left":"0%"},300);
+                return false;
+            });
+        });
+    </script>
+</div>
+<!-- } mobile상단 끝 -->
+
+
+<!-- 콘텐츠 시작 { -->
+<div id="wrapper">
+	        <div class="subtop">
+            <div class="txt">
+                <h2>업무분야</h2>
+                <h3>인접건축물 사전조사</h3>
+            </div>
+        </div>
+    
+    <div class="container_wrap">
+                    <div id="aside" class="mo_hide">
+                
+<!-- 메뉴 시작 { -->
+<link rel="stylesheet" href="skin/groupmenu/adffix/css/style.css">
+
+
+<section id="groupmenu" style="width:195px;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr height="70">
+            <td class="nanum-gb" valign="top" colspan='3' style="color:#525252; font-size:25px; line-height:80px; border-bottom:1px solid #d6d6d6;border-top:10px solid #0033cc;text-align:center;">
+                <!--  그룹 네임 시작 -->
+                <b>
+                    업무분야                </b>
+                <!-- 그룹 네임 끝 -->
+            </td>
+        </tr>
+
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li>
+                            <!-- <a href="business_01.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >안전진단</a> -->
+                                                        <a href="business_01.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >안전진단</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li>
+                            <!-- <a href="business_02.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >안전점검</a> -->
+                                                        <a href="business_02.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >안전점검</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li>
+                            <!-- <a href="business_03.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >건축물관리점검</a> -->
+                                                        <a href="business_03.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >건축물관리점검</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li>
+                            <!-- <a href="business_04.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >건설공사 정기안전점검</a> -->
+                                                        <a href="business_04.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >건설공사 정기안전점검</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li>
+                            <!-- <a href="business_05.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >내진성능평가</a> -->
+                                                        <a href="business_05.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >내진성능평가</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li>
+                            <!-- <a href="business_06.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >법원감정</a> -->
+                                                        <a href="business_06.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >법원감정</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li class="on">
+                            <!-- <a href="business_07.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >인접건축물 사전조사</a> -->
+                                                        <a href="business_07.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >인접건축물 사전조사</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li>
+                            <!-- <a href="business_08.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >구조설계/감리</a> -->
+                                                        <a href="business_08.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >구조설계/감리</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+                <tr>
+            <td>
+                <div id="nav1">
+                    <ul>
+                        <li>
+                            <!-- <a href="business_09.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >시설물보수/보강공사</a> -->
+                                                        <a href="business_09.html" class="nanum-g" style="font-size:16px; line-height:45px; display:block;" >시설물보수/보강공사</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+        
+    </table>
+</section>
+<!-- } 메뉴 끝 -->
+
+<style>
+    #nav1 {
+        text-indent: 10px;
+    }
+
+</style>
+            </div>
+
+            <div id="aside" class="pc_hide">
+                
+<!-- 메뉴 시작 { -->
+<link rel="stylesheet" href="skin/groupmenu/custom/css/style.css">
+<section id="groupmenu" style="width:100%;">
+	<ul>
+            	
+                <li>
+                        <!-- <a href="business_01.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >안전진단</a> -->
+                                                <a href="business_01.html&sca=습식특허+전기온돌판넬" class="nanum-g">안전진단</a>
+                    </li>
+	
+                <li>
+                        <!-- <a href="business_02.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >안전점검</a> -->
+                                                <a href="business_02.html" class="nanum-g">안전점검</a>
+                    </li>
+	
+                <li>
+                        <!-- <a href="business_03.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >건축물관리점검</a> -->
+                                                <a href="business_03.html&sca=천정형+복사패널" class="nanum-g">건축물관리점검</a>
+                    </li>
+	
+                <li>
+                        <!-- <a href="business_04.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >건설공사 정기안전점검</a> -->
+                                                <a href="business_04.html" class="nanum-g">건설공사 정기안전점검</a>
+                    </li>
+	
+                <li>
+                        <!-- <a href="business_05.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >내진성능평가</a> -->
+                                                <a href="business_05.html" class="nanum-g">내진성능평가</a>
+                    </li>
+	
+                <li>
+                        <!-- <a href="business_06.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >법원감정</a> -->
+                                                <a href="business_06.html" class="nanum-g">법원감정</a>
+                    </li>
+	
+                <li class="on">
+                        <!-- <a href="business_07.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >인접건축물 사전조사</a> -->
+                                                <a href="business_07.html" class="nanum-g">인접건축물 사전조사</a>
+                    </li>
+	
+                <li>
+                        <!-- <a href="business_08.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >구조설계/감리</a> -->
+                                                <a href="business_08.html" class="nanum-g">구조설계/감리</a>
+                    </li>
+	
+                <li>
+                        <!-- <a href="business_09.html" class="nanum-g" style="font-size:13px; line-height:50px; display:block;" >시설물보수/보강공사</a> -->
+                                                <a href="business_09.html" class="nanum-g">시설물보수/보강공사</a>
+                    </li>
+	</ul>
+</section>
+<!-- } 메뉴 끝 -->
+
+<style>
+
+
+@media screen and (max-width:1200px){
+    #groupmenu{box-sizing: border-box;border-bottom: 1px solid #bbb;}
+    #groupmenu ul{display: flex;flex-direction: row;justify-content: flex-start;flex-wrap: wrap;max-width: 1200px;margin: 0 auto;}
+    #groupmenu ul li{width: calc(100% / 9);}
+    #groupmenu ul li a{height: 60px;line-height: 60px;text-align: center;font-size: 16px;display: block;}
+    #groupmenu ul li.on a{background:#0033cc;color: #fff;}
+
+	#groupmenu ul{}
+	#groupmenu ul li{width: auto;}
+	#groupmenu ul li a{font-size: 14px;line-height: 40px;height: 40px;letter-spacing: -0.2px;padding: 0 15px;word-break: keep-all;width: max-content;}
+}
+</style>            </div>
+        
+   
+        <div id="container">
+            <h2 id="container_title">인접건축물 사전조사</h2>
+
+
+
+
+<div class="sub_wrap">
+
+    <div class="sub_0201">
+
+        <div class="cont">
+
+            <div class="title">
+
+                <h1>인접건축물 사전조사</h1>
+
+            </div>
+
+
+
+            <table>
+
+                <colgroup>
+
+                    <col width="15%">
+
+                    <col width="85%">
+
+                </colgroup>
+
+                <tr>
+
+                    <th>목적</th>
+
+                    <td>
+
+                        <ul>
+
+                            <li>현장 주변 시설물물에 대한 공사 전 건축물의 현황조사와 점검을 통해 공사 중 발생될 수 있는 손상을 미연에 방지함과 동시에 건물손상 초기에 이에 대한 대책을 마련하여 분쟁의 소지를 사전에 방지하고, 안전점검 및 계측을 통해 현장주변 주민의 불안감을 해소</li>
+
+                        </ul>
+
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <th>조사시기</th>
+
+                    <td>
+
+                        <ul>
+
+                            <li>기존 건축물 해체공사 진행 전 및 진행 중</li>
+
+                        </ul>
+
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <th>과업내용</th>
+
+                    <td>
+
+                        <ul>
+
+                            <li>
+
+                                신축공사 현장에 인접한 건축물의 공용부 및 외부에서 정밀한 육안조사 진행
+
+                                <dl>
+
+                                    <dd>균열 및 누수, 박리·박락 등</dd>
+
+                                </dl>
+
+                            </li>
+
+                            <li>
+
+                                신축공사 현장에 인접한 건축물의 계측을 통한 병위조사
+
+                                <dl>
+
+                                    <dd>균열의 진행 및 건축물의 기울기 상태 초기값 조사</dd>
+
+                                </dl>
+
+                            </li>
+
+                        </ul>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+</div>
+<!-- } 콘텐츠 끝 -->
+
+<hr>
+
+<!-- 하단 시작 { -->
+<div id="ft">
+
+    <div id="ft_wr">
+        <div id="ft_company" class="ft_cnt">
+	        <p class="ft_info">
+	        	<b>(주)한강엔지니어링</b><br>
+				대표 : 이관배 | 사업자등록번호 : 212-81-91777 |<br class="pc_hide"> E-mail : scm4700@naver.com<br>
+                서울사무실 : 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호 | TEL : 02-484-4700 |<br class="pc_hide"> FAX : 02-484-4750<br>
+                광명사무실 : 경기도 광명시 소하로 190, 광명G타워 B동 1314호
+				<a href="../adm"><img src="./theme/basic/img/admin.gif" width="38px" height="12px" alt="admin"></a>
+			</p>
+	    </div>
+	</div>
+        <div id="ft_copy">Copyright &copy; <b>(주)한강엔지니어링.</b> All rights reserved.</div>
+    
+    
+    <button type="button" id="top_btn">
+    	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+    </button>
+    <script>
+    $(function() {
+        $("#top_btn").on("click", function() {
+            $("html, body").animate({scrollTop:0}, '500');
+            return false;
+        });
+    });
+    </script>
+</div>
+
+<!-- MR Script Ver 2.0 -->
+
+<script async="true" src=".//log1.toup.net/mirae_log_chat_common.js" charset="UTF-8"></script>
+
+<!-- MR Script END Ver 2.0 -->
+<!-- } 하단 끝 -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+
+</body>
+</html>
+
+<!-- 사용스킨 : theme/html -->
