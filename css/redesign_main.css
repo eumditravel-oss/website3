@@ -951,7 +951,7 @@ img { max-width: 100%; height: auto; display: block; }
     display: flex;
     gap: 50px;
     margin-bottom: 80px;
-    align-items: center;
+    align-items: flex-start;
 }
 .ceo-img {
     flex: 0 0 45%;
@@ -969,9 +969,10 @@ img { max-width: 100%; height: auto; display: block; }
     flex: 1;
 }
 .ceo-text h3 {
-    font-size: 28px;
-    color: var(--color-primary);
-    margin-bottom: 25px;
+    font-size: 28px !important;
+    color: var(--color-primary) !important;
+    margin-top: 0 !important;
+    margin-bottom: 25px !important;
     line-height: 1.4;
 }
 .ceo-text p {
