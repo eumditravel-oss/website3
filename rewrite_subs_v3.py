@@ -7,7 +7,7 @@ menus = {
         'title': '회사소개',
         'items': {
             '0101': ('인사말', '신뢰를 바탕으로 최상의 안전진단 서비스를 제공합니다.'),
-            '0102': ('연혁', '(주)신영에스씨엠이 걸어온 발자취를 소개합니다.'),
+            '0102': ('연혁', '(주)한강엔지니어링이 걸어온 발자취를 소개합니다.'),
             '0103': ('주요실적', '수많은 공공기관 및 민간 기업과 함께하며 축적된 노하우'),
             '0104': ('오시는길', '찾아오시는 길을 상세히 안내해 드립니다.')
         }
@@ -104,7 +104,7 @@ new_footer = """
         <div class="footer-inner">
             <div class="f-info">
                 <div class="f-logo">
-                    <img src="./img/logo.png" alt="(주)신영에스씨엠">
+                    <img src="./img/logo.png" alt="(주)한강엔지니어링">
                 </div>
                 <p><strong>대표 :</strong> 이관배 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
                 <p><strong>서울사무실 :</strong> 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호</p>
@@ -118,7 +118,7 @@ new_footer = """
             </div>
         </div>
         <div class="f-copy">
-            Copyright &copy; (주)신영에스씨엠. All rights reserved.
+            Copyright &copy; (주)한강엔지니어링. All rights reserved.
         </div>
     </div>
 </footer>
@@ -201,7 +201,7 @@ for filepath in sub_files:
 
     # Get title
     title_match = re.search(r'<title>(.*?)</title>', content)
-    page_title_tag = title_match.group(1) if title_match else "(주)신영에스씨엠"
+    page_title_tag = title_match.group(1) if title_match else "(주)한강엔지니어링"
     
     cat_title, sub_title, lead_text, sub_items, cat_id = get_menu_info(page_id)
     
@@ -254,7 +254,7 @@ for filepath in sub_files:
             main_content_html += f'''
     <div class="info-card fade-up">
         <i class="fas fa-info-circle" style="color: var(--color-point); margin-bottom: 12px; font-size: 24px;"></i>
-        <p>※ 고객 여러분의 소중한 생명과 재산을 보호하기 위해 최선을 다하는 <strong>(주)신영에스씨엠</strong>입니다.</p>
+        <p>※ 고객 여러분의 소중한 생명과 재산을 보호하기 위해 최선을 다하는 <strong>(주)한강엔지니어링</strong>입니다.</p>
     </div>
     <h3 class="section-title fade-up">주요 안내</h3>
     <p class="fade-up">

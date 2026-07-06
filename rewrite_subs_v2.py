@@ -119,7 +119,7 @@ mega_header = """<!-- Mobile Overlay -->
 <header id="header">
     <div class="container header-inner">
         <a href="./index.html" class="logo">
-            <img src="./img/logo.png" alt="(주)신영에스씨엠">
+            <img src="./img/logo.png" alt="(주)한강엔지니어링">
         </a>
         <nav class="gnb-wrap">
             <ul class="gnb">
@@ -217,7 +217,7 @@ new_footer = """
         <div class="footer-inner">
             <div class="f-info">
                 <div class="f-logo">
-                    <img src="./img/logo.png" alt="(주)신영에스씨엠">
+                    <img src="./img/logo.png" alt="(주)한강엔지니어링">
                 </div>
                 <p><strong>대표 :</strong> 이관배 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
                 <p><strong>서울사무실 :</strong> 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호</p>
@@ -231,7 +231,7 @@ new_footer = """
             </div>
         </div>
         <div class="f-copy">
-            Copyright &copy; (주)신영에스씨엠. All rights reserved.
+            Copyright &copy; (주)한강엔지니어링. All rights reserved.
         </div>
     </div>
 </footer>
@@ -249,7 +249,7 @@ for filepath in sub_files:
 
     # Get title
     title_match = re.search(r'<title>(.*?)</title>', content)
-    page_title_tag = title_match.group(1) if title_match else "(주)신영에스씨엠"
+    page_title_tag = title_match.group(1) if title_match else "(주)한강엔지니어링"
     
     cat_title, sub_title, sub_items, cat_id = get_menu_info(page_id)
     

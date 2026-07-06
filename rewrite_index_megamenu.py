@@ -48,7 +48,7 @@ mega_header = """<!-- Mobile Overlay -->
 <header id="header">
     <div class="container header-inner">
         <a href="./index.html" class="logo">
-            <img src="./img/logo.png" alt="(주)신영에스씨엠">
+            <img src="./img/logo.png" alt="(주)한강엔지니어링">
         </a>
         <nav class="gnb-wrap">
             <ul class="gnb">

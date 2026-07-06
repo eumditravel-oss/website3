@@ -25,7 +25,7 @@ template = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} - (주)신영에스씨엠</title>
+    <title>{title} - (주)한강엔지니어링</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -99,7 +99,7 @@ template = """<!DOCTYPE html>
                     </div>
                     <div class="txt">
                         <h1>신뢰를 최우선으로 하는 안전진단 전문기관</h1>
-                        <h2>(주)신영에스씨엠 - {title}</h2>
+                        <h2>(주)한강엔지니어링 - {title}</h2>
                         <p>
                         저희는 최신 기술과 엄격한 안전진단 기준을 바탕으로,<br class="mo_hide"> 다양한 분야의 안전진단 서비스를 제공합니다.
                         <br><br>
@@ -117,12 +117,12 @@ template = """<!DOCTYPE html>
         <div class="container">
             <div id="ft_company">
                 <p>
-                    <b>(주)신영에스씨엠</b><br>
+                    <b>(주)한강엔지니어링</b><br>
                     대표 : 이관배 | 사업자등록번호 : 212-81-91777 | E-mail : scm4700@naver.com<br>
                     서울사무실 : 서울특별시 성동구 성수일로4길 25 | TEL : 02-484-4700
                 </p>
             </div>
-            <div id="ft_copy">Copyright &copy; <b>(주)신영에스씨엠.</b> All rights reserved.</div>
+            <div id="ft_copy">Copyright &copy; <b>(주)한강엔지니어링.</b> All rights reserved.</div>
         </div>
     </div>
     

@@ -28,7 +28,7 @@ template_head = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} - (주)신영에스씨엠</title>
+    <title>{title} - (주)한강엔지니어링</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="http://sinyoungscm.com/theme/basic/css/default.css?ver=220620">
     <link rel="stylesheet" href="http://sinyoungscm.com/theme/basic/skin/board/basic_history2/style.css">
@@ -70,12 +70,12 @@ template_foot = """
         <div class="container">
             <div id="ft_company">
                 <p>
-                    <b>(주)신영에스씨엠</b><br>
+                    <b>(주)한강엔지니어링</b><br>
                     대표 : 이관배 | 사업자등록번호 : 212-81-91777 | E-mail : scm4700@naver.com<br>
                     서울사무실 : 서울특별시 성동구 성수일로4길 25 | TEL : 02-484-4700
                 </p>
             </div>
-            <div id="ft_copy">Copyright &copy; <b>(주)신영에스씨엠.</b> All rights reserved.</div>
+            <div id="ft_copy">Copyright &copy; <b>(주)한강엔지니어링.</b> All rights reserved.</div>
         </div>
     </div>
     
