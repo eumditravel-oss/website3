@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-#nav1 ul{padding:0; margin:0px;/* margin:10px 0 8px 3px; */}
-#nav1 ul li{display:inline;}
-#nav1 ul li a{/* color:#222222;*/ color:#757575; border-bottom:1px solid #EDEDED;}
-#nav1 ul li a:hover{background:#f3f3f3; color:#0033cc; font-weight:bold;}
-#nav1 li.on {font-weight:bold; }
-#nav1 li.on a{background:#f3f3f3; color:#0033cc; text-decoration:none; font-weight:bold; transition: all .3s;}
-#nav1 li.on a:hover{background:#f3f3f3; color:#0033cc;}
