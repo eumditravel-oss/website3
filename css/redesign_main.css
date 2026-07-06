@@ -2478,3 +2478,66 @@ img { max-width: 100%; height: auto; display: block; }
         padding: 15px 20px;
     }
 }
+
+/* ----------------------------------------
+   Board View UI
+---------------------------------------- */
+.board-view-wrap {
+    border-top: 2px solid #222;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.board-view-header {
+    padding: 25px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.board-view-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.board-view-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    color: #777;
+}
+.board-view-meta div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.board-view-meta i {
+    color: #aaa;
+}
+.board-view-content {
+    padding: 40px 20px;
+    min-height: 300px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+}
+.board-view-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+.btn-list {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.btn-list:hover {
+    background-color: #e5e5e5;
+    color: #000;
+}
