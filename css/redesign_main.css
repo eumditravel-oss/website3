@@ -1603,6 +1603,27 @@ img { max-width: 100%; height: auto; display: block; }
     .service-card.two-cols .service-card-body > ul {
         column-count: 1;
     }
+    .service-card {
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+    .service-card-header {
+        margin-bottom: 15px;
+    }
+    .service-card h4 {
+        font-size: 18px;
+    }
+    .service-card-body {
+        font-size: 14px;
+    }
+    .service-card-body table {
+        table-layout: fixed;
+        word-break: break-word;
+    }
+    .service-card-body th, .service-card-body td {
+        padding: 8px 4px;
+        font-size: 13px;
+    }
 }
 
 /* ==========================================================
