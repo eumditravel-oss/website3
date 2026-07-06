@@ -66,13 +66,10 @@ $(document).ready(function() {
             var matchSearch = (searchQuery === '' || title.indexOf(searchQuery) !== -1 || meta.indexOf(searchQuery) !== -1);
             
             if (matchFilter && matchSearch) {
-                // Use css display block explicitly, but wait, grid items shouldn't be flex or block, just empty resets to grid/flex context
-                // Let's remove any inline display:none
-                $card.css('display', '');
+                $card.attr('style', '');
                 visibleCount++;
             } else {
-                // Force hide
-                $card.css('display', 'none');
+                $card.attr('style', 'display: none !important');
             }
         });
         
@@ -81,7 +78,10 @@ $(document).ready(function() {
         
         // Re-apply list view styles to visible elements if list view is active
         if ($('.view-btn .fa-bars').parent().hasClass('active')) {
-            $('.portfolio-card').not('[style*="display: none"]').css({'display': 'flex'});
+            $('.portfolio-card').not('[style*="display: none"]').css({
+                'display': 'flex',
+                'align-items': 'center'
+            });
         }
     }
 
