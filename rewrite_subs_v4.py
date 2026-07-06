@@ -7,7 +7,6 @@ menus = {
         'title': '회사소개',
         'en_title': 'COMPANY',
         'items': {
-            '0100': ('회사소개 홈', '회사소개 메인입니다.', 'fa-house'),
             '0101': ('인사말', '신뢰를 바탕으로 최상의 안전진단 서비스를 제공합니다.', 'fa-user-tie'),
             '0102': ('연혁', '(주)한강엔지니어링이 걸어온 발자취를 소개합니다.', 'fa-calendar-alt'),
             '0103': ('주요실적', '수많은 공공기관 및 민간 기업과 함께하며 축적된 노하우', 'fa-list-alt'),
@@ -18,7 +17,6 @@ menus = {
         'title': '업무분야',
         'en_title': 'BUSINESS',
         'items': {
-            '0200': ('업무분야 홈', '업무분야 메인입니다.', 'fa-house'),
             '0201': ('안전진단', '건축물의 구조적 안전성을 정밀하게 진단합니다.', 'fa-search'),
             '0202': ('안전점검', '사고 예방을 위한 철저한 안전점검 서비스', 'fa-clipboard-check'),
             '0203': ('건축물관리점검', '정기적인 점검을 통해 건축물의 수명을 연장합니다.', 'fa-building'),
@@ -34,7 +32,6 @@ menus = {
         'title': '인증 및 장비현황',
         'en_title': 'CERTIFICATE',
         'items': {
-            '0300': ('인증 및 장비현황 홈', '인증 및 장비현황 메인입니다.', 'fa-house'),
             '0301': ('인증현황', '국가 공인 안전진단 전문기관의 확실한 자격증명', 'fa-certificate'),
             '0302': ('장비보유현황', '정밀한 진단을 위한 최첨단 측정 및 검사 장비 보유', 'fa-microscope')
         }
@@ -43,7 +40,6 @@ menus = {
         'title': '고객센터',
         'en_title': 'CUSTOMER',
         'items': {
-            '0400': ('고객센터 홈', '고객센터 메인입니다.', 'fa-house'),
             '0401': ('공지사항', '새로운 소식과 유용한 정보를 확인하세요.', 'fa-bullhorn'),
             '0402': ('견적문의', '전문가가 빠르고 정확하게 견적을 상담해 드립니다.', 'fa-file-invoice-dollar')
         }
@@ -243,10 +239,9 @@ for filepath in sub_files:
 
     sidebar_items_html = ""
     for k, v in sub_items.items():
-        # Ensure the link targets the actual page if it's "0100" we point to "0101" for now
-        link = f"./sub_{k}.html" if k.endswith('01') or not k.endswith('00') else f"./sub_{cat_id}01.html"
+        link = f"./sub_{k}.html"
         active_class = "active" if k == page_id else ""
-        sidebar_items_html += f'<li class="{active_class}"><a href="{link}"><i class="fas {v[2]}"></i> <span>{v[0]}</span></a></li>\\n                '
+        sidebar_items_html += f'<li class="{active_class}"><a href="{link}"><i class="fas {v[2]}"></i> <span>{v[0]}</span></a></li>\n                '
 
     new_body = mega_header + f"""
 <div id="wrapper">
