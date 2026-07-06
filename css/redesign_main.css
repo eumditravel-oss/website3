@@ -1600,29 +1600,40 @@ img { max-width: 100%; height: auto; display: block; }
     margin-bottom: 20px;
 }
 @media (max-width: 768px) {
+    .service-grid {
+        gap: 12px;
+    }
     .service-card.two-cols .service-card-body > ul {
         column-count: 1;
     }
     .service-card {
         flex: 1 1 100%;
-        padding: 20px;
+        padding: 12px 15px;
     }
     .service-card-header {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     .service-card h4 {
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .service-card-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        margin-right: 10px;
     }
     .service-card-body {
         font-size: 14px;
+        line-height: 1.5;
     }
     .service-card-body table {
         table-layout: fixed;
         word-break: break-word;
+        margin-top: 10px;
     }
     .service-card-body th, .service-card-body td {
-        padding: 8px 4px;
-        font-size: 13px;
+        padding: 6px 4px;
+        font-size: 12px;
     }
 }
 
