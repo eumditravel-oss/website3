@@ -1405,11 +1405,14 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 700;
 }
 .service-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 .service-card {
+    flex: 1 1 calc(50% - 15px);
+    width: 100%;
+    min-width: 300px;
     background: var(--color-bg-white);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
@@ -1571,8 +1574,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* Long list cards */
-.service-card.two-cols {
-    grid-column: 1 / -1;
+.service-card.two-cols,
+.service-card.full-width {
+    flex: 1 1 100%;
 }
 .service-card.two-cols .service-card-body > ul {
     column-count: 2;
