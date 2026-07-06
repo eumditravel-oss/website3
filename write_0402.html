@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>문의사항 1 페이지 | (주)한강엔지니어링</title>
+<title>무료견적문의 1 페이지 | (주)한강엔지니어링</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="./css/redesign_main.css?v=3">
 <link rel="stylesheet" href="./sub/sub.css">
 <!-- Subpage specific css/js for forms if needed -->
 <script src="./js/jquery-1.12.4.min.js"></script>
 
-<link rel="stylesheet" href="./theme/basic/skin/board/basic/style.css">
+<link rel="stylesheet" href="./theme/basic/skin/board/estimate/style.css">
 </head>
 <body>
 <!-- Mobile Overlay -->
@@ -53,7 +53,13 @@
                 <li><a href="./sub_0302.html">장비보유현황</a></li>
             </ul>
         </li>
-        <li><a href="./sub_0403.html">고객센터</a></li>
+                <li>
+            <a href="./sub_0401.html" class="subOpen">고객센터 <i class="fa fa-chevron-down"></i></a>
+            <ul class="gnb_2dul_mo">
+                <li><a href="./sub_0401.html">공지사항</a></li>
+                <li><a href="./sub_0403.html">문의사항</a></li>
+            </ul>
+        </li>
         <li><a href="./sub_0402.html">무료견적문의</a></li>
     </ul>
 </nav>
@@ -69,7 +75,7 @@
                 <li data-target="menu-01"><a href="./sub_0101.html">회사소개</a></li>
                 <li data-target="menu-02"><a href="./sub_0201.html">업무분야</a></li>
                 <li data-target="menu-03"><a href="./sub_0301.html">인증 및 장비현황</a></li>
-                <li data-target="menu-04"><a href="./sub_0403.html">고객센터</a></li>
+                <li data-target="menu-04"><a href="./sub_0401.html">고객센터</a></li>
                 <li data-target="menu-05"><a href="./sub_0402.html">무료견적문의</a></li>
             </ul>
         </nav>
@@ -113,8 +119,9 @@
                     </ul>
                 </div>
                 <div class="mega-col" id="menu-04">
-                    <h3 class="mega-title"><a href="./sub_0403.html">고객센터</a></h3>
+                    <h3 class="mega-title"><a href="./sub_0401.html">고객센터</a></h3>
                     <ul class="mega-list">
+                        <li><a href="./sub_0401.html">공지사항</a></li>
                         <li><a href="./sub_0403.html">문의사항</a></li>
                     </ul>
                 </div>
@@ -139,12 +146,12 @@
     <div class="subpage-new-layout">
         <aside class="sidebar-new">
             <div class="sidebar-header">
-                <h2>고객센터</h2>
-                <span class="en">CUSTOMER</span>
+                <h2>무료견적문의</h2>
+                <span class="en">ESTIMATE</span>
             </div>
-                        <ul class="sidebar-menu-new">
-                <li class=""><a href="./sub_0401.html"><i class="fas fa-bullhorn"></i> <span>공지사항</span></a></li>
-                <li class="active"><a href="./sub_0403.html"><i class="fas fa-question-circle"></i> <span>문의사항</span></a></li>
+            <ul class="sidebar-menu-new">
+                <li class="active"><a href="./sub_0402.html"><i class="fas fa-file-invoice-dollar"></i> <span>견적문의</span></a></li>
+                
             </ul>
             <div class="sidebar-contact">
                 <div class="contact-icon"><i class="fas fa-headset"></i></div>
@@ -157,78 +164,79 @@
 
         <div class="content-wrapper">
             <div class="breadcrumb-new">
-                <i class="fas fa-home"></i> &gt; <span>고객센터</span> &gt; <span class="current">문의사항</span>
+                <i class="fas fa-home"></i> &gt; <span>무료견적문의</span> &gt; <span class="current">견적문의</span>
             </div>
             
             <main class="content-main">
-                <h2 class="page-title">문의사항</h2>
-                <p class="page-subtitle">건축물 및 시설물 안전진단 관련 문의를 남겨주세요. 신속하고 정확하게 답변드리겠습니다.</p>
 
-                <div class="contact-info-bar motion-fade-up">
-                    <div class="contact-info-col">
-                        <i class="fas fa-phone-volume contact-info-icon"></i>
-                        <div class="contact-info-text">
-                            <span class="contact-info-title">전화 문의</span>
-                            <span class="contact-info-value">02-6959-0729</span>
-                        </div>
-                    </div>
-                    <div class="contact-info-col">
-                        <i class="far fa-envelope contact-info-icon"></i>
-                        <div class="contact-info-text">
-                            <span class="contact-info-title">이메일 문의</span>
-                            <span class="contact-info-value" style="font-size:15px;">hangang0730@daum.net</span>
-                        </div>
-                    </div>
-                    <a href="./write_0403.html" class="contact-info-col">
-                        <i class="fas fa-pen-nib contact-info-icon"></i>
-                        <div class="contact-info-text">
-                            <span class="contact-info-title">온라인 문의</span>
-                            <span class="contact-info-value link">문의사항하기 <i class="fas fa-chevron-right" style="font-size:12px;"></i></span>
-                        </div>
-                    </a>
-                </div>
+                <h2 class="page-title">견적문의 작성</h2>
+                <p class="page-subtitle">무료 견적을 위해 현장 상황 및 필요하신 점검 내역을 상세히 작성해 주세요.</p>
 
-                <div class="board-top-controls motion-fade-up">
-                    <div class="board-total">
-                        Total <b>1</b>건 | 1 페이지
-                    </div>
-                    <div class="board-actions">
-                        <form name="fsearch" method="get" action="#" style="margin:0;">
-                            <input type="hidden" name="bo_table" value="0403">
-                            <div class="board-search-box">
-                                <input type="text" name="stx" class="board-search-input" placeholder="제목, 글쓴이 검색">
-                                <button type="submit" class="board-search-btn"><i class="fas fa-search"></i></button>
+                <form onsubmit="alert('문의가 정상적으로 접수되었습니다.\n빠른 시일 내에 기재해주신 연락처로 답변드리겠습니다.'); location.href='./sub_0402.html'; return false;" class="motion-fade-up">
+                    <div class="write-form-container">
+                        <div class="write-row">
+                            <div class="write-label">작성자<span class="req">*</span></div>
+                            <div class="write-input-area">
+                                <input type="text" class="write-input" placeholder="이름 또는 상호명" required>
                             </div>
-                        </form>
-                        <a href="./write_0403.html" class="board-write-btn">문의하기</a>
+                        </div>
+                        <div class="write-row">
+                            <div class="write-label">비밀번호<span class="req">*</span></div>
+                            <div class="write-input-area">
+                                <input type="password" class="write-input" placeholder="글 수정/삭제 시 필요합니다." required>
+                            </div>
+                        </div>
+                        <div class="write-row">
+                            <div class="write-label">연락처<span class="req">*</span></div>
+                            <div class="write-input-area">
+                                <input type="text" class="write-input" placeholder="예: 010-1234-5678" required>
+                            </div>
+                        </div>
+                        <div class="write-row">
+                            <div class="write-label">이메일</div>
+                            <div class="write-input-area">
+                                <input type="email" class="write-input" placeholder="답변 받을 이메일 주소">
+                            </div>
+                        </div>
+                        <div class="write-row">
+                            <div class="write-label">제목<span class="req">*</span></div>
+                            <div class="write-input-area">
+                                <input type="text" class="write-input full" placeholder="문의 제목을 입력해주세요." required>
+                            </div>
+                        </div>
+                        <div class="write-row">
+                            <div class="write-label" style="align-items:flex-start; padding-top:20px;">내용<span class="req">*</span></div>
+                            <div class="write-input-area">
+                                <textarea class="write-textarea" placeholder="문의하실 내용을 상세히 기재해 주시면 더 빠르고 정확한 답변이 가능합니다." required></textarea>
+                            </div>
+                        </div>
+                        <div class="write-row">
+                            <div class="write-label">첨부파일</div>
+                            <div class="write-input-area">
+                                <input type="file" class="write-file-input">
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    
+                    <div class="privacy-wrap">
+                        <h4 style="margin-bottom:10px; font-size:15px; color:#333;">개인정보처리방침</h4>
+                        <div class="privacy-box">
+                            (주)한강엔지니어링은 문의사항 접수 및 처리를 위해 아래와 같이 개인정보를 수집 및 이용합니다.<br><br>
+                            1. 수집하는 개인정보 항목: 작성자(이름/상호), 연락처, 이메일 등<br>
+                            2. 개인정보 수집 및 이용 목적: 문의 내역 확인, 답변 통보, 상담 진행 등<br>
+                            3. 개인정보의 보유 및 이용 기간: 원칙적으로 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. (단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 관련 법령에 따라 보관합니다.)
+                        </div>
+                        <label class="privacy-agree">
+                            <input type="checkbox" required> 위 개인정보 수집 및 이용에 동의합니다. (필수)
+                        </label>
+                    </div>
 
-                <table class="modern-board-table motion-fade-up">
-                    <thead>
-                        <tr>
-                            <th class="td-num">번호</th>
-                            <th>제목</th>
-                            <th class="td-name">글쓴이</th>
-                            <th class="td-view">조회</th>
-                            <th class="td-date">날짜</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="td-num">1</td>
-                            <td class="td-subject"><a href="./sub_0403.html">[안녕하세요. (주)한강엔지니어링입니다.]</a></td>
-                            <td class="td-name">최고관리자</td>
-                            <td class="td-view">68</td>
-                            <td class="td-date">06-05</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="modern-pagination motion-fade-up">
-                    <a href="#" class="btn btn-outline" style="padding:5px 10px;">1</a>
-                </div>
-            </main>
+                    <div class="write-buttons">
+                        <a href="./sub_0402.html" class="btn btn-cancel">취소</a>
+                        <button type="submit" class="btn btn-submit">작성완료</button>
+                    </div>
+                </form>
+</main>
         </div>
     </div>
 
