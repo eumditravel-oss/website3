@@ -115,7 +115,7 @@ mega_header = """<!-- Mobile Overlay -->
             <div class="mega-cta">
                 <p>전문가의 빠르고 정확한 진단</p>
                 <a href="./sub_0402.html" class="btn btn-point"><i class="fas fa-file-invoice"></i> 무료 견적 문의</a>
-                <div class="mega-phone" style="margin-top:15px;"><i class="fas fa-phone"></i> 02-484-4700</div>
+                <div class="mega-phone" style="margin-top:15px;"><i class="fas fa-phone"></i> 02-6959-0729</div>
             </div>
         </div>
     </div>

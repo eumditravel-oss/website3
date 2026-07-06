@@ -118,8 +118,8 @@ template = """<!DOCTYPE html>
             <div id="ft_company">
                 <p>
                     <b>(주)한강엔지니어링</b><br>
-                    대표 : 이관배 | 사업자등록번호 : 212-81-91777 | E-mail : scm4700@naver.com<br>
-                    서울사무실 : 서울특별시 성동구 성수일로4길 25 | TEL : 02-484-4700
+                    대표 : 우상진 | 사업자등록번호 : 212-81-91777 | E-mail : hangang0730@daum.net<br>
+                    본사 : 서울시 성동구 연무장5가길 7 현대테라스타워 W동 1006호 | TEL : 02-6959-0729
                 </p>
             </div>
             <div id="ft_copy">Copyright &copy; <b>(주)한강엔지니어링.</b> All rights reserved.</div>

@@ -61,10 +61,10 @@ new_footer = """
                 <div class="f-logo">
                     <img src="./img/logo.png" alt="(주)한강엔지니어링">
                 </div>
-                <p><strong>대표 :</strong> 이관배 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
-                <p><strong>서울사무실 :</strong> 서울특별시 성동구 성수일로4길 25, 서울숲코오롱디지털타워 1차 809호</p>
-                <p><strong>광명사무실 :</strong> 경기도 광명시 소하로 190, 광명G타워 B동 1314호</p>
-                <p><strong>TEL :</strong> 02-484-4700 &nbsp;|&nbsp; <strong>FAX :</strong> 02-484-4750 &nbsp;|&nbsp; <strong>E-mail :</strong> scm4700@naver.com</p>
+                <p><strong>대표 :</strong> 우상진 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 212-81-91777</p>
+                <p><strong>본사 :</strong> 서울시 성동구 연무장5가길 7 현대테라스타워 W동 1006호</p>
+                
+                <p><strong>TEL :</strong> 02-6959-0729 &nbsp;|&nbsp; <strong>FAX :</strong> 02-6959-0730 &nbsp;|&nbsp; <strong>Mobile :</strong> 010-9700-2926 &nbsp;|&nbsp; <strong>E-mail :</strong> hangang0730@daum.net</p>
             </div>
             <div style="text-align: right; align-self: flex-end;">
                 <a href="#header" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color:#fff!important;">
