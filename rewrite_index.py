@@ -230,8 +230,6 @@ html_content = """<!doctype html>
                 </div>
                 <ul class="news-list">
                     <li><a href="./sub_0401.html"><span>안녕하세요. (주)한강엔지니어링입니다.</span> <span class="news-date">06-05</span></a></li>
-                    <li><a href="./sub_0401.html"><span>홈페이지가 새롭게 리뉴얼 되었습니다.</span> <span class="news-date">06-01</span></a></li>
-                    <li><a href="./sub_0401.html"><span>정기 안전점검 관련 안내사항</span> <span class="news-date">05-20</span></a></li>
                 </ul>
             </div>
             <div class="news-box">

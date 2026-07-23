@@ -2909,21 +2909,6 @@ img { max-width: 100%; height: auto; display: block; }
     overflow-y: auto;
 }
 
-.mega-col#menu-02 {
-    flex: 1.9;
-}
-
-.mega-col#menu-02 .mega-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 20px;
-}
-
-.mega-col#menu-02 .mega-list a {
-    line-height: 1.45;
-    word-break: keep-all;
-}
-
 .business-overview-section .service-header {
     margin-bottom: 28px;
 }
