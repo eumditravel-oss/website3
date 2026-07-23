@@ -39,13 +39,8 @@
                 <li><a href="./sub_0201.html">안전점검 및 정밀안전점검</a></li>
                 <li><a href="./sub_0202.html">정밀안전진단</a></li>
                 <li><a href="./sub_0204.html">건설현장 정기안전점검</a></li>
-                <li><a href="./sub_0203.html#safety-management-plan">안전관리계획서 작성</a></li>
                 <li><a href="./sub_0207.html">인접건축물 현황조사</a></li>
-                <li><a href="./sub_0203.html#seismic-performance">내진성능평가</a></li>
-                <li><a href="./sub_0203.html#structural-safety">구조안전진단</a></li>
                 <li><a href="./sub_0206.html">법원감정</a></li>
-                <li><a href="./sub_0203.html#damage-diagnosis">피해진단</a></li>
-                <li><a href="./sub_0203.html#fire-diagnosis">화재진단</a></li>
                 <li><a href="./sub_0208.html">건설사업관리</a></li>
             </ul>
         </li>
@@ -107,13 +102,8 @@
                         <li><a href="./sub_0201.html">안전점검 및 정밀안전점검</a></li>
                         <li><a href="./sub_0202.html">정밀안전진단</a></li>
                         <li><a href="./sub_0204.html">건설현장 정기안전점검</a></li>
-                        <li><a href="./sub_0203.html#safety-management-plan">안전관리계획서 작성</a></li>
                         <li><a href="./sub_0207.html">인접건축물 현황조사</a></li>
-                        <li><a href="./sub_0203.html#seismic-performance">내진성능평가</a></li>
-                        <li><a href="./sub_0203.html#structural-safety">구조안전진단</a></li>
                         <li><a href="./sub_0206.html">법원감정</a></li>
-                        <li><a href="./sub_0203.html#damage-diagnosis">피해진단</a></li>
-                        <li><a href="./sub_0203.html#fire-diagnosis">화재진단</a></li>
                         <li><a href="./sub_0208.html">건설사업관리</a></li>
                     </ul>
                 </div>
@@ -195,7 +185,7 @@
     <div class="container">
         <div class="text-center fade-up">
             <h2 class="section-title">주요 업무</h2>
-            <p class="section-desc">지명원 주요업무와 건설엔지니어링업 등록 내용을 기준으로 전문 서비스를 제공합니다.</p>
+            <p class="section-desc">지명원 12~16페이지의 주요업무와 건설엔지니어링업 등록 내용을 기준으로 전문 서비스를 제공합니다.</p>
         </div>
         <div class="business-grid fade-up">
             <a href="./sub_0201.html" class="business-card">
@@ -222,31 +212,6 @@
                 <div class="b-icon"><i class="fas fa-scale-balanced"></i></div>
                 <h3 class="b-title">법원감정</h3>
                 <p class="b-desc">건축물 하자·공사비·피해 현황을 조사하고 보수비용과 기여도를 산정합니다.</p>
-            </a>
-            <a href="./sub_0203.html#safety-management-plan" class="business-card">
-                <div class="b-icon"><i class="fas fa-file-shield"></i></div>
-                <h3 class="b-title">안전관리계획서 작성</h3>
-                <p class="b-desc">건설기술진흥법·시설물안전법 관련 사업으로 지명원에 수록된 업무입니다.</p>
-            </a>
-            <a href="./sub_0203.html#seismic-performance" class="business-card">
-                <div class="b-icon"><i class="fas fa-house-crack"></i></div>
-                <h3 class="b-title">내진성능평가</h3>
-                <p class="b-desc">지명원 사업소개의 기타 전문업무에 수록된 업무입니다.</p>
-            </a>
-            <a href="./sub_0203.html#structural-safety" class="business-card">
-                <div class="b-icon"><i class="fas fa-building-shield"></i></div>
-                <h3 class="b-title">구조안전진단</h3>
-                <p class="b-desc">지명원 사업소개의 기타 전문업무에 수록된 업무입니다.</p>
-            </a>
-            <a href="./sub_0203.html#damage-diagnosis" class="business-card">
-                <div class="b-icon"><i class="fas fa-house-circle-exclamation"></i></div>
-                <h3 class="b-title">피해진단</h3>
-                <p class="b-desc">지명원 사업소개의 기타 전문업무에 수록된 업무입니다.</p>
-            </a>
-            <a href="./sub_0203.html#fire-diagnosis" class="business-card">
-                <div class="b-icon"><i class="fas fa-fire-extinguisher"></i></div>
-                <h3 class="b-title">화재진단</h3>
-                <p class="b-desc">지명원 사업소개의 기타 전문업무에 수록된 업무입니다.</p>
             </a>
             <a href="./sub_0208.html" class="business-card">
                 <div class="b-icon"><i class="fas fa-diagram-project"></i></div>
@@ -313,6 +278,19 @@
                         "timestamp" : "1749090060288",
                         "key" : "3zsch4b4suk"
                     }).render();
+
+                    const mainMapRoot = document.getElementById("daumRoughmapContainer1749090060288");
+                    const syncMainMapPhone = () => {
+                        const phoneText = mainMapRoot.querySelector(".phone .txt");
+                        if (phoneText && phoneText.textContent.trim() !== "010-9700-2926") {
+                            phoneText.textContent = "010-9700-2926";
+                        }
+                    };
+                    syncMainMapPhone();
+                    new MutationObserver(syncMainMapPhone).observe(mainMapRoot, {
+                        childList: true,
+                        subtree: true
+                    });
                 </script>
             </div>
             <div class="contact-info">
