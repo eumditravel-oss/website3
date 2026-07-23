@@ -37,18 +37,7 @@ $(document).ready(function() {
         $(this).addClass('active');
         
         var isList = $(this).find('.fa-bars').length > 0;
-        
-        if (isList) {
-            $('.portfolio-grid').css({'grid-template-columns': '1fr'});
-            $('.portfolio-card').css({'display': 'flex', 'align-items': 'center'});
-            $('.card-img').css({'width': '300px', 'height': '200px', 'flex-shrink': '0'});
-            $('.card-body').css({'flex': '1'});
-        } else {
-            $('.portfolio-grid').css({'grid-template-columns': ''});
-            $('.portfolio-card').css({'display': '', 'align-items': ''});
-            $('.card-img').css({'width': '', 'height': '', 'flex-shrink': ''});
-            $('.card-body').css({'flex': ''});
-        }
+        $('.portfolio-grid').toggleClass('list-view', isList);
     });
 
     function filterCards() {
@@ -76,13 +65,6 @@ $(document).ready(function() {
         // Update total count
         $('.portfolio-total strong').text(visibleCount);
         
-        // Re-apply list view styles to visible elements if list view is active
-        if ($('.view-btn .fa-bars').parent().hasClass('active')) {
-            $('.portfolio-card').not('[style*="display: none"]').css({
-                'display': 'flex',
-                'align-items': 'center'
-            });
-        }
     }
 
     function sortCards() {
@@ -108,4 +90,7 @@ $(document).ready(function() {
             $grid.append(item); // Re-append reorders them
         });
     }
+
+    // Respect the active category when the page first opens.
+    filterCards();
 });
