@@ -1416,6 +1416,12 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--color-primary);
     font-weight: 700;
 }
+.service-header p {
+    margin: 12px 0 0;
+    color: var(--color-text-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
 .service-grid {
     display: flex;
     flex-wrap: wrap;
@@ -1504,6 +1510,93 @@ img { max-width: 100%; height: auto; display: block; }
 }
 @media(max-width: 991px) {
     .service-grid { grid-template-columns: 1fr; }
+}
+
+/* Construction Management Registration */
+.cm-registration {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+    gap: 32px;
+    align-items: start;
+    margin-top: 40px;
+}
+.cm-registration-info {
+    min-height: 100%;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    color: #fff;
+    background: linear-gradient(145deg, #0f2742 0%, #164b82 100%);
+    box-shadow: var(--shadow-md);
+}
+.cm-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #8fc5ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+.cm-registration-info h4 {
+    margin: 0 0 16px;
+    color: #fff;
+    font-size: 25px;
+}
+.cm-registration-info > p {
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 15px;
+    line-height: 1.8;
+}
+.cm-registration-list {
+    margin: 0;
+}
+.cm-registration-list div {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+.cm-registration-list dt {
+    color: #8fc5ff;
+    font-weight: 700;
+}
+.cm-registration-list dd {
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+}
+.cm-certificate {
+    margin: 0;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: #f8fafc;
+    box-shadow: var(--shadow-sm);
+}
+.cm-certificate a {
+    display: block;
+}
+.cm-certificate img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 720px;
+    object-fit: contain;
+}
+.cm-certificate figcaption {
+    margin-top: 12px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    text-align: center;
+}
+@media(max-width: 768px) {
+    .cm-registration {
+        grid-template-columns: 1fr;
+    }
+    .cm-registration-info {
+        padding: 28px 24px;
+    }
 }
 
 /* Map Overlay */
@@ -2067,11 +2160,18 @@ img { max-width: 100%; height: auto; display: block; }
     width: 100%;
     height: 200px;
     overflow: hidden;
+    background: #f8fafc;
+}
+.card-img > a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .card-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 10px;
     transition: transform 0.5s;
 }
 .portfolio-card:hover .card-img img {
