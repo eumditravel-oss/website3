@@ -35,14 +35,11 @@
         <li>
             <a href="./sub_0201.html" class="subOpen">업무분야 <i class="fa fa-chevron-down"></i></a>
             <ul class="gnb_2dul_mo">
-                <li><a href="./sub_0201.html">안전진단</a></li>
-                <li><a href="./sub_0202.html">안전점검</a></li>
-                <li><a href="./sub_0203.html">건축물관리점검</a></li>
-                <li><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
-                <li><a href="./sub_0205.html">내진성능평가</a></li>
+                <li><a href="./sub_0201.html">안전점검 및 정밀안전점검</a></li>
+                <li><a href="./sub_0202.html">정밀안전진단</a></li>
+                <li><a href="./sub_0204.html">건설현장 정기안전점검</a></li>
+                <li><a href="./sub_0207.html">인접건축물 현황조사</a></li>
                 <li><a href="./sub_0206.html">법원감정</a></li>
-                <li><a href="./sub_0207.html">인접건축물 사전조사</a></li>
-                <li><a href="./sub_0208.html">건설사업 관리</a></li>
             </ul>
         </li>
         <li>
@@ -99,14 +96,11 @@
                 <div class="mega-col" id="menu-02">
                     <h3 class="mega-title"><a href="./sub_0201.html">업무분야</a></h3>
                     <ul class="mega-list">
-                        <li><a href="./sub_0201.html">안전진단</a></li>
-                        <li><a href="./sub_0202.html">안전점검</a></li>
-                        <li><a href="./sub_0203.html">건축물관리점검</a></li>
-                        <li><a href="./sub_0204.html">건설공사 정기안전점검</a></li>
-                        <li><a href="./sub_0205.html">내진성능평가</a></li>
+                        <li><a href="./sub_0201.html">안전점검 및 정밀안전점검</a></li>
+                        <li><a href="./sub_0202.html">정밀안전진단</a></li>
+                        <li><a href="./sub_0204.html">건설현장 정기안전점검</a></li>
+                        <li><a href="./sub_0207.html">인접건축물 현황조사</a></li>
                         <li><a href="./sub_0206.html">법원감정</a></li>
-                        <li><a href="./sub_0207.html">인접건축물 사전조사</a></li>
-                        <li><a href="./sub_0208.html">건설사업 관리</a></li>
                     </ul>
                 </div>
                 <div class="mega-col" id="menu-03">
@@ -170,48 +164,48 @@
                 <h2 class="page-title">견적문의 작성</h2>
                 <p class="page-subtitle">무료 견적을 위해 현장 상황 및 필요하신 점검 내역을 상세히 작성해 주세요.</p>
 
-                <form onsubmit="alert('문의가 정상적으로 접수되었습니다.\n빠른 시일 내에 기재해주신 연락처로 답변드리겠습니다.'); location.href='./sub_0402.html'; return false;" class="motion-fade-up">
+                <form onsubmit="alert('온라인 접수 저장 기능을 준비 중입니다. 전화 010-9700-2926으로 문의해 주세요.'); return false;" class="motion-fade-up">
                     <div class="write-form-container">
                         <div class="write-row">
-                            <div class="write-label">작성자<span class="req">*</span></div>
+                            <label class="write-label" for="estimate-author">작성자<span class="req">*</span></label>
                             <div class="write-input-area">
-                                <input type="text" class="write-input" placeholder="이름 또는 상호명" required>
+                                <input type="text" id="estimate-author" name="author" class="write-input" placeholder="이름 또는 상호명" autocomplete="name" required>
                             </div>
                         </div>
                         <div class="write-row">
-                            <div class="write-label">비밀번호<span class="req">*</span></div>
+                            <label class="write-label" for="estimate-password">비밀번호<span class="req">*</span></label>
                             <div class="write-input-area">
-                                <input type="password" class="write-input" placeholder="글 수정/삭제 시 필요합니다." required>
+                                <input type="password" id="estimate-password" name="password" class="write-input" placeholder="글 수정/삭제 시 필요합니다." autocomplete="new-password" required>
                             </div>
                         </div>
                         <div class="write-row">
-                            <div class="write-label">연락처<span class="req">*</span></div>
+                            <label class="write-label" for="estimate-phone">연락처<span class="req">*</span></label>
                             <div class="write-input-area">
-                                <input type="text" class="write-input" placeholder="예: 010-1234-5678" required>
+                                <input type="tel" id="estimate-phone" name="phone" class="write-input" placeholder="예: 010-1234-5678" autocomplete="tel" required>
                             </div>
                         </div>
                         <div class="write-row">
-                            <div class="write-label">이메일</div>
+                            <label class="write-label" for="estimate-email">이메일</label>
                             <div class="write-input-area">
-                                <input type="email" class="write-input" placeholder="답변 받을 이메일 주소">
+                                <input type="email" id="estimate-email" name="email" class="write-input" placeholder="답변 받을 이메일 주소" autocomplete="email">
                             </div>
                         </div>
                         <div class="write-row">
-                            <div class="write-label">제목<span class="req">*</span></div>
+                            <label class="write-label" for="estimate-title">제목<span class="req">*</span></label>
                             <div class="write-input-area">
-                                <input type="text" class="write-input full" placeholder="문의 제목을 입력해주세요." required>
+                                <input type="text" id="estimate-title" name="title" class="write-input full" placeholder="문의 제목을 입력해주세요." required>
                             </div>
                         </div>
                         <div class="write-row">
-                            <div class="write-label" style="align-items:flex-start; padding-top:20px;">내용<span class="req">*</span></div>
+                            <label class="write-label" for="estimate-content" style="align-items:flex-start; padding-top:20px;">내용<span class="req">*</span></label>
                             <div class="write-input-area">
-                                <textarea class="write-textarea" placeholder="문의하실 내용을 상세히 기재해 주시면 더 빠르고 정확한 답변이 가능합니다." required></textarea>
+                                <textarea id="estimate-content" name="content" class="write-textarea" placeholder="문의하실 내용을 상세히 기재해 주시면 더 빠르고 정확한 답변이 가능합니다." required></textarea>
                             </div>
                         </div>
                         <div class="write-row">
-                            <div class="write-label">첨부파일</div>
+                            <label class="write-label" for="estimate-attachment">첨부파일</label>
                             <div class="write-input-area">
-                                <input type="file" class="write-file-input">
+                                <input type="file" id="estimate-attachment" name="attachment" class="write-file-input">
                             </div>
                         </div>
                     </div>
@@ -225,7 +219,7 @@
                             3. 개인정보의 보유 및 이용 기간: 원칙적으로 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. (단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 관련 법령에 따라 보관합니다.)
                         </div>
                         <label class="privacy-agree">
-                            <input type="checkbox" required> 위 개인정보 수집 및 이용에 동의합니다. (필수)
+                            <input type="checkbox" name="privacy_agree" value="1" required> 위 개인정보 수집 및 이용에 동의합니다. (필수)
                         </label>
                     </div>
 
@@ -263,7 +257,7 @@
                     <img src="./img/logo.png" alt="(주)한강엔지니어링">
                 </div>
                 <p><strong>상호 :</strong> (주)한강엔지니어링, (주)한강이앤씨 &nbsp;|&nbsp; <strong>창립일 :</strong> 2022년 12월 19일</p>
-                <p><strong>대표 :</strong> 우상진 &nbsp;|&nbsp; <strong>인원 :</strong> 14명 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 369-81-02982</p>
+                <p><strong>대표 :</strong> 우상진 &nbsp;|&nbsp; <strong>사업자등록번호 :</strong> 369-81-02982</p>
                 <p><strong>본사 :</strong> 서울특별시 성동구 연무장5가길 7 W동 1006호 (성수동2가, 현대테라스타워)</p>
                 <p><strong>TEL :</strong> 010-9700-2926 &nbsp;|&nbsp; <strong>FAX :</strong> 02-6959-0730 &nbsp;|&nbsp; <strong>E-mail :</strong> hangang0730@daum.net</p>
             </div>

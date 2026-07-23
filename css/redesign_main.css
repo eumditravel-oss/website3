@@ -367,6 +367,7 @@ img { max-width: 100%; height: auto; display: block; }
     gap: 20px;
 }
 .project-card {
+    display: block;
     border-radius: var(--radius-md);
     overflow: hidden;
     position: relative;
@@ -387,6 +388,14 @@ img { max-width: 100%; height: auto; display: block; }
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     padding: 30px 20px 20px;
     color: #fff;
+}
+.project-category {
+    display: block;
+    margin-bottom: 7px;
+    color: #dbeafe;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
 }
 .project-title { margin: 0; font-size: 18px; font-weight: 600; color: #fff !important; }
 
@@ -510,8 +519,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Motions */
 .fade-up {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.8s var(--easing), transform 0.8s var(--easing);
 }
 .fade-up.visible {

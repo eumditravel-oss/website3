@@ -7,11 +7,24 @@ $(document).ready(function() {
         $(this).attr('data-index', index);
     });
 
+    var initialCategory = new URLSearchParams(window.location.search).get('category');
+    var $initialFilter = $('.filter-btn[data-category="' + initialCategory + '"]');
+    if ($initialFilter.length) {
+        $('.filter-btn').removeClass('active');
+        $initialFilter.addClass('active');
+    }
+
     // Filter functionality
     $('.filter-btn').on('click', function(e) {
         e.preventDefault();
         $('.filter-btn').removeClass('active');
         $(this).addClass('active');
+        var selectedCategory = $(this).attr('data-category');
+        if (selectedCategory && window.history && window.history.replaceState) {
+            var nextUrl = new URL(window.location.href);
+            nextUrl.searchParams.set('category', selectedCategory);
+            window.history.replaceState({}, '', nextUrl);
+        }
         filterCards();
     });
 
